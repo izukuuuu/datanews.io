@@ -1,8 +1,15 @@
 @font-face {
-    font-family: 'MyCustomFont';
-    src: url('fonts/Alibaba-PuHuiTi-Regular.ttf') format('puhuiti_regular'),
-        url('fonts/Alibaba-PuHuiTi-Bold.ttf') format('puhuiti_bold');
-    /* 可以添加其他字体格式的URL，以便浏览器支持不同的格式 */
+    font-family: 'puhuiti';
+    src: url('fonts/Alibaba-PuHuiTi-Regular.ttf') format('truetype'),
+         url('fonts/Alibaba-PuHuiTi-Bold.ttf') format('truetype'),
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'SongTi'; /* 自定义字体名称 */
+    src: url('fonts/SongTi.ttf') format('truetype'); /* 字体文件的路径和格式 */
+    /* 可选的字体样式和权重属性 */
     font-weight: normal;
     font-style: normal;
 }
@@ -12,7 +19,7 @@ body,
 html {
     height: 100%;
     margin: 0;
-    font: 400 15px/1.8 "puhuiti_regular", sans-serif;
+    font: 400 15px/1.8 "puhuiti", sans-serif;
 }
 
 /* 导航栏 */
@@ -104,12 +111,12 @@ html {
 /* 标题-移动版 */
 .header-text-mobile {
     position: absolute;
-    bottom: 80px;
+    bottom: 0px;
     left: 0px;
+    width: 100%;
+    color: #fff;
     background-color: rgba(0, 0, 0, 0.7);
     backdrop-filter: blur(10px);
-    color: white;
-    padding-left: 20px;
     padding: 20px;
 }
 
@@ -203,4 +210,8 @@ html {
 .fit-image {
     border-radius: 16px;
     box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.1);
+}
+
+.cite{
+    font: 14px "SongTi", sans-serif;
 }
