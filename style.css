@@ -17,7 +17,7 @@ html {
 
 /* 导航栏 */
 .header {
-    position: fixed;
+    position: sticky;
     top: 0;
     left: 0;
     right: 0;
@@ -28,6 +28,7 @@ html {
     /* 标题栏文本颜色 */
     padding: 10px;
     border-bottom: 0.5px solid rgba(200, 200, 200, 0.5);
+    z-index: 999; /* 确保标题栏在页面上方 */
 }
 
 .hidden {
