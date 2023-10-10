@@ -702,6 +702,52 @@
         }
     });
 </script>
+<script>
+    window.addEventListener('scroll', function () {
+        const header = document.getElementById('chaper-3-header');
+        const targetElement = document.getElementById('chapter-3-title');
+        const bottomElement = document.getElementById('chapter-3-bottom');
+
+        // 获取目标元素的位置信息
+        const targetElementRect = targetElement.getBoundingClientRect();
+        const bottomElementRect = bottomElement.getBoundingClientRect();
+
+        // 当滚动到目标元素的顶部时显示标题栏
+        if (targetElementRect.bottom <= 0) {
+            header.classList.remove('hidden');
+        } else {
+            header.classList.add('hidden');
+        }
+
+        // 当滚动到目标元素的底部时隐藏标题栏
+        if (bottomElementRect.bottom <= 0) {
+            header.classList.add('hidden');
+        }
+    });
+</script>
+<script>
+    window.addEventListener('scroll', function () {
+        const header = document.getElementById('chaper-4-header');
+        const targetElement = document.getElementById('chapter-4-title');
+        const bottomElement = document.getElementById('chapter-4-bottom');
+
+        // 获取目标元素的位置信息
+        const targetElementRect = targetElement.getBoundingClientRect();
+        const bottomElementRect = bottomElement.getBoundingClientRect();
+
+        // 当滚动到目标元素的顶部时显示标题栏
+        if (targetElementRect.bottom <= 0) {
+            header.classList.remove('hidden');
+        } else {
+            header.classList.add('hidden');
+        }
+
+        // 当滚动到目标元素的底部时隐藏标题栏
+        if (bottomElementRect.bottom <= 0) {
+            header.classList.add('hidden');
+        }
+    });
+</script>
 <!-- 图表1 -->
 <script type="text/javascript">
     google.charts.load('current', { 'packages': ['corechart'] });
