@@ -17,7 +17,8 @@ html {
 
 /* 导航栏 */
 .header {
-    position: sticky; /* 尝试固定 */
+    position: sticky;
+    /* 尝试固定 */
     top: 0;
     left: 0;
     right: 0;
@@ -28,7 +29,8 @@ html {
     /* 标题栏文本颜色 */
     padding: 10px;
     border-bottom: 0.5px solid rgba(200, 200, 200, 0.5);
-    z-index: 999; /* 确保标题栏在页面上方 */
+    z-index: 999;
+    /* 确保标题栏在页面上方 */
 }
 
 .hidden {
@@ -37,13 +39,42 @@ html {
 
 /* 标题图片 */
 .bgimg-1 {
-    background-image: url("./img/title1.png");
     background-repeat: no-repeat;
     background-position: top right;
     min-height: 100%;
     height: auto;
     background-color: #f6fbff;
 }
+
+@media only screen and (min-width: 768px) {
+    .bgimg-1 {
+        background-image: url("./img/title1.png");
+    }
+}
+
+@media only screen and (max-width: 767px) {
+    .bgimg-1 {
+        background-image: url("./img/title2.png");
+    }
+}
+
+.chart-center {
+    height: 400px;
+    margin: 0 auto;
+}
+
+@media only screen and (min-width: 768px) {
+    .chart-center {
+        width: 600px;
+    }
+}
+
+@media only screen and (max-width: 767px) {
+    .chart-center {
+        width: 350px;
+    }
+}
+
 
 .bgimg-2 {
     background-image: url("./img/chapter2.jpg");
@@ -169,7 +200,7 @@ html {
     box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.05);
 }
 
-.fit-image{
+.fit-image {
     border-radius: 16px;
     box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.1);
 }
