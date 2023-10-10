@@ -1,7 +1,7 @@
 @font-face {
     font-family: 'puhuiti';
     src: url('fonts/Alibaba-PuHuiTi-Regular.ttf') format('truetype'),
-         url('fonts/Alibaba-PuHuiTi-Bold.ttf') format('truetype'),
+         url('fonts/Alibaba-PuHuiTi-Bold.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
 }
