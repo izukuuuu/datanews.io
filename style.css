@@ -1,8 +1,14 @@
 @font-face {
     font-family: 'puhuiti';
-    src: url('fonts/Alibaba-PuHuiTi-Regular.ttf') format('truetype'),
-         url('fonts/Alibaba-PuHuiTi-Bold.ttf') format('truetype');
+    src: url('fonts/Alibaba-PuHuiTi-Regular.ttf') format('truetype');
     font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'puhuiti';
+    src: url('fonts/Alibaba-PuHuiTi-Bold.ttf') format('truetype');
+    font-weight: bold;
     font-style: normal;
 }
 
@@ -136,22 +142,22 @@ html {
 }
 
 .title-desktop {
-    font-size: 50px;
+    font: 50px "puhuiti", sans-serif;
     font-weight: bold;
 }
 
 .title-desktop-large {
-    font-size: 60px;
+    font: 60px "puhuiti", sans-serif;
     font-weight: bold;
 }
 
 .title-mobile {
-    font-size: 30px;
+    font: 30px "puhuiti", sans-serif;
     font-weight: bold;
 }
 
 .title-mobile-large {
-    font-size: 50px;
+    font: 50px "puhuiti", sans-serif;
     font-weight: bold;
 }
 
