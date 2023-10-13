@@ -13,9 +13,8 @@
 }
 
 @font-face {
-    font-family: 'SongTi'; /* 自定义字体名称 */
-    src: url('fonts/SongTi.ttf') format('truetype'); /* 字体文件的路径和格式 */
-    /* 可选的字体样式和权重属性 */
+    font-family: 'SongTi';
+    src: url('fonts/SongTi.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
 }

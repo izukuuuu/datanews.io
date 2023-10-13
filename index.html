@@ -13,6 +13,8 @@
 
     <!-- CSS -->
     <link rel="stylesheet" href="style.css" />
+
+    <!-- 模板CSS -->
     <link rel="stylesheet" href="assets/css/vendor/vendor.min.css">
     <link rel="stylesheet" href="assets/css/plugins/plugins.min.css">
     <link rel="stylesheet" href="assets/css/style.min.css">
@@ -56,6 +58,7 @@
 
     p {
         color: #111;
+        font: 14px "puhuiti", sans-serif;
     }
 </style>
 
@@ -641,11 +644,14 @@
 
 </body>
 
+<!-- 谷歌图表 -->
 <script type="text/javascript" src="js/loader.js"></script>
 <script src="assets/js/vendor.min.js"></script>
 <script src="assets/js/plugins.min.js"></script>
 <!--Main JS-->
 <script src="assets/js/main.js"></script>
+
+<!-- 电脑/移动端元素切换-->
 <script>
     // 获取窗口宽度
     var windowWidth = window.innerWidth;
@@ -683,6 +689,7 @@
     });
 
 </script>
+<!-- 标题栏显示切换 -->
 <script>
     window.addEventListener('scroll', function () {
         const header = document.getElementById('chaper-1-header');
@@ -775,7 +782,7 @@
         }
     });
 </script>
-<!-- 图表1 -->
+<!-- 图表1初始化 -->
 <script type="text/javascript">
     google.charts.load('current', { 'packages': ['corechart'] });
     google.charts.setOnLoadCallback(drawChart);
@@ -809,7 +816,7 @@
         chart.draw(data, options);
     }
 </script>
-
+<!-- 图表2初始化 -->
 <script type="text/javascript">
     google.charts.load('current', { 'packages': ['bar'] });
     google.charts.setOnLoadCallback(drawChart);
