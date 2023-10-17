@@ -81,7 +81,7 @@ html {
     float: left;
     width: 20%;
     text-align: center;
-    padding: 12px 0;
+    padding: 6px 0;
     transition: all 0.3s ease;
     color: gray;
     font-size: 24px;
@@ -151,8 +151,8 @@ html {
 @media only screen and (max-width: 767px) {
     .bgimg-1 {
         background-image: url("./img/title2.png");
-        min-height: calc(100% - 72px) !important;
-        height: calc(100% - 72px) !important;
+        min-height: calc(100% - 60px) !important;
+        height: calc(100% - 60px) !important;
     }
 }
 
@@ -194,7 +194,7 @@ html {
     bottom: 60px;
     left: 30px;
     background-color: #d9e7f7;
-    color: #7289b8;
+    color: #6089b8;
     padding: 20px;
     margin: 0 auto;
 }
@@ -202,7 +202,7 @@ html {
 /* 标题-移动版 */
 .header-text-mobile {
     position: absolute;
-    bottom: 72px;
+    bottom: 60px;
     left: 0px;
     width: 100%;
     color: #fff;
@@ -295,7 +295,7 @@ html {
 }
 
 .container-padding-top-first {
-    padding-top: 72px;
+    padding-top: 60px;
 }
 
 .shadow-box {
