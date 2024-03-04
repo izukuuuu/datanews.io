@@ -13,6 +13,7 @@
 
     <!-- 添加图标库 -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
 
     <!-- CSS -->
     <link rel="stylesheet" href="style.css" />
@@ -68,7 +69,7 @@
 <body>
 
     <!-- 导航栏区域 -->
-    <div id="chaper-1-header" class="text-center header shadow-box hidden">
+    <div id="chapter-1-header" class="text-center header shadow-box hidden">
         <div class="desktop-content">
             <h4 class="m-auto">前言 | 在华留学生：文化的“跨界”使者</h4>
         </div>
@@ -79,7 +80,7 @@
 
     </div>
 
-    <div id="chaper-2-header" class="text-center header shadow-box hidden">
+    <div id="chapter-2-header" class="text-center header shadow-box hidden">
         <div class="desktop-content">
             <h4 class="m-auto">第二章 | 在华留学生与文化适应</h4>
         </div>
@@ -89,7 +90,7 @@
         </div>
     </div>
 
-    <div id="chaper-3-header" class="text-center header shadow-box hidden">
+    <div id="chapter-3-header" class="text-center header shadow-box hidden">
         <div class="desktop-content">
             <h4 class="m-auto">第三章 | 在华留学生与文化交际</h4>
         </div>
@@ -99,7 +100,7 @@
         </div>
     </div>
 
-    <div id="chaper-4-header" class="text-center header shadow-box hidden">
+    <div id="chapter-4-header" class="text-center header shadow-box hidden">
         <div class="desktop-content">
             <h4 class="m-auto">第四章 | 展望</h4>
         </div>
@@ -113,20 +114,20 @@
     <!-- 侧边栏区域 移动端为底栏-->
     <div class="desktop-content">
         <div class="icon-bar">
-            <a class="active" href="#"><i class="fa fa-home"></i></a>
-            <a class="icon-bar-margin" href="#"><i class="fa fa-search"></i></a>
-            <a class="icon-bar-margin" href="#"><i class="fa fa-envelope"></i></a>
-            <a class="icon-bar-margin" href="#"><i class="fa fa-globe"></i></a>
-            <a href="#"><i class="fa fa-trash"></i></a>
+            <a href="#" id="home-button"><span class="material-symbols-outlined">home</span></a>  <!--页面顶部移动到顶部-->
+            <a class="icon-bar-margin" id="chapter-1-button" onclick="scrollToElement('chapter-1')"><span class="material-symbols-outlined">monitoring</span></a>  <!--页面顶部移动到chapter-1-header-->
+            <a class="icon-bar-margin" id="chapter-2-button" onclick="scrollToElement('chapter-2')"><span class="material-symbols-outlined">join_right</span></a>  <!--页面顶部移动到chapter-2-header-->
+            <a class="icon-bar-margin" id="chapter-3-button" onclick="scrollToElement('chapter-3')"><span class="material-symbols-outlined">diversity_2</span></a>  <!--页面顶部移动到chapter-3-header-->
+            <a id="chapter-4-button" onclick="scrollToElement('chapter-4')"><span class="material-symbols-outlined">workspaces</span></a>  <!--页面顶部移动到chapter-4-header-->
         </div>
     </div>
     <div class="mobile-content">
         <div class="icon-bar-mobile">
-            <a class="active" href="#"><i class="fa fa-home"></i></a>
-            <a href="#"><i class="fa fa-search"></i></a>
-            <a href="#"><i class="fa fa-envelope"></i></a>
-            <a href="#"><i class="fa fa-globe"></i></a>
-            <a href="#"><i class="fa fa-trash"></i></a>
+            <a href="#" id="home-button"><span class="material-symbols-outlined">home</span></a>  <!--页面顶部移动到顶部-->
+            <a class="icon-bar-margin" id="chapter-1-button" onclick="scrollToElement('chapter-1')"><span class="material-symbols-outlined">monitoring</span></a>  <!--页面顶部移动到chapter-1-header-->
+            <a class="icon-bar-margin" id="chapter-2-button" onclick="scrollToElement('chapter-2')"><span class="material-symbols-outlined">join_right</span></a>  <!--页面顶部移动到chapter-2-header-->
+            <a class="icon-bar-margin" id="chapter-3-button" onclick="scrollToElement('chapter-3')"><span class="material-symbols-outlined">diversity_2</span></a>  <!--页面顶部移动到chapter-3-header-->
+            <a id="chapter-4-button" onclick="scrollToElement('chapter-4')"><span class="material-symbols-outlined">workspaces</span></a>  <!--页面顶部移动到chapter-4-header-->
         </div>
     </div>
 
@@ -230,445 +231,449 @@
                     </div>
                     <!-- 条形图 -->
                     <div class="chart-center" id="chart_div"></div>
-                    <!-- Plotly环形图测试 -->
-                    <div class="chart-center">
+                    <!-- Echarts条形图测试 -->
+                    <div class="chart-center" id="0c90bacd622c4e2d8ecfd557e554b189"></div>
+                    <!-- Plotly环形图测试-->
+                    <div class="chart-center" id="6adaae60-86bc-4dd5-afdc-e3259cb6a757"></div>
+
                     <div class="section-title text-center">
                         <p class="m-auto line-height-3">
                             我国一直以来都欢迎世界各地的留学生来华学习，我们对留学生提供了一系列的优惠政策，包括奖学金、简化签证手续、扩大就业范围等。随着我国国际地位的不断提高，来华留学生的数量也在逐年增加。在华留学生在享受我国提供的便利的同时，也需要适应我国的文化和生活方式，这是一个双向的过程，也是世界了解我国的一个重要途径。
                         </p>
                     </div>
                 </div>
-            </div>
-            <div id="chapter-1-bottom"></div> <!-- 底部 -->
-        </div>
-    </div>
-
-    <!-- 第二章 -->
-    <div class="section bgimg-2" id="Chapter 2">
-        <!-- 标题 -->
-        <div class="bgimg-2"> <!-- 视差滚动 -->
-            <div style="background-color: rgba(255, 255, 255, 0.7)">
-                <div class="container container-padding-top">
-                    <div class="row">
-                        <div class="col-12" data-aos="fade-up" data-aos-duration="1100">
-                            <div class="section-title text-center">
-                                <div id="chapter-2-title"> <!-- 第二章标题 -->
-                                    <h2 class="title">第二章</h2>
-                                    <h3 class="m-auto">在华留学生与文化适应</h3>
-                                </div>
-
-                                <span class="d-flex justify-content-center"></span>
-                                <p class="m-auto  line-height-3">
-                                    文化适应指个体在进入一个新的文化环境后，通过学习和调整，逐渐适应新的文化规范和价值观，从而减少文化冲突和压力，提高生活和工作的满意度和效率的过程。文化适应是一个复杂而动态的过程，受到个体和环境的多种因素的影响。在华留学生作为跨文化者，他们在中国所经历的文化适应过程也因个体与环境的多重因素而变得复杂而动态。
-                                <p>
-
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                <div id="chapter-1-bottom"></div> <!-- 底部 -->
             </div>
         </div>
-        <!-- 正文 -->
-        <div style="background-color: #F2F6FA;">
-            <div class="container">
-                <div class="col-12" data-aos="fade-up" data-aos-duration="1100">
-                    <div class="section-title text-center">
-                        <div class="desktop-content">
-                            <p class="m-auto line-height-3">
-                                来自五湖四海的留学生们，带着对未来的憧憬，踏上了中国这片神秘的土地。
-                            </p>
-                            <p class="m-auto line-height-3">
-                                他们带着好奇心，探索着这个拥有悠久历史、灿烂文化的国度。成为国际文化交流的关键推动力。
-                            </p>
-                            <p></p>
-                            <p class="m-auto line-height-3">
-                                我们的数据收集主要采用问卷调查和深度访谈两种方式。<br>问卷调查分为线上和线下两种形式，<br>线上使用微信问卷星平台设计了中英双语问卷，线下使用英中西三种语言进行实地采访。<br>样本主要选取北京交通大学的留学生群体，<br>并按照国家和性别等进行系统抽样，后续将扩展到北京的各个高校。<br>深度访谈则是针对部分问卷调查的对象进行了更加详细和深入的访谈，以收集更多的信息和故事。
-                            </p>
-                        </div>
-                        <!-- 电脑端内容 -->
-                        <div class="desktop-content">
-                            <p class="m-auto line-height-3">
-                                来自五湖四海的留学生们，带着对未来的憧憬，踏上了中国这片神秘的土地。
-                            </p>
-                            <p></p>
-                            <p class="m-auto line-height-3">
-                                他们带着好奇心，探索着这个拥有悠久历史、灿烂文化的国度。成为国际文化交流的关键推动力。
-                            </p>
-                            <span class="d-flex justify-content-center"></span>
-                            <p></p>
-                            <p class="m-auto line-height-3">根据问卷结果，我们收集到了关于在中国学习期间遇到的主要困难的有关数据。</p>
-                            <p></p>
-                        </div>
-                        <!-- 移动端内容 -->
-                        <div class="mobile-content">
-                            <p class="m-auto line-height-3">
-                                来自五湖四海的留学生们，<br>带着对未来的憧憬，<br>踏上了中国这片神秘的土地。
-                            </p>
-                            <p></p>
-                            <p class="m-auto line-height-3">
-                                他们带着好奇心，<br>探索着这个拥有悠久历史、灿烂文化的国度。<br>成为国际文化交流的关键推动力。
-                            </p>
-                            <span class="d-flex justify-content-center"></span>
-                            <p></p>
-                            <p class="m-auto line-height-3">根据问卷结果，<br>我们收集到了关于在中国学习期间遇到的主要困难的有关数据。</p>
-                        </div>
 
-                        <!-- 这里需要一张图表 -->
-                        <div class="chart-center" id="chart_2"></div>
-                        <p></p>
-
-                        <!-- 电脑端内容 -->
-                        <div class="desktop-content">
-                            <p class="m-auto line-height-3">
-                                根据调查，<br>约有 60% 的受访者表示在中国学习期间，他们遇到了适应中国的教育和学习方法方面的困难，<br>包括对不同的教学风格、考核方式和学术文化的不熟悉。
-                            </p>
-                            <p></p>
-                            <p class="m-auto line-height-3">
-                                超过 70% 的受访者提到，学习和使用汉语是他们在中国学习过程中面临的主要挑战之一，<br>这表明语言障碍对留学生来说可能是一个重要的文化适应问题。
-                            </p>
-                            <p></p>
-                            <p class="m-auto line-height-3">
-                                大约 45% 的受访者表示在中国处理日常生活问题时遇到了挑战，<br>包括住宿安排、搭乘公共交通、购物以及适应中国货币的使用等。
-                            </p>
-                            <p></p>
-                            <p class="m-auto line-height-3">
-                                近 30% 的受访者提到他们在与中国学生建立友谊关系方面遇到了困难，<br>涉及到文化差异、语言障碍或社交环境的不同。
-                            </p>
-                            <p></p>
-                            <p class="m-auto line-height-3">
-                                大约 20% 的受访者表示在保持身体健康方面存在挑战，<br>包括适应不同的气候、饮食和生活方式等。
-                            </p>
-                            <p></p>
-                            <p class="m-auto line-height-3">
-                                约有 50% 的受访者提到他们在中国学习期间面临学业压力，可能与不同的学习环境和要求有关。
-                            </p>
-                            <span class="d-flex justify-content-center"></span>
-                            <p class="m-auto line-height-3">
-                                语言障碍可能是最直观的困难之一。<br>
-                                根据深度访谈调查，有许多在华留学生表示，语言障碍是最大的挑战：</p>
-                            <p></p>
-                            <p class="m-auto line-height-3 cite">
-                                “我花了两年时间才能听懂普通话”<br>
-                                “我总是忘记汉字怎么写”<br>
-                                “我不知道怎么用中文表达我的感情”。<br>
-                            </p>
-                            <p></p>
-                            <p class="m-auto line-height-3">
-                                除了语言障碍外，在华留学生还要面对中西方文化之间的差异。<br>这些文化差异在无形之间也导致在华留学生产生文化冲突、文化失落或者文化隔阂的情绪。<br>
-
-                                <br>
-
-                                在本次研究中，我们还发现大多数在华留学生倾向于使用国外的社交平台，<br>如 WhatsApp、Instagram、Facebook 和 Tiktok 等。<br>
-
-                                相较之下，他们在我国的主流社交平台上活跃度较低，<br>仅约 10%的受访者表示使用抖音，微博、B 站、小红书等平台的使用率则更低。<br>
-
-                                <br>
-
-                                针对这一现象，我们进一步探讨了原因。<br>许多受访者表示，他们之所以倾向于使用国外社交平台，<br>一方面是因为已经形成了使用习惯，<br>另一方面则是因为我国的社交平台在功能和使用习惯上与他们所熟悉的平台存在较大差异。
-                            </p>
-                            <p></p>
-                            <p class="m-auto line-height-3 cite">
-                                “试过，但是我发现我对它们的功能和使用方式不太熟悉，所以我还是更喜欢使用那些平台。”<br>
-
-                                “我觉得使用国外的社交平台让我更有归属感，因为我可以与我原来的朋友们保持联系。而在我国的社交平台上，我可能会感到有些孤独。”<br>
-
-                                ……
-                            </p>
-                            <p></p>
-                            <p class="m-auto line-height-3">
-                                而对于为何不使用国内的小红书、微博等平台，不少受访者还提出了使用方面的困难，<br>其中一位受访者表示：
-                            <p></p>
-                            <p class="m-auto line-height-3 cite">“翻译功能不是很好用。”</p>
-                            <p></p>
-                            <p class="m-auto line-height-3">另一位留学生则提到：</p>
-                            <p></p>
-                            <p class="m-auto line-height-3 cite">“很多地方，像是评论没法翻译，这对我的使用造成了困难”。</p>
-                            <p></p>
-                            <p class="m-auto line-height-3">
-                                这些反馈突显了语言障碍在使用中国社交媒体平台时可能构成的障碍。对于留学生而言，在使用这些平台时遇到的语言难题可能会影响他们与中国网民的互动，也可能导致信息获取的不便。
-                            </p>
-                        </div>
-
-                        <!-- 移动端内容 -->
-                        <div class="mobile-content">
-                            <p class="m-auto line-height-3">
-                                根据调查，<br>约有 60% 的受访者表示在中国学习期间，他们遇到了适应中国的教育和学习方法方面的困难，<br>包括对不同的教学风格、考核方式和学术文化的不熟悉。
-                            </p>
-                            <p></p>
-                            <p class="m-auto line-height-3">
-                                超过 70% 的受访者提到，学习和使用汉语是他们在中国学习过程中面临的主要挑战之一，<br>这表明语言障碍对留学生来说可能是一个重要的文化适应问题。
-                            </p>
-                            <p></p>
-                            <p class="m-auto line-height-3">
-                                大约 45% 的受访者表示在中国处理日常生活问题时遇到了挑战，<br>包括住宿安排、搭乘公共交通、购物以及适应中国货币的使用等。
-                            </p>
-                            <p></p>
-                            <p class="m-auto line-height-3">
-                                近 30% 的受访者提到他们在与中国学生建立友谊关系方面遇到了困难，<br>涉及到文化差异、语言障碍或社交环境的不同。
-                            </p>
-                            <p></p>
-                            <p class="m-auto line-height-3">
-                                大约 20% 的受访者表示在保持身体健康方面存在挑战，<br>包括适应不同的气候、饮食和生活方式等。
-                            </p>
-                            <p></p>
-                            <p class="m-auto line-height-3">
-                                约有 50% 的受访者提到他们在中国学习期间面临学业压力，可能与不同的学习环境和要求有关。
-                            </p>
-                            <span class="d-flex justify-content-center"></span>
-                            <p class="m-auto line-height-3">
-                                语言障碍可能是最直观的困难之一。<br>
-                                根据深度访谈调查，有许多在华留学生表示，语言障碍是最大的挑战：</p>
-                            <p></p>
-                            <p class="m-auto line-height-3 cite">
-                                “我花了两年时间才能听懂普通话”<br>
-                                “我总是忘记汉字怎么写”<br>
-                                “我不知道怎么用中文表达我的感情”。<br>
-                            </p>
-                            <p></p>
-                            <p class="m-auto line-height-3">
-                                除了语言障碍外，在华留学生还要面对中西方文化之间的差异。<br>这些文化差异在无形之间也导致在华留学生产生文化冲突、文化失落或者文化隔阂的情绪。<br>
-
-                                <br>
-
-                                在本次研究中，我们还发现大多数在华留学生倾向于使用国外的社交平台，<br>如 WhatsApp、Instagram、Facebook 和 Tiktok 等。<br>
-
-                                相较之下，他们在我国的主流社交平台上活跃度较低，<br>仅约 10%的受访者表示使用抖音，微博、B 站、小红书等平台的使用率则更低。<br>
-
-                                <br>
-
-                                针对这一现象，我们进一步探讨了原因。<br>许多受访者表示，他们之所以倾向于使用国外社交平台，<br>一方面是因为已经形成了使用习惯，<br>另一方面则是因为我国的社交平台在功能和使用习惯上与他们所熟悉的平台存在较大差异。
-                            </p>
-                            <p></p>
-                            <p class="m-auto line-height-3 cite">
-                                “试过，但是我发现我对它们的功能和使用方式不太熟悉，所以我还是更喜欢使用那些平台。”<br>
-
-                                “我觉得使用国外的社交平台让我更有归属感，因为我可以与我原来的朋友们保持联系。而在我国的社交平台上，我可能会感到有些孤独。”<br>
-
-                                ……
-                            </p>
-                            <p></p>
-                            <p class="m-auto line-height-3">
-                                而对于为何不使用国内的小红书、微博等平台，不少受访者还提出了使用方面的困难，<br>其中一位受访者表示：
-                            <p></p>
-                            <p class="m-auto line-height-3 cite">“翻译功能不是很好用。”</p>
-                            <p></p>
-                            <p class="m-auto line-height-3">另一位留学生则提到：</p>
-                            <p></p>
-                            <p class="m-auto line-height-3 cite">“很多地方，像是评论没法翻译，这对我的使用造成了困难”。</p>
-                            <p></p>
-                            <p class="m-auto line-height-3">
-                                这些反馈突显了语言障碍在使用中国社交媒体平台时可能构成的障碍。对于留学生而言，在使用这些平台时遇到的语言难题可能会影响他们与中国网民的互动，也可能导致信息获取的不便。
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div id="chapter-2-bottom"></div> <!-- 底部 -->
-        </div>
-    </div>
-
-    <!-- 第三章 -->
-    <div class="section section-margin-bottom" id="chapter-3">
-        <!-- 标题 -->
-        <div class="container container-padding-top">
-            <div class="col-12" data-aos="fade-up" data-aos-duration="1100">
-                <div class="section-title text-center" style="padding-bottom: 0px;">
-                    <div id="chapter-3-title"> <!-- 第三章标题 -->
-                        <h2 class="m-auto">第三章</h2>
-                        <h3 class="m-auto">在华留学生与文化交际</h3>
-                    </div>
-                    <span class="d-flex justify-content-center"></span>
-                    <p class="m-auto line-height-3">
-                        在当今全球化时代，教育跨足国界，留学生们成为连接不同文化和国家的桥梁。在华留学生们既传播本国文化，又将中华文化播撒向世界。
-                    <p>
-                </div>
-            </div>
-        </div>
-        <!-- 正文 -->
-        <div class="col-12 section-title text-center" style="padding-bottom: 0px;" data-aos="fade-up"
-            data-aos-duration="1100">
-            <div class="container container-padding-top">
-                <!-- 电脑端内容 -->
-                <div class="desktop-content">
-                    <p class="m-auto line-height-3">
-                        留学生们通过举办各种活动，如外国文化节、文化周等，将丰富多彩的异域文化带入校园，与中国文化相互交融。
-                        他们的文字和歌谣，如五彩的羽翼，轻盈地穿越语言的障碍，与中国文化交织成美妙的乐章。留学生把多元丰富的异域文化带到校园，文化的多元碰撞构成了校园里的一道风景线。
-                        “世界文化节”、“世界文化周”……在这些多姿多彩的外国文化节中，外国留学生成为文化交流的使者，竞相在舞台上展示不同民族的灿烂文化。
-                    </p>
-                    <p></p>
-                </div>
-                <!-- 移动端内容 -->
-                <div class="mobile-content">
-                    <p class="m-auto line-height-3">
-                        留学生们通过举办各种活动，如外国文化节、文化周等，将丰富多彩的异域文化带入校园，与中国文化相互交融。
-                        他们的文字和歌谣，如五彩的羽翼，轻盈地穿越语言的障碍，与中国文化交织成美妙的乐章。留学生把多元丰富的异域文化带到校园，文化的多元碰撞构成了校园里的一道风景线。
-                        “世界文化节”、“世界文化周”……在这些多姿多彩的外国文化节中，外国留学生成为文化交流的使者，竞相在舞台上展示不同民族的灿烂文化。
-                    </p>
-                </div>
-                <!-- 图片 -->
-                <div class="section gallery-section" style="padding-top: 30px; padding-bottom: 30px;">
-                    <div class="container">
+        <!-- 第二章 -->
+        <div class="section bgimg-2" id="chapter-2">
+            <!-- 标题 -->
+            <div class="bgimg-2"> <!-- 视差滚动 -->
+                <div style="background-color: rgba(255, 255, 255, 0.7)">
+                    <div class="container container-padding-top">
                         <div class="row">
-                            <div class="col-lg-12" data-aos="fade-up" data-aos-duration="1800">
-                                <div class="row gallery-filter-wrapper m-b-n50">
-                                    <div class="col-md-6 col-lg-4 m-b-50 filter-item item2 item3 item4">
-                                        <!-- Single Gallery Start -->
-                                        <div class="single-gallery">
-                                            <div class="gallery-thumb">
-                                                <img class="fit-image" src="img/detail1.jpg" alt="Gallery Image">
-                                            </div>
-                                        </div>
-                                        <!-- Single Gallery End -->
+                            <div class="col-12" data-aos="fade-up" data-aos-duration="1100">
+                                <div class="section-title text-center">
+                                    <div id="chapter-2-title"> <!-- 第二章标题 -->
+                                        <h2 class="title">第二章</h2>
+                                        <h3 class="m-auto">在华留学生与文化适应</h3>
                                     </div>
-                                    <div class="col-md-6 col-lg-4 m-b-50 filter-item item1 item3">
-                                        <!-- Single Gallery Start -->
-                                        <div class="single-gallery">
-                                            <div class="gallery-thumb">
-                                                <img class="fit-image" src="img/detail2.jpg" alt="Gallery Image">
-                                            </div>
-                                        </div>
-                                        <!-- Single Gallery End -->
-                                    </div>
-                                    <div class="col-md-6 col-lg-4 m-b-50 filter-item item1 item3">
-                                        <!-- Single Gallery Start -->
-                                        <div class="single-gallery">
-                                            <div class="gallery-thumb">
-                                                <img class="fit-image" src="img/detail3.jpg" alt="Gallery Image">
-                                            </div>
-                                        </div>
-                                        <!-- Single Gallery End -->
-                                    </div>
+
+                                    <span class="d-flex justify-content-center"></span>
+                                    <p class="m-auto  line-height-3">
+                                        文化适应指个体在进入一个新的文化环境后，通过学习和调整，逐渐适应新的文化规范和价值观，从而减少文化冲突和压力，提高生活和工作的满意度和效率的过程。文化适应是一个复杂而动态的过程，受到个体和环境的多种因素的影响。在华留学生作为跨文化者，他们在中国所经历的文化适应过程也因个体与环境的多重因素而变得复杂而动态。
+                                    <p>
+
                                 </div>
                             </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- 电脑端内容 -->
-                <div class="desktop-content">
-                    <p class="m-auto line-height-3">
-                        在这里，他们是中外文化的交汇处，是跨越国界的心灵相遇点。<br>
-                        在华留学生不仅是异域文化的传播者，更是中华文化向外传播的有机渠道。<br>
-                        他们在学习、见证、传播中国政治、经济、文化的同时，为世界各国提供了了解真实中国的窗口。<br>
-                        在中外交流中起到了重要的桥梁作用，对于向世界展现我国的真实面貌发挥了重要作用。<br>
-                        在美丽的校园里，来自世界各地的留学生们汇聚一堂，共同学习、交流、成长。他们不仅为中华文化注入了新的活力，还将我国的优秀传统文化传播到了世界的各个角落。<br>
-                        <br>
-                        在我们的调查中，来自法国的留学生玛丽（化名）在我国学习期间，被中国书法的魅力深深吸引。<br>
-                        她不仅自己勤学苦练，还积极向法国的朋友们介绍书法艺术。<br>
-                        玛丽回到法国后，与志同道合的朋友们一起创办了一个书法协会，<br>
-                        定期举办书法展览和交流活动，让更多的人了解到了中国传统文化的魅力。<br>
-                        <br>
-                        不仅如此，许多留学生还将我国的传统节日晒到社交媒体上，与世界各地的朋友们分享。<br>
-                        例如，在春节期间，留学生们会通过照片和视频展示中国新年的独特氛围，如贴春联、包饺子、放鞭炮等。<br>
-                        这些富有中国特色的习俗吸引了世界各地的目光，让更多的人了解到了中国的传统文化和习俗。<br>
-                        用自己的实际行动，为世界提供了解真实中国的窗口，对向世界展现我国的真实面貌发挥了重要作用。
-                    </p>
-                </div>
-                <!-- 移动端内容 -->
-                <div class="mobile-content">
-                    <p class="m-auto line-height-3">
-                        在这里，他们是中外文化的交汇处，是跨越国界的心灵相遇点。<br>
-                        在华留学生不仅是异域文化的传播者，更是中华文化向外传播的有机渠道。<br>
-                        他们在学习、见证、传播中国政治、经济、文化的同时，为世界各国提供了了解真实中国的窗口。<br>
-                        在中外交流中起到了重要的桥梁作用，对于向世界展现我国的真实面貌发挥了重要作用。<br>
-                        在美丽的校园里，来自世界各地的留学生们汇聚一堂，共同学习、交流、成长。他们不仅为中华文化注入了新的活力，还将我国的优秀传统文化传播到了世界的各个角落。<br>
-                        <br>
-                        在我们的调查中，来自法国的留学生玛丽（化名）在我国学习期间，被中国书法的魅力深深吸引。<br>
-                        她不仅自己勤学苦练，还积极向法国的朋友们介绍书法艺术。<br>
-                        玛丽回到法国后，与志同道合的朋友们一起创办了一个书法协会，<br>
-                        定期举办书法展览和交流活动，让更多的人了解到了中国传统文化的魅力。<br>
-                        <br>
-                        不仅如此，许多留学生还将我国的传统节日晒到社交媒体上，与世界各地的朋友们分享。<br>
-                        例如，在春节期间，留学生们会通过照片和视频展示中国新年的独特氛围，如贴春联、包饺子、放鞭炮等。<br>
-                        这些富有中国特色的习俗吸引了世界各地的目光，让更多的人了解到了中国的传统文化和习俗。<br>
-                        用自己的实际行动，为世界提供了解真实中国的窗口，对向世界展现我国的真实面貌发挥了重要作用。
-                    </p>
-                </div>
-            </div>
-            <div id="chapter-3-bottom"></div> <!-- 底部 -->
-        </div>
-    </div>
-
-
-    <!-- 第四章 -->
-    <div class="section section-margin-bottom" id="chapter-4" style="background-color: #F2F6FA;">
-        <div class="container container-padding-top">
-            <div class="row">
-                <div class="col-12" data-aos="fade-up" data-aos-anchor-placement="top-bottom" data-aos-duration="1100">
-                    <div class="section-title text-center" style="padding-bottom: 0px;">
-                        <div id="chapter-4-title"> <!-- 第四章标题 -->
-                            <h2 class="m-auto">第四章</h2>
-                            <h3 class="m-auto">展望</h3>
-                            <span class="d-flex justify-content-center"></span>
                         </div>
                     </div>
                 </div>
             </div>
             <!-- 正文 -->
-            <div class="col-12 section-title text-center" style="padding-top: 0px;" data-aos="fade-up"
-                data-aos-duration="1100">
-                <!-- 电脑端内容 -->
-                <div class="desktop-content">
-                    <p class="m-auto line-height-3">
-                        随着全球疫情的逐渐控制，在华留学生的生活也将逐渐恢复正常。
-                        在疫情期间，很多留学生不得不在自己的国家进行线上学习，与老师和同学们进行远程交流。这种形式的交流虽然能够维持学习的进行，但是却无法取代面对面的交流和互动。
-                        在后疫情时代，我们希望在华留学生能够更加积极地参与到跨文化交际中来。在学习和生活中，他们可以主动与来自不同国家和地区的人交流，了解不同的文化和思维方式。这不仅可以拓宽视野，还可以提高跨文化交际的能力。
-                        同时，我们希望留学生们能够借助疫情期间的经验，探索新的跨文化交际方式。
-                        例如，可以通过线上交流平台，组织跨文化交流活动，让更多人参与到其中来。还可以利用社交媒体等工具，建立跨文化的社群，促进不同文化之间的交流和互动。
-                        在跨文化交际领域，我们还需要加强对留学生的心理支持和辅导。很多留学生面临着各种压力和挑战，如孤独、焦虑、抑郁等。因此，需要提供适当的心理支持和辅导，帮助他们更好地适应新环境，缓解压力和负面情绪。
-                    </p>
-                    <span class="d-flex justify-content-center"></span>
-                    <p class="m-auto line-height-3">
-                        在华留学生不仅是文化交流的使者，也是中华文化的传播者。我们期待通过心灵的碰撞，能够更好地通过在华留学生群体，传播中华文化，让更多的人了解和理解中国。
-                        通过开展相关活动，让留学生们能够深入学习和体验中华文化。通过阅读中国经典文献，参加各类文化活动，学习中国传统艺术和技艺等方式，深入理解和体验中华文化。将真实的、有深度的中华文化传播给世界。
-                        其次，我们希望留学生们能够用自己的语言和方式，将中华文化传播给世界。利用社交媒体平台，分享自己在中国的生活和学习经历，让更多的人了解中国。同时，他们也可以通过自己的行动，展示中华文化的价值观和精神风貌，让更多的人感受到中华文化的魅力。
-                        中华文化博大精深，以开放和包容的态度，面对文化的差异和冲突，才能有效传播中华文化。尊重和理解不同文化的存在和发展，以平等和互信的态度，让不同的文化交流碰撞。这样，才能最大程度发挥在华留学生传播中华文化的作用，真正成为文化交流的使者和桥梁，促进不同文化之间的交流和理解。
-                    </p>
+            <div style="background-color: #F2F6FA;">
+                <div class="container">
+                    <div class="col-12" data-aos="fade-up" data-aos-duration="1100">
+                        <div class="section-title text-center">
+                            <div class="desktop-content">
+                                <p class="m-auto line-height-3">
+                                    来自五湖四海的留学生们，带着对未来的憧憬，踏上了中国这片神秘的土地。
+                                </p>
+                                <p class="m-auto line-height-3">
+                                    他们带着好奇心，探索着这个拥有悠久历史、灿烂文化的国度。成为国际文化交流的关键推动力。
+                                </p>
+                                <p></p>
+                                <p class="m-auto line-height-3">
+                                    我们的数据收集主要采用问卷调查和深度访谈两种方式。<br>问卷调查分为线上和线下两种形式，<br>线上使用微信问卷星平台设计了中英双语问卷，线下使用英中西三种语言进行实地采访。<br>样本主要选取北京交通大学的留学生群体，<br>并按照国家和性别等进行系统抽样，后续将扩展到北京的各个高校。<br>深度访谈则是针对部分问卷调查的对象进行了更加详细和深入的访谈，以收集更多的信息和故事。
+                                </p>
+                            </div>
+                            <!-- 电脑端内容 -->
+                            <div class="desktop-content">
+                                <p class="m-auto line-height-3">
+                                    来自五湖四海的留学生们，带着对未来的憧憬，踏上了中国这片神秘的土地。
+                                </p>
+                                <p></p>
+                                <p class="m-auto line-height-3">
+                                    他们带着好奇心，探索着这个拥有悠久历史、灿烂文化的国度。成为国际文化交流的关键推动力。
+                                </p>
+                                <span class="d-flex justify-content-center"></span>
+                                <p></p>
+                                <p class="m-auto line-height-3">根据问卷结果，我们收集到了关于在中国学习期间遇到的主要困难的有关数据。</p>
+                                <p></p>
+                            </div>
+                            <!-- 移动端内容 -->
+                            <div class="mobile-content">
+                                <p class="m-auto line-height-3">
+                                    来自五湖四海的留学生们，<br>带着对未来的憧憬，<br>踏上了中国这片神秘的土地。
+                                </p>
+                                <p></p>
+                                <p class="m-auto line-height-3">
+                                    他们带着好奇心，<br>探索着这个拥有悠久历史、灿烂文化的国度。<br>成为国际文化交流的关键推动力。
+                                </p>
+                                <span class="d-flex justify-content-center"></span>
+                                <p></p>
+                                <p class="m-auto line-height-3">根据问卷结果，<br>我们收集到了关于在中国学习期间遇到的主要困难的有关数据。</p>
+                            </div>
+
+                            <!-- 这里需要一张图表 -->
+                            <div class="chart-center" id="chart_2"></div>
+                            <p></p>
+
+                            <!-- 电脑端内容 -->
+                            <div class="desktop-content">
+                                <p class="m-auto line-height-3">
+                                    根据调查，<br>约有 60% 的受访者表示在中国学习期间，他们遇到了适应中国的教育和学习方法方面的困难，<br>包括对不同的教学风格、考核方式和学术文化的不熟悉。
+                                </p>
+                                <p></p>
+                                <p class="m-auto line-height-3">
+                                    超过 70% 的受访者提到，学习和使用汉语是他们在中国学习过程中面临的主要挑战之一，<br>这表明语言障碍对留学生来说可能是一个重要的文化适应问题。
+                                </p>
+                                <p></p>
+                                <p class="m-auto line-height-3">
+                                    大约 45% 的受访者表示在中国处理日常生活问题时遇到了挑战，<br>包括住宿安排、搭乘公共交通、购物以及适应中国货币的使用等。
+                                </p>
+                                <p></p>
+                                <p class="m-auto line-height-3">
+                                    近 30% 的受访者提到他们在与中国学生建立友谊关系方面遇到了困难，<br>涉及到文化差异、语言障碍或社交环境的不同。
+                                </p>
+                                <p></p>
+                                <p class="m-auto line-height-3">
+                                    大约 20% 的受访者表示在保持身体健康方面存在挑战，<br>包括适应不同的气候、饮食和生活方式等。
+                                </p>
+                                <p></p>
+                                <p class="m-auto line-height-3">
+                                    约有 50% 的受访者提到他们在中国学习期间面临学业压力，可能与不同的学习环境和要求有关。
+                                </p>
+                                <span class="d-flex justify-content-center"></span>
+                                <p class="m-auto line-height-3">
+                                    语言障碍可能是最直观的困难之一。<br>
+                                    根据深度访谈调查，有许多在华留学生表示，语言障碍是最大的挑战：</p>
+                                <p></p>
+                                <p class="m-auto line-height-3 cite">
+                                    “我花了两年时间才能听懂普通话”<br>
+                                    “我总是忘记汉字怎么写”<br>
+                                    “我不知道怎么用中文表达我的感情”。<br>
+                                </p>
+                                <p></p>
+                                <p class="m-auto line-height-3">
+                                    除了语言障碍外，在华留学生还要面对中西方文化之间的差异。<br>这些文化差异在无形之间也导致在华留学生产生文化冲突、文化失落或者文化隔阂的情绪。<br>
+
+                                    <br>
+
+                                    在本次研究中，我们还发现大多数在华留学生倾向于使用国外的社交平台，<br>如 WhatsApp、Instagram、Facebook 和 Tiktok 等。<br>
+
+                                    相较之下，他们在我国的主流社交平台上活跃度较低，<br>仅约 10%的受访者表示使用抖音，微博、B 站、小红书等平台的使用率则更低。<br>
+
+                                    <br>
+
+                                    针对这一现象，我们进一步探讨了原因。<br>许多受访者表示，他们之所以倾向于使用国外社交平台，<br>一方面是因为已经形成了使用习惯，<br>另一方面则是因为我国的社交平台在功能和使用习惯上与他们所熟悉的平台存在较大差异。
+                                </p>
+                                <p></p>
+                                <p class="m-auto line-height-3 cite">
+                                    “试过，但是我发现我对它们的功能和使用方式不太熟悉，所以我还是更喜欢使用那些平台。”<br>
+
+                                    “我觉得使用国外的社交平台让我更有归属感，因为我可以与我原来的朋友们保持联系。而在我国的社交平台上，我可能会感到有些孤独。”<br>
+
+                                    ……
+                                </p>
+                                <p></p>
+                                <p class="m-auto line-height-3">
+                                    而对于为何不使用国内的小红书、微博等平台，不少受访者还提出了使用方面的困难，<br>其中一位受访者表示：
+                                <p></p>
+                                <p class="m-auto line-height-3 cite">“翻译功能不是很好用。”</p>
+                                <p></p>
+                                <p class="m-auto line-height-3">另一位留学生则提到：</p>
+                                <p></p>
+                                <p class="m-auto line-height-3 cite">“很多地方，像是评论没法翻译，这对我的使用造成了困难”。</p>
+                                <p></p>
+                                <p class="m-auto line-height-3">
+                                    这些反馈突显了语言障碍在使用中国社交媒体平台时可能构成的障碍。对于留学生而言，在使用这些平台时遇到的语言难题可能会影响他们与中国网民的互动，也可能导致信息获取的不便。
+                                </p>
+                            </div>
+
+                            <!-- 移动端内容 -->
+                            <div class="mobile-content">
+                                <p class="m-auto line-height-3">
+                                    根据调查，<br>约有 60% 的受访者表示在中国学习期间，他们遇到了适应中国的教育和学习方法方面的困难，<br>包括对不同的教学风格、考核方式和学术文化的不熟悉。
+                                </p>
+                                <p></p>
+                                <p class="m-auto line-height-3">
+                                    超过 70% 的受访者提到，学习和使用汉语是他们在中国学习过程中面临的主要挑战之一，<br>这表明语言障碍对留学生来说可能是一个重要的文化适应问题。
+                                </p>
+                                <p></p>
+                                <p class="m-auto line-height-3">
+                                    大约 45% 的受访者表示在中国处理日常生活问题时遇到了挑战，<br>包括住宿安排、搭乘公共交通、购物以及适应中国货币的使用等。
+                                </p>
+                                <p></p>
+                                <p class="m-auto line-height-3">
+                                    近 30% 的受访者提到他们在与中国学生建立友谊关系方面遇到了困难，<br>涉及到文化差异、语言障碍或社交环境的不同。
+                                </p>
+                                <p></p>
+                                <p class="m-auto line-height-3">
+                                    大约 20% 的受访者表示在保持身体健康方面存在挑战，<br>包括适应不同的气候、饮食和生活方式等。
+                                </p>
+                                <p></p>
+                                <p class="m-auto line-height-3">
+                                    约有 50% 的受访者提到他们在中国学习期间面临学业压力，可能与不同的学习环境和要求有关。
+                                </p>
+                                <span class="d-flex justify-content-center"></span>
+                                <p class="m-auto line-height-3">
+                                    语言障碍可能是最直观的困难之一。<br>
+                                    根据深度访谈调查，有许多在华留学生表示，语言障碍是最大的挑战：</p>
+                                <p></p>
+                                <p class="m-auto line-height-3 cite">
+                                    “我花了两年时间才能听懂普通话”<br>
+                                    “我总是忘记汉字怎么写”<br>
+                                    “我不知道怎么用中文表达我的感情”。<br>
+                                </p>
+                                <p></p>
+                                <p class="m-auto line-height-3">
+                                    除了语言障碍外，在华留学生还要面对中西方文化之间的差异。<br>这些文化差异在无形之间也导致在华留学生产生文化冲突、文化失落或者文化隔阂的情绪。<br>
+
+                                    <br>
+
+                                    在本次研究中，我们还发现大多数在华留学生倾向于使用国外的社交平台，<br>如 WhatsApp、Instagram、Facebook 和 Tiktok 等。<br>
+
+                                    相较之下，他们在我国的主流社交平台上活跃度较低，<br>仅约 10%的受访者表示使用抖音，微博、B 站、小红书等平台的使用率则更低。<br>
+
+                                    <br>
+
+                                    针对这一现象，我们进一步探讨了原因。<br>许多受访者表示，他们之所以倾向于使用国外社交平台，<br>一方面是因为已经形成了使用习惯，<br>另一方面则是因为我国的社交平台在功能和使用习惯上与他们所熟悉的平台存在较大差异。
+                                </p>
+                                <p></p>
+                                <p class="m-auto line-height-3 cite">
+                                    “试过，但是我发现我对它们的功能和使用方式不太熟悉，所以我还是更喜欢使用那些平台。”<br>
+
+                                    “我觉得使用国外的社交平台让我更有归属感，因为我可以与我原来的朋友们保持联系。而在我国的社交平台上，我可能会感到有些孤独。”<br>
+
+                                    ……
+                                </p>
+                                <p></p>
+                                <p class="m-auto line-height-3">
+                                    而对于为何不使用国内的小红书、微博等平台，不少受访者还提出了使用方面的困难，<br>其中一位受访者表示：
+                                <p></p>
+                                <p class="m-auto line-height-3 cite">“翻译功能不是很好用。”</p>
+                                <p></p>
+                                <p class="m-auto line-height-3">另一位留学生则提到：</p>
+                                <p></p>
+                                <p class="m-auto line-height-3 cite">“很多地方，像是评论没法翻译，这对我的使用造成了困难”。</p>
+                                <p></p>
+                                <p class="m-auto line-height-3">
+                                    这些反馈突显了语言障碍在使用中国社交媒体平台时可能构成的障碍。对于留学生而言，在使用这些平台时遇到的语言难题可能会影响他们与中国网民的互动，也可能导致信息获取的不便。
+                                </p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <!-- 移动端内容 -->
-                <div class="mobile-content">
-                    <p class="m-auto line-height-3">
-                        随着全球疫情的逐渐控制，在华留学生的生活也将逐渐恢复正常。
-                        在疫情期间，很多留学生不得不在自己的国家进行线上学习，与老师和同学们进行远程交流。这种形式的交流虽然能够维持学习的进行，但是却无法取代面对面的交流和互动。
-                        在后疫情时代，我们希望在华留学生能够更加积极地参与到跨文化交际中来。在学习和生活中，他们可以主动与来自不同国家和地区的人交流，了解不同的文化和思维方式。这不仅可以拓宽视野，还可以提高跨文化交际的能力。
-                        同时，我们希望留学生们能够借助疫情期间的经验，探索新的跨文化交际方式。
-                        例如，可以通过线上交流平台，组织跨文化交流活动，让更多人参与到其中来。还可以利用社交媒体等工具，建立跨文化的社群，促进不同文化之间的交流和互动。
-                        在跨文化交际领域，我们还需要加强对留学生的心理支持和辅导。很多留学生面临着各种压力和挑战，如孤独、焦虑、抑郁等。因此，需要提供适当的心理支持和辅导，帮助他们更好地适应新环境，缓解压力和负面情绪。
-                    </p>
-                    <span class="d-flex justify-content-center"></span>
-                    <p class="m-auto line-height-3">
-                        在华留学生不仅是文化交流的使者，也是中华文化的传播者。我们期待通过心灵的碰撞，能够更好地通过在华留学生群体，传播中华文化，让更多的人了解和理解中国。
-                        通过开展相关活动，让留学生们能够深入学习和体验中华文化。通过阅读中国经典文献，参加各类文化活动，学习中国传统艺术和技艺等方式，深入理解和体验中华文化。将真实的、有深度的中华文化传播给世界。
-                        其次，我们希望留学生们能够用自己的语言和方式，将中华文化传播给世界。利用社交媒体平台，分享自己在中国的生活和学习经历，让更多的人了解中国。同时，他们也可以通过自己的行动，展示中华文化的价值观和精神风貌，让更多的人感受到中华文化的魅力。
-                        中华文化博大精深，以开放和包容的态度，面对文化的差异和冲突，才能有效传播中华文化。尊重和理解不同文化的存在和发展，以平等和互信的态度，让不同的文化交流碰撞。这样，才能最大程度发挥在华留学生传播中华文化的作用，真正成为文化交流的使者和桥梁，促进不同文化之间的交流和理解。
-                    </p>
+                <div id="chapter-2-bottom"></div> <!-- 底部 -->
+            </div>
+        </div>
+
+        <!-- 第三章 -->
+        <div class="section section-margin-bottom" id="chapter-3">
+            <!-- 标题 -->
+            <div class="container container-padding-top">
+                <div class="col-12" data-aos="fade-up" data-aos-duration="1100">
+                    <div class="section-title text-center" style="padding-bottom: 0px;">
+                        <div id="chapter-3-title"> <!-- 第三章标题 -->
+                            <h2 class="m-auto">第三章</h2>
+                            <h3 class="m-auto">在华留学生与文化交际</h3>
+                        </div>
+                        <span class="d-flex justify-content-center"></span>
+                        <p class="m-auto line-height-3">
+                            在当今全球化时代，教育跨足国界，留学生们成为连接不同文化和国家的桥梁。在华留学生们既传播本国文化，又将中华文化播撒向世界。
+                        <p>
+                    </div>
                 </div>
             </div>
-            <div id="chapter-4-bottom"></div> <!-- 底部 -->
-        </div>
-    </div>
-
-
-    <!-- 底部 -->
-    <div class="section" style="padding-bottom: 72px;" id="about">
-        <div class="container">
-            <div class="row">
-                <div class="col-12" data-aos="fade-up" data-aos-anchor-placement="top-bottom" data-aos-duration="1100">
-                    <div class="section-title text-center">
+            <!-- 正文 -->
+            <div class="col-12 section-title text-center" style="padding-bottom: 0px;" data-aos="fade-up"
+                data-aos-duration="1100">
+                <div class="container container-padding-top">
+                    <!-- 电脑端内容 -->
+                    <div class="desktop-content">
                         <p class="m-auto line-height-3">
-                            《跨文化交际视野下的在京高校留学生认知与适应效果的实况研究》
+                            留学生们通过举办各种活动，如外国文化节、文化周等，将丰富多彩的异域文化带入校园，与中国文化相互交融。
+                            他们的文字和歌谣，如五彩的羽翼，轻盈地穿越语言的障碍，与中国文化交织成美妙的乐章。留学生把多元丰富的异域文化带到校园，文化的多元碰撞构成了校园里的一道风景线。
+                            “世界文化节”、“世界文化周”……在这些多姿多彩的外国文化节中，外国留学生成为文化交流的使者，竞相在舞台上展示不同民族的灿烂文化。
                         </p>
+                        <p></p>
+                    </div>
+                    <!-- 移动端内容 -->
+                    <div class="mobile-content">
                         <p class="m-auto line-height-3">
-                            大创项目相关数据收集仍在进行中，后续将不定期更新完善。
+                            留学生们通过举办各种活动，如外国文化节、文化周等，将丰富多彩的异域文化带入校园，与中国文化相互交融。
+                            他们的文字和歌谣，如五彩的羽翼，轻盈地穿越语言的障碍，与中国文化交织成美妙的乐章。留学生把多元丰富的异域文化带到校园，文化的多元碰撞构成了校园里的一道风景线。
+                            “世界文化节”、“世界文化周”……在这些多姿多彩的外国文化节中，外国留学生成为文化交流的使者，竞相在舞台上展示不同民族的灿烂文化。
+                        </p>
+                    </div>
+                    <!-- 图片 -->
+                    <div class="section gallery-section" style="padding-top: 30px; padding-bottom: 30px;">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-lg-12" data-aos="fade-up" data-aos-duration="1800">
+                                    <div class="row gallery-filter-wrapper m-b-n50">
+                                        <div class="col-md-6 col-lg-4 m-b-50 filter-item item2 item3 item4">
+                                            <!-- Single Gallery Start -->
+                                            <div class="single-gallery">
+                                                <div class="gallery-thumb">
+                                                    <img class="fit-image" src="img/detail1.jpg" alt="Gallery Image">
+                                                </div>
+                                            </div>
+                                            <!-- Single Gallery End -->
+                                        </div>
+                                        <div class="col-md-6 col-lg-4 m-b-50 filter-item item1 item3">
+                                            <!-- Single Gallery Start -->
+                                            <div class="single-gallery">
+                                                <div class="gallery-thumb">
+                                                    <img class="fit-image" src="img/detail2.jpg" alt="Gallery Image">
+                                                </div>
+                                            </div>
+                                            <!-- Single Gallery End -->
+                                        </div>
+                                        <div class="col-md-6 col-lg-4 m-b-50 filter-item item1 item3">
+                                            <!-- Single Gallery Start -->
+                                            <div class="single-gallery">
+                                                <div class="gallery-thumb">
+                                                    <img class="fit-image" src="img/detail3.jpg" alt="Gallery Image">
+                                                </div>
+                                            </div>
+                                            <!-- Single Gallery End -->
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 电脑端内容 -->
+                    <div class="desktop-content">
+                        <p class="m-auto line-height-3">
+                            在这里，他们是中外文化的交汇处，是跨越国界的心灵相遇点。<br>
+                            在华留学生不仅是异域文化的传播者，更是中华文化向外传播的有机渠道。<br>
+                            他们在学习、见证、传播中国政治、经济、文化的同时，为世界各国提供了了解真实中国的窗口。<br>
+                            在中外交流中起到了重要的桥梁作用，对于向世界展现我国的真实面貌发挥了重要作用。<br>
+                            在美丽的校园里，来自世界各地的留学生们汇聚一堂，共同学习、交流、成长。他们不仅为中华文化注入了新的活力，还将我国的优秀传统文化传播到了世界的各个角落。<br>
+                            <br>
+                            在我们的调查中，来自法国的留学生玛丽（化名）在我国学习期间，被中国书法的魅力深深吸引。<br>
+                            她不仅自己勤学苦练，还积极向法国的朋友们介绍书法艺术。<br>
+                            玛丽回到法国后，与志同道合的朋友们一起创办了一个书法协会，<br>
+                            定期举办书法展览和交流活动，让更多的人了解到了中国传统文化的魅力。<br>
+                            <br>
+                            不仅如此，许多留学生还将我国的传统节日晒到社交媒体上，与世界各地的朋友们分享。<br>
+                            例如，在春节期间，留学生们会通过照片和视频展示中国新年的独特氛围，如贴春联、包饺子、放鞭炮等。<br>
+                            这些富有中国特色的习俗吸引了世界各地的目光，让更多的人了解到了中国的传统文化和习俗。<br>
+                            用自己的实际行动，为世界提供了解真实中国的窗口，对向世界展现我国的真实面貌发挥了重要作用。
+                        </p>
+                    </div>
+                    <!-- 移动端内容 -->
+                    <div class="mobile-content">
+                        <p class="m-auto line-height-3">
+                            在这里，他们是中外文化的交汇处，是跨越国界的心灵相遇点。<br>
+                            在华留学生不仅是异域文化的传播者，更是中华文化向外传播的有机渠道。<br>
+                            他们在学习、见证、传播中国政治、经济、文化的同时，为世界各国提供了了解真实中国的窗口。<br>
+                            在中外交流中起到了重要的桥梁作用，对于向世界展现我国的真实面貌发挥了重要作用。<br>
+                            在美丽的校园里，来自世界各地的留学生们汇聚一堂，共同学习、交流、成长。他们不仅为中华文化注入了新的活力，还将我国的优秀传统文化传播到了世界的各个角落。<br>
+                            <br>
+                            在我们的调查中，来自法国的留学生玛丽（化名）在我国学习期间，被中国书法的魅力深深吸引。<br>
+                            她不仅自己勤学苦练，还积极向法国的朋友们介绍书法艺术。<br>
+                            玛丽回到法国后，与志同道合的朋友们一起创办了一个书法协会，<br>
+                            定期举办书法展览和交流活动，让更多的人了解到了中国传统文化的魅力。<br>
+                            <br>
+                            不仅如此，许多留学生还将我国的传统节日晒到社交媒体上，与世界各地的朋友们分享。<br>
+                            例如，在春节期间，留学生们会通过照片和视频展示中国新年的独特氛围，如贴春联、包饺子、放鞭炮等。<br>
+                            这些富有中国特色的习俗吸引了世界各地的目光，让更多的人了解到了中国的传统文化和习俗。<br>
+                            用自己的实际行动，为世界提供了解真实中国的窗口，对向世界展现我国的真实面貌发挥了重要作用。
+                        </p>
+                    </div>
+                </div>
+                <div id="chapter-3-bottom"></div> <!-- 底部 -->
+            </div>
+        </div>
+
+
+        <!-- 第四章 -->
+        <div class="section section-margin-bottom" id="chapter-4" style="background-color: #F2F6FA;">
+            <div class="container container-padding-top">
+                <div class="row">
+                    <div class="col-12" data-aos="fade-up" data-aos-anchor-placement="top-bottom"
+                        data-aos-duration="1100">
+                        <div class="section-title text-center" style="padding-bottom: 0px;">
+                            <div id="chapter-4-title"> <!-- 第四章标题 -->
+                                <h2 class="m-auto">第四章</h2>
+                                <h3 class="m-auto">展望</h3>
+                                <span class="d-flex justify-content-center"></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- 正文 -->
+                <div class="col-12 section-title text-center" style="padding-top: 0px;" data-aos="fade-up"
+                    data-aos-duration="1100">
+                    <!-- 电脑端内容 -->
+                    <div class="desktop-content">
+                        <p class="m-auto line-height-3">
+                            随着全球疫情的逐渐控制，在华留学生的生活也将逐渐恢复正常。
+                            在疫情期间，很多留学生不得不在自己的国家进行线上学习，与老师和同学们进行远程交流。这种形式的交流虽然能够维持学习的进行，但是却无法取代面对面的交流和互动。
+                            在后疫情时代，我们希望在华留学生能够更加积极地参与到跨文化交际中来。在学习和生活中，他们可以主动与来自不同国家和地区的人交流，了解不同的文化和思维方式。这不仅可以拓宽视野，还可以提高跨文化交际的能力。
+                            同时，我们希望留学生们能够借助疫情期间的经验，探索新的跨文化交际方式。
+                            例如，可以通过线上交流平台，组织跨文化交流活动，让更多人参与到其中来。还可以利用社交媒体等工具，建立跨文化的社群，促进不同文化之间的交流和互动。
+                            在跨文化交际领域，我们还需要加强对留学生的心理支持和辅导。很多留学生面临着各种压力和挑战，如孤独、焦虑、抑郁等。因此，需要提供适当的心理支持和辅导，帮助他们更好地适应新环境，缓解压力和负面情绪。
                         </p>
                         <span class="d-flex justify-content-center"></span>
-                        <p class="m-auto line-height-3">小组成员：夏荣鑫 张斐 谢建双</p>
-                        <p class="m-auto line-height-3">数据收集：夏荣鑫 张斐</p>
-                        <p class="m-auto line-height-3">网站制作：谢建双</p>
+                        <p class="m-auto line-height-3">
+                            在华留学生不仅是文化交流的使者，也是中华文化的传播者。我们期待通过心灵的碰撞，能够更好地通过在华留学生群体，传播中华文化，让更多的人了解和理解中国。
+                            通过开展相关活动，让留学生们能够深入学习和体验中华文化。通过阅读中国经典文献，参加各类文化活动，学习中国传统艺术和技艺等方式，深入理解和体验中华文化。将真实的、有深度的中华文化传播给世界。
+                            其次，我们希望留学生们能够用自己的语言和方式，将中华文化传播给世界。利用社交媒体平台，分享自己在中国的生活和学习经历，让更多的人了解中国。同时，他们也可以通过自己的行动，展示中华文化的价值观和精神风貌，让更多的人感受到中华文化的魅力。
+                            中华文化博大精深，以开放和包容的态度，面对文化的差异和冲突，才能有效传播中华文化。尊重和理解不同文化的存在和发展，以平等和互信的态度，让不同的文化交流碰撞。这样，才能最大程度发挥在华留学生传播中华文化的作用，真正成为文化交流的使者和桥梁，促进不同文化之间的交流和理解。
+                        </p>
+                    </div>
+                    <!-- 移动端内容 -->
+                    <div class="mobile-content">
+                        <p class="m-auto line-height-3">
+                            随着全球疫情的逐渐控制，在华留学生的生活也将逐渐恢复正常。
+                            在疫情期间，很多留学生不得不在自己的国家进行线上学习，与老师和同学们进行远程交流。这种形式的交流虽然能够维持学习的进行，但是却无法取代面对面的交流和互动。
+                            在后疫情时代，我们希望在华留学生能够更加积极地参与到跨文化交际中来。在学习和生活中，他们可以主动与来自不同国家和地区的人交流，了解不同的文化和思维方式。这不仅可以拓宽视野，还可以提高跨文化交际的能力。
+                            同时，我们希望留学生们能够借助疫情期间的经验，探索新的跨文化交际方式。
+                            例如，可以通过线上交流平台，组织跨文化交流活动，让更多人参与到其中来。还可以利用社交媒体等工具，建立跨文化的社群，促进不同文化之间的交流和互动。
+                            在跨文化交际领域，我们还需要加强对留学生的心理支持和辅导。很多留学生面临着各种压力和挑战，如孤独、焦虑、抑郁等。因此，需要提供适当的心理支持和辅导，帮助他们更好地适应新环境，缓解压力和负面情绪。
+                        </p>
+                        <span class="d-flex justify-content-center"></span>
+                        <p class="m-auto line-height-3">
+                            在华留学生不仅是文化交流的使者，也是中华文化的传播者。我们期待通过心灵的碰撞，能够更好地通过在华留学生群体，传播中华文化，让更多的人了解和理解中国。
+                            通过开展相关活动，让留学生们能够深入学习和体验中华文化。通过阅读中国经典文献，参加各类文化活动，学习中国传统艺术和技艺等方式，深入理解和体验中华文化。将真实的、有深度的中华文化传播给世界。
+                            其次，我们希望留学生们能够用自己的语言和方式，将中华文化传播给世界。利用社交媒体平台，分享自己在中国的生活和学习经历，让更多的人了解中国。同时，他们也可以通过自己的行动，展示中华文化的价值观和精神风貌，让更多的人感受到中华文化的魅力。
+                            中华文化博大精深，以开放和包容的态度，面对文化的差异和冲突，才能有效传播中华文化。尊重和理解不同文化的存在和发展，以平等和互信的态度，让不同的文化交流碰撞。这样，才能最大程度发挥在华留学生传播中华文化的作用，真正成为文化交流的使者和桥梁，促进不同文化之间的交流和理解。
+                        </p>
+                    </div>
+                </div>
+                <div id="chapter-4-bottom"></div> <!-- 底部 -->
+            </div>
+        </div>
+
+
+        <!-- 底部 -->
+        <div class="section" style="padding-bottom: 72px;" id="about">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12" data-aos="fade-up" data-aos-anchor-placement="top-bottom"
+                        data-aos-duration="1100">
+                        <div class="section-title text-center">
+                            <p class="m-auto line-height-3">
+                                《跨文化交际视野下的在京高校留学生认知与适应效果的实况研究》
+                            </p>
+                            <p class="m-auto line-height-3">
+                                大创项目相关数据收集仍在进行中，后续将不定期更新完善。
+                            </p>
+                            <span class="d-flex justify-content-center"></span>
+                            <p class="m-auto line-height-3">小组成员：夏荣鑫 张斐 谢建双</p>
+                            <p class="m-auto line-height-3">数据收集：夏荣鑫 张斐</p>
+                            <p class="m-auto line-height-3">网站制作：谢建双</p>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
 
 </body>
 
@@ -676,6 +681,10 @@
 <script type="text/javascript" src="js/loader.js"></script>
 <script src="assets/js/vendor.min.js"></script>
 <script src="assets/js/plugins.min.js"></script>
+<!-- Echarts-->
+<script type="text/javascript" src="https://assets.pyecharts.org/assets/v5/echarts.min.js"></script>
+<!-- Plotly -->
+<script src="https://cdn.plot.ly/plotly-2.29.1.min.js" charset="utf-8"></script>
 <!--Main JS-->
 <script src="assets/js/main.js"></script>
 
@@ -717,10 +726,11 @@
     });
 
 </script>
+
 <!-- 标题栏显示切换 -->
 <script>
     window.addEventListener('scroll', function () {
-        const header = document.getElementById('chaper-1-header');
+        const header = document.getElementById('chapter-1-header');
         const targetElement = document.getElementById('chapter-1-title');
         const bottomElement = document.getElementById('chapter-1-bottom');
 
@@ -741,9 +751,10 @@
         }
     });
 </script>
+
 <script>
     window.addEventListener('scroll', function () {
-        const header = document.getElementById('chaper-2-header');
+        const header = document.getElementById('chapter-2-header');
         const targetElement = document.getElementById('chapter-2-title');
         const bottomElement = document.getElementById('chapter-2-bottom');
 
@@ -764,9 +775,20 @@
         }
     });
 </script>
+
+<!-- 平滑滚动 -->
+<script>
+    function scrollToElement(elementId) {
+        var element = document.getElementById(elementId);
+        if (element) {
+            element.scrollIntoView({ behavior: 'smooth' });
+        }
+    }
+    </script>
+
 <script>
     window.addEventListener('scroll', function () {
-        const header = document.getElementById('chaper-3-header');
+        const header = document.getElementById('chapter-3-header');
         const targetElement = document.getElementById('chapter-3-title');
         const bottomElement = document.getElementById('chapter-3-bottom');
 
@@ -787,9 +809,10 @@
         }
     });
 </script>
+
 <script>
     window.addEventListener('scroll', function () {
-        const header = document.getElementById('chaper-4-header');
+        const header = document.getElementById('chapter-4-header');
         const targetElement = document.getElementById('chapter-4-title');
         const bottomElement = document.getElementById('chapter-4-bottom');
 
@@ -810,6 +833,7 @@
         }
     });
 </script>
+
 <!-- 图表1初始化 -->
 <script type="text/javascript">
     google.charts.load('current', { 'packages': ['corechart'] });
@@ -842,6 +866,7 @@
         chart.draw(data, options);
     }
 </script>
+
 <!-- 图表2初始化 -->
 <script type="text/javascript">
     google.charts.load('current', { 'packages': ['bar'] });
@@ -877,5 +902,205 @@
         chart.draw(data, google.charts.Bar.convertOptions(options));
     }
 </script>
+
+<!-- Echarts条形图1初始化 -->
+<script>
+    var chart_0c90bacd622c4e2d8ecfd557e554b189 = echarts.init(
+        document.getElementById('0c90bacd622c4e2d8ecfd557e554b189'), 'white', { renderer: 'canvas' });  /* element id*/
+    var option_0c90bacd622c4e2d8ecfd557e554b189 = {
+        "animation": true,
+        "animationThreshold": 2000,
+        "animationDuration": 1000,
+        "animationEasing": "cubicOut",
+        "animationDelay": 0,
+        "animationDurationUpdate": 300,
+        "animationEasingUpdate": "cubicOut",
+        "animationDelayUpdate": 0,
+        "aria": {
+            "enabled": false
+        },
+        "color": [
+            "#5470c6",
+            "#91cc75",
+            "#fac858",
+            "#ee6666",
+            "#73c0de",
+            "#3ba272",
+            "#fc8452",
+            "#9a60b4",
+            "#ea7ccc"
+        ],
+        "series": [
+            {
+                "type": "bar",
+                "name": "\u53d1\u5e03\u9891\u6b21",
+                "legendHoverLink": true,
+                "data": [
+                    94,
+                    45,
+                    36,
+                    27,
+                    8,
+                    4,
+                    3,
+                    2,
+                    2,
+                    2
+                ],
+                "realtimeSort": false,
+                "showBackground": false,
+                "stackStrategy": "samesign",
+                "cursor": "pointer",
+                "barMinHeight": 0,
+                "barCategoryGap": "20%",
+                "barGap": "30%",
+                "large": false,
+                "largeThreshold": 400,
+                "seriesLayoutBy": "column",
+                "datasetIndex": 0,
+                "clip": true,
+                "zlevel": 0,
+                "z": 2,
+                "label": {
+                    "show": true,
+                    "margin": 8
+                }
+            }
+        ],
+        "legend": [
+            {
+                "data": [
+                    "\u53d1\u5e03\u9891\u6b21"
+                ],
+                "selected": {},
+                "show": true,
+                "padding": 5,
+                "itemGap": 10,
+                "itemWidth": 25,
+                "itemHeight": 14,
+                "backgroundColor": "transparent",
+                "borderColor": "#ccc",
+                "borderWidth": 1,
+                "borderRadius": 0,
+                "pageButtonItemGap": 5,
+                "pageButtonPosition": "end",
+                "pageFormatter": "{current}/{total}",
+                "pageIconColor": "#2f4554",
+                "pageIconInactiveColor": "#aaa",
+                "pageIconSize": 15,
+                "animationDurationUpdate": 800,
+                "selector": false,
+                "selectorPosition": "auto",
+                "selectorItemGap": 7,
+                "selectorButtonGap": 10
+            }
+        ],
+        "tooltip": {
+            "show": true,
+            "trigger": "item",
+            "triggerOn": "mousemove|click",
+            "axisPointer": {
+                "type": "line"
+            },
+            "showContent": true,
+            "alwaysShowContent": false,
+            "showDelay": 0,
+            "hideDelay": 100,
+            "enterable": false,
+            "confine": false,
+            "appendToBody": false,
+            "transitionDuration": 0.4,
+            "textStyle": {
+                "fontSize": 14
+            },
+            "borderWidth": 0,
+            "padding": 5,
+            "order": "seriesAsc"
+        },
+        "xAxis": [
+            {
+                "name": "\u7528\u6237\u6635\u79f0",
+                "show": true,
+                "scale": false,
+                "nameLocation": "end",
+                "nameGap": 15,
+                "gridIndex": 0,
+                "axisLabel": {
+                    "show": true,
+                    "rotate": 45,
+                    "margin": 8
+                },
+                "inverse": false,
+                "offset": 0,
+                "splitNumber": 5,
+                "minInterval": 0,
+                "splitLine": {
+                    "show": true,
+                    "lineStyle": {
+                        "show": true,
+                        "width": 1,
+                        "opacity": 1,
+                        "curveness": 0,
+                        "type": "solid"
+                    }
+                },
+                "data": [
+                    "\u592e\u5e7f\u7f51",
+                    "\u4e2d\u56fd\u65e5\u62a5",
+                    "\u4eba\u6c11\u65e5\u62a5",
+                    "\u4e2d\u56fd\u65b0\u95fb\u7f51",
+                    "\u4e2d\u56fd\u9752\u5e74\u62a5",
+                    "\u65b0\u534e\u793e",
+                    "\u6cd5\u6cbb\u65e5\u62a5",
+                    "\u89e3\u653e\u519b\u62a5",
+                    "\u4e2d\u56fd\u5987\u5973\u62a5",
+                    "\u4eba\u6c11\u653f\u534f\u7f51"
+                ]
+            }
+        ],
+        "yAxis": [
+            {
+                "name": "\u53d1\u5e03\u9891\u6b21",
+                "show": true,
+                "scale": false,
+                "nameLocation": "end",
+                "nameGap": 15,
+                "gridIndex": 0,
+                "inverse": false,
+                "offset": 0,
+                "splitNumber": 5,
+                "minInterval": 0,
+                "splitLine": {
+                    "show": true,
+                    "lineStyle": {
+                        "show": true,
+                        "width": 1,
+                        "opacity": 1,
+                        "curveness": 0,
+                        "type": "solid"
+                    }
+                }
+            }
+        ],
+        "title": [
+            {
+                "show": true,
+                "text": "\u5b98\u65b9\u5a92\u4f53\u53d1\u5e03\u9891\u6b21\u6392\u540d\u524d10\u6761\u5f62\u56fe",
+                "target": "blank",
+                "subtarget": "blank",
+                "padding": 5,
+                "itemGap": 10,
+                "textAlign": "auto",
+                "textVerticalAlign": "auto",
+                "triggerEvent": false
+            }
+        ]
+    };
+    chart_0c90bacd622c4e2d8ecfd557e554b189.setOption(option_0c90bacd622c4e2d8ecfd557e554b189);
+</script>
+
+<!-- Plotly测试 -->
+<script
+    type="text/javascript">                                    window.PLOTLYENV = window.PLOTLYENV || {}; if (document.getElementById("6adaae60-86bc-4dd5-afdc-e3259cb6a757")) { Plotly.newPlot("6adaae60-86bc-4dd5-afdc-e3259cb6a757", [{ "customdata": [["负向"], ["中性"], ["正向"]], "domain": { "x": [0.0, 1.0], "y": [0.0, 1.0] }, "hole": 0.4, "hovertemplate": "情感倾向=%{customdata[0]}\u003cbr\u003e情感倾向比例=%{value}\u003cextra\u003e\u003c\u002fextra\u003e", "labels": ["负向", "中性", "正向"], "legendgroup": "", "marker": { "colors": ["rgb(229, 76, 94)", "rgb(240, 173, 78)", "rgb(100, 136, 207)"] }, "name": "", "showlegend": true, "values": [77.04582833266657, 2.9492821265057563, 20.004889540827666], "type": "pie" }], { "template": { "data": { "histogram2dcontour": [{ "type": "histogram2dcontour", "colorbar": { "outlinewidth": 0, "ticks": "" }, "colorscale": [[0.0, "#0d0887"], [0.1111111111111111, "#46039f"], [0.2222222222222222, "#7201a8"], [0.3333333333333333, "#9c179e"], [0.4444444444444444, "#bd3786"], [0.5555555555555556, "#d8576b"], [0.6666666666666666, "#ed7953"], [0.7777777777777778, "#fb9f3a"], [0.8888888888888888, "#fdca26"], [1.0, "#f0f921"]] }], "choropleth": [{ "type": "choropleth", "colorbar": { "outlinewidth": 0, "ticks": "" } }], "histogram2d": [{ "type": "histogram2d", "colorbar": { "outlinewidth": 0, "ticks": "" }, "colorscale": [[0.0, "#0d0887"], [0.1111111111111111, "#46039f"], [0.2222222222222222, "#7201a8"], [0.3333333333333333, "#9c179e"], [0.4444444444444444, "#bd3786"], [0.5555555555555556, "#d8576b"], [0.6666666666666666, "#ed7953"], [0.7777777777777778, "#fb9f3a"], [0.8888888888888888, "#fdca26"], [1.0, "#f0f921"]] }], "heatmap": [{ "type": "heatmap", "colorbar": { "outlinewidth": 0, "ticks": "" }, "colorscale": [[0.0, "#0d0887"], [0.1111111111111111, "#46039f"], [0.2222222222222222, "#7201a8"], [0.3333333333333333, "#9c179e"], [0.4444444444444444, "#bd3786"], [0.5555555555555556, "#d8576b"], [0.6666666666666666, "#ed7953"], [0.7777777777777778, "#fb9f3a"], [0.8888888888888888, "#fdca26"], [1.0, "#f0f921"]] }], "heatmapgl": [{ "type": "heatmapgl", "colorbar": { "outlinewidth": 0, "ticks": "" }, "colorscale": [[0.0, "#0d0887"], [0.1111111111111111, "#46039f"], [0.2222222222222222, "#7201a8"], [0.3333333333333333, "#9c179e"], [0.4444444444444444, "#bd3786"], [0.5555555555555556, "#d8576b"], [0.6666666666666666, "#ed7953"], [0.7777777777777778, "#fb9f3a"], [0.8888888888888888, "#fdca26"], [1.0, "#f0f921"]] }], "contourcarpet": [{ "type": "contourcarpet", "colorbar": { "outlinewidth": 0, "ticks": "" } }], "contour": [{ "type": "contour", "colorbar": { "outlinewidth": 0, "ticks": "" }, "colorscale": [[0.0, "#0d0887"], [0.1111111111111111, "#46039f"], [0.2222222222222222, "#7201a8"], [0.3333333333333333, "#9c179e"], [0.4444444444444444, "#bd3786"], [0.5555555555555556, "#d8576b"], [0.6666666666666666, "#ed7953"], [0.7777777777777778, "#fb9f3a"], [0.8888888888888888, "#fdca26"], [1.0, "#f0f921"]] }], "surface": [{ "type": "surface", "colorbar": { "outlinewidth": 0, "ticks": "" }, "colorscale": [[0.0, "#0d0887"], [0.1111111111111111, "#46039f"], [0.2222222222222222, "#7201a8"], [0.3333333333333333, "#9c179e"], [0.4444444444444444, "#bd3786"], [0.5555555555555556, "#d8576b"], [0.6666666666666666, "#ed7953"], [0.7777777777777778, "#fb9f3a"], [0.8888888888888888, "#fdca26"], [1.0, "#f0f921"]] }], "mesh3d": [{ "type": "mesh3d", "colorbar": { "outlinewidth": 0, "ticks": "" } }], "scatter": [{ "fillpattern": { "fillmode": "overlay", "size": 10, "solidity": 0.2 }, "type": "scatter" }], "parcoords": [{ "type": "parcoords", "line": { "colorbar": { "outlinewidth": 0, "ticks": "" } } }], "scatterpolargl": [{ "type": "scatterpolargl", "marker": { "colorbar": { "outlinewidth": 0, "ticks": "" } } }], "bar": [{ "error_x": { "color": "#2a3f5f" }, "error_y": { "color": "#2a3f5f" }, "marker": { "line": { "color": "#E5ECF6", "width": 0.5 }, "pattern": { "fillmode": "overlay", "size": 10, "solidity": 0.2 } }, "type": "bar" }], "scattergeo": [{ "type": "scattergeo", "marker": { "colorbar": { "outlinewidth": 0, "ticks": "" } } }], "scatterpolar": [{ "type": "scatterpolar", "marker": { "colorbar": { "outlinewidth": 0, "ticks": "" } } }], "histogram": [{ "marker": { "pattern": { "fillmode": "overlay", "size": 10, "solidity": 0.2 } }, "type": "histogram" }], "scattergl": [{ "type": "scattergl", "marker": { "colorbar": { "outlinewidth": 0, "ticks": "" } } }], "scatter3d": [{ "type": "scatter3d", "line": { "colorbar": { "outlinewidth": 0, "ticks": "" } }, "marker": { "colorbar": { "outlinewidth": 0, "ticks": "" } } }], "scattermapbox": [{ "type": "scattermapbox", "marker": { "colorbar": { "outlinewidth": 0, "ticks": "" } } }], "scatterternary": [{ "type": "scatterternary", "marker": { "colorbar": { "outlinewidth": 0, "ticks": "" } } }], "scattercarpet": [{ "type": "scattercarpet", "marker": { "colorbar": { "outlinewidth": 0, "ticks": "" } } }], "carpet": [{ "aaxis": { "endlinecolor": "#2a3f5f", "gridcolor": "white", "linecolor": "white", "minorgridcolor": "white", "startlinecolor": "#2a3f5f" }, "baxis": { "endlinecolor": "#2a3f5f", "gridcolor": "white", "linecolor": "white", "minorgridcolor": "white", "startlinecolor": "#2a3f5f" }, "type": "carpet" }], "table": [{ "cells": { "fill": { "color": "#EBF0F8" }, "line": { "color": "white" } }, "header": { "fill": { "color": "#C8D4E3" }, "line": { "color": "white" } }, "type": "table" }], "barpolar": [{ "marker": { "line": { "color": "#E5ECF6", "width": 0.5 }, "pattern": { "fillmode": "overlay", "size": 10, "solidity": 0.2 } }, "type": "barpolar" }], "pie": [{ "automargin": true, "type": "pie" }] }, "layout": { "autotypenumbers": "strict", "colorway": ["#636efa", "#EF553B", "#00cc96", "#ab63fa", "#FFA15A", "#19d3f3", "#FF6692", "#B6E880", "#FF97FF", "#FECB52"], "font": { "color": "#2a3f5f" }, "hovermode": "closest", "hoverlabel": { "align": "left" }, "paper_bgcolor": "white", "plot_bgcolor": "#E5ECF6", "polar": { "bgcolor": "#E5ECF6", "angularaxis": { "gridcolor": "white", "linecolor": "white", "ticks": "" }, "radialaxis": { "gridcolor": "white", "linecolor": "white", "ticks": "" } }, "ternary": { "bgcolor": "#E5ECF6", "aaxis": { "gridcolor": "white", "linecolor": "white", "ticks": "" }, "baxis": { "gridcolor": "white", "linecolor": "white", "ticks": "" }, "caxis": { "gridcolor": "white", "linecolor": "white", "ticks": "" } }, "coloraxis": { "colorbar": { "outlinewidth": 0, "ticks": "" } }, "colorscale": { "sequential": [[0.0, "#0d0887"], [0.1111111111111111, "#46039f"], [0.2222222222222222, "#7201a8"], [0.3333333333333333, "#9c179e"], [0.4444444444444444, "#bd3786"], [0.5555555555555556, "#d8576b"], [0.6666666666666666, "#ed7953"], [0.7777777777777778, "#fb9f3a"], [0.8888888888888888, "#fdca26"], [1.0, "#f0f921"]], "sequentialminus": [[0.0, "#0d0887"], [0.1111111111111111, "#46039f"], [0.2222222222222222, "#7201a8"], [0.3333333333333333, "#9c179e"], [0.4444444444444444, "#bd3786"], [0.5555555555555556, "#d8576b"], [0.6666666666666666, "#ed7953"], [0.7777777777777778, "#fb9f3a"], [0.8888888888888888, "#fdca26"], [1.0, "#f0f921"]], "diverging": [[0, "#8e0152"], [0.1, "#c51b7d"], [0.2, "#de77ae"], [0.3, "#f1b6da"], [0.4, "#fde0ef"], [0.5, "#f7f7f7"], [0.6, "#e6f5d0"], [0.7, "#b8e186"], [0.8, "#7fbc41"], [0.9, "#4d9221"], [1, "#276419"]] }, "xaxis": { "gridcolor": "white", "linecolor": "white", "ticks": "", "title": { "standoff": 15 }, "zerolinecolor": "white", "automargin": true, "zerolinewidth": 2 }, "yaxis": { "gridcolor": "white", "linecolor": "white", "ticks": "", "title": { "standoff": 15 }, "zerolinecolor": "white", "automargin": true, "zerolinewidth": 2 }, "scene": { "xaxis": { "backgroundcolor": "#E5ECF6", "gridcolor": "white", "linecolor": "white", "showbackground": true, "ticks": "", "zerolinecolor": "white", "gridwidth": 2 }, "yaxis": { "backgroundcolor": "#E5ECF6", "gridcolor": "white", "linecolor": "white", "showbackground": true, "ticks": "", "zerolinecolor": "white", "gridwidth": 2 }, "zaxis": { "backgroundcolor": "#E5ECF6", "gridcolor": "white", "linecolor": "white", "showbackground": true, "ticks": "", "zerolinecolor": "white", "gridwidth": 2 } }, "shapedefaults": { "line": { "color": "#2a3f5f" } }, "annotationdefaults": { "arrowcolor": "#2a3f5f", "arrowhead": 0, "arrowwidth": 1 }, "geo": { "bgcolor": "white", "landcolor": "#E5ECF6", "subunitcolor": "white", "showland": true, "showlakes": true, "lakecolor": "white" }, "title": { "x": 0.05 }, "mapbox": { "style": "light" } } }, "legend": { "tracegroupgap": 0, "orientation": "v", "yanchor": "top", "y": 0.9, "xanchor": "left", "x": 0.85 }, "margin": { "t": 60 }, "piecolorway": ["rgb(229, 76, 94)", "rgb(240, 173, 78)", "rgb(100, 136, 207)"], "font": { "size": 36 }, "title": { "text": "微博用户情感倾向比例" } }, { "responsive": true }) };                            </script>
 
 </html>
