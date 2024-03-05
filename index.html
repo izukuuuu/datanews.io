@@ -13,7 +13,8 @@
 
     <!-- 添加图标库 -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
 
     <!-- CSS -->
     <link rel="stylesheet" href="style.css" />
@@ -72,20 +73,28 @@
     <!-- 侧边栏区域 移动端为底栏-->
     <div class="desktop-content">
         <div class="icon-bar">
-            <a href="#" id="home-button"><span class="material-symbols-outlined">home</span></a>  <!--页面顶部移动到顶部-->
-            <a class="icon-bar-margin" id="chapter-1-button" onclick="scrollToElement('chapter-1-title')"><span class="material-symbols-outlined">monitoring</span></a>  <!--页面顶部移动到chapter-1-header-->
-            <a class="icon-bar-margin" id="chapter-2-button" onclick="scrollToElement('chapter-2-title')"><span class="material-symbols-outlined">join_right</span></a>  <!--页面顶部移动到chapter-2-header-->
-            <a class="icon-bar-margin" id="chapter-3-button" onclick="scrollToElement('chapter-3-title')"><span class="material-symbols-outlined">diversity_2</span></a>  <!--页面顶部移动到chapter-3-header-->
-            <a id="chapter-4-button" onclick="scrollToElement('chapter-4-title')"><span class="material-symbols-outlined">workspaces</span></a>  <!--页面顶部移动到chapter-4-header-->
+            <a href="#" id="home-button"><span class="material-symbols-outlined">home</span></a>
+            <a class="icon-bar-margin" id="chapter-1-button" onclick="scrollToElement('chapter-1')"><span
+                    class="material-symbols-outlined">monitoring</span></a>
+            <a class="icon-bar-margin" id="chapter-2-button" onclick="scrollToElement('chapter-2')"><span
+                    class="material-symbols-outlined">join_right</span></a>
+            <a class="icon-bar-margin" id="chapter-3-button" onclick="scrollToElement('chapter-3')"><span
+                    class="material-symbols-outlined">diversity_2</span></a>
+            <a id="chapter-4-button" onclick="scrollToElement('chapter-4')"><span
+                    class="material-symbols-outlined">workspaces</span></a>
         </div>
     </div>
     <div class="mobile-content">
         <div class="icon-bar-mobile">
-            <a class="icon-bar-margin" href="#" id="home-button"><span class="material-symbols-outlined">home</span></a>  <!--页面顶部移动到顶部-->
-            <a class="icon-bar-margin" id="chapter-1-button" onclick="scrollToElement('chapter-1-title')"><span class="material-symbols-outlined">monitoring</span></a>  <!--页面顶部移动到chapter-1-header-->
-            <a class="icon-bar-margin" id="chapter-2-button" onclick="scrollToElement('chapter-2-title')"><span class="material-symbols-outlined">join_right</span></a>  <!--页面顶部移动到chapter-2-header-->
-            <a class="icon-bar-margin" id="chapter-3-button" onclick="scrollToElement('chapter-3-title')"><span class="material-symbols-outlined">diversity_2</span></a>  <!--页面顶部移动到chapter-3-header-->
-            <a class="icon-bar-margin" id="chapter-4-button" onclick="scrollToElement('chapter-4-title')"><span class="material-symbols-outlined">workspaces</span></a>  <!--页面顶部移动到chapter-4-header-->
+            <a class="icon-bar-margin" href="#" id="home-button"><span class="material-symbols-outlined">home</span></a>
+            <a class="icon-bar-margin" id="chapter-1-button" onclick="scrollToElement('chapter-1')"><span
+                    class="material-symbols-outlined">monitoring</span></a>
+            <a class="icon-bar-margin" id="chapter-2-button" onclick="scrollToElement('chapter-2')"><span
+                    class="material-symbols-outlined">join_right</span></a>
+            <a class="icon-bar-margin" id="chapter-3-button" onclick="scrollToElement('chapter-3')"><span
+                    class="material-symbols-outlined">diversity_2</span></a>
+            <a class="icon-bar-margin" id="chapter-4-button" onclick="scrollToElement('chapter-4')"><span
+                    class="material-symbols-outlined">workspaces</span></a>
         </div>
     </div>
 
@@ -201,6 +210,7 @@
                     </div>
                 </div>
                 <div id="chapter-1-bottom"></div> <!-- 底部 -->
+                <div class="bottom-padding"></div>
             </div>
         </div>
 
@@ -425,6 +435,7 @@
                     </div>
                 </div>
                 <div id="chapter-2-bottom"></div> <!-- 底部 -->
+                <div class="bottom-padding"></div>
             </div>
         </div>
 
@@ -546,6 +557,7 @@
                     </div>
                 </div>
                 <div id="chapter-3-bottom"></div> <!-- 底部 -->
+                <div class="bottom-padding"></div>
             </div>
         </div>
 
@@ -606,6 +618,7 @@
                     </div>
                 </div>
                 <div id="chapter-4-bottom"></div> <!-- 底部 -->
+                <div class="bottom-padding"></div>
             </div>
         </div>
 
@@ -692,11 +705,11 @@
         const header = document.getElementById('chapter-1-header');
         const targetElement = document.getElementById('chapter-1-title');
         const bottomElement = document.getElementById('chapter-1-bottom');
-    
+
         // 获取目标元素的位置信息
         const targetElementRect = targetElement.getBoundingClientRect();
         const bottomElementRect = bottomElement.getBoundingClientRect();
-    
+
         // 当滚动到目标元素的顶部时显示标题栏
         if (targetElementRect.bottom <= 0) {
             header.classList.remove('hidden');
@@ -705,7 +718,7 @@
             header.classList.remove('visible');
             header.classList.add('hidden');
         }
-    
+
         // 当滚动到目标元素的底部时隐藏标题栏
         if (bottomElementRect.bottom <= 0) {
             header.classList.add('hidden');
@@ -715,42 +728,15 @@
 </script>
 
 <script>
-window.addEventListener('scroll', function () {
-    const header = document.getElementById('chapter-2-header');
-    const targetElement = document.getElementById('chapter-2-title');
-    const bottomElement = document.getElementById('chapter-2-bottom');
-
-    // 获取目标元素的位置信息
-    const targetElementRect = targetElement.getBoundingClientRect();
-    const bottomElementRect = bottomElement.getBoundingClientRect();
-
-    // 当滚动到目标元素的顶部时显示标题栏
-    if (targetElementRect.bottom <= 0) {
-        header.classList.remove('hidden');
-        header.classList.add('visible');
-    } else {
-        header.classList.remove('visible');
-        header.classList.add('hidden');
-    }
-
-    // 当滚动到目标元素的底部时隐藏标题栏
-    if (bottomElementRect.bottom <= 0) {
-        header.classList.add('hidden');
-        header.classList.remove('visible');
-    }
-});
-</script>
-
-<script>
     window.addEventListener('scroll', function () {
-        const header = document.getElementById('chapter-3-header');
-        const targetElement = document.getElementById('chapter-3-title');
-        const bottomElement = document.getElementById('chapter-3-bottom');
-    
+        const header = document.getElementById('chapter-2-header');
+        const targetElement = document.getElementById('chapter-2-title');
+        const bottomElement = document.getElementById('chapter-2-bottom');
+
         // 获取目标元素的位置信息
         const targetElementRect = targetElement.getBoundingClientRect();
         const bottomElementRect = bottomElement.getBoundingClientRect();
-    
+
         // 当滚动到目标元素的顶部时显示标题栏
         if (targetElementRect.bottom <= 0) {
             header.classList.remove('hidden');
@@ -759,7 +745,34 @@ window.addEventListener('scroll', function () {
             header.classList.remove('visible');
             header.classList.add('hidden');
         }
-    
+
+        // 当滚动到目标元素的底部时隐藏标题栏
+        if (bottomElementRect.bottom <= 0) {
+            header.classList.add('hidden');
+            header.classList.remove('visible');
+        }
+    });
+</script>
+
+<script>
+    window.addEventListener('scroll', function () {
+        const header = document.getElementById('chapter-3-header');
+        const targetElement = document.getElementById('chapter-3-title');
+        const bottomElement = document.getElementById('chapter-3-bottom');
+
+        // 获取目标元素的位置信息
+        const targetElementRect = targetElement.getBoundingClientRect();
+        const bottomElementRect = bottomElement.getBoundingClientRect();
+
+        // 当滚动到目标元素的顶部时显示标题栏
+        if (targetElementRect.bottom <= 0) {
+            header.classList.remove('hidden');
+            header.classList.add('visible');
+        } else {
+            header.classList.remove('visible');
+            header.classList.add('hidden');
+        }
+
         // 当滚动到目标元素的底部时隐藏标题栏
         if (bottomElementRect.bottom <= 0) {
             header.classList.add('hidden');
@@ -773,11 +786,11 @@ window.addEventListener('scroll', function () {
         const header = document.getElementById('chapter-4-header');
         const targetElement = document.getElementById('chapter-4-title');
         const bottomElement = document.getElementById('chapter-4-bottom');
-    
+
         // 获取目标元素的位置信息
         const targetElementRect = targetElement.getBoundingClientRect();
         const bottomElementRect = bottomElement.getBoundingClientRect();
-    
+
         // 当滚动到目标元素的顶部时显示标题栏
         if (targetElementRect.bottom <= 0) {
             header.classList.remove('hidden');
@@ -786,7 +799,7 @@ window.addEventListener('scroll', function () {
             header.classList.remove('visible');
             header.classList.add('hidden');
         }
-    
+
         // 当滚动到目标元素的底部时隐藏标题栏
         if (bottomElementRect.bottom <= 0) {
             header.classList.add('hidden');
@@ -798,10 +811,8 @@ window.addEventListener('scroll', function () {
 <!-- 平滑滚动 -->
 <script>
     function scrollToElement(elementId) {
-        var element = document.getElementById(elementId);
-        if (element) {
-            element.scrollIntoView({ behavior: 'smooth' });
-        }
+        const element = document.getElementById(elementId);
+        element.scrollIntoView({ behavior: 'smooth'});
     }
 </script>
 

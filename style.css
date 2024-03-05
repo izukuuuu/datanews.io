@@ -366,3 +366,7 @@ html {
 .cite {
     font: 14px "SongTi", sans-serif;
 }
+
+.bottom-padding {
+    height: 5px;
+}
