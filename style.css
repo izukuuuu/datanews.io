@@ -19,7 +19,45 @@
     font-style: normal;
 }
 
+h1 {
+    letter-spacing: 5px;
+    text-transform: uppercase;
+    font: 50px "puhuiti", sans-serif;
+    color: #fff;
+    border: 0px;
+}
 
+h2 {
+    letter-spacing: 5px;
+    text-transform: uppercase;
+    font: 40px "puhuiti", sans-serif;
+    font-weight: bold;
+    color: #111;
+    border: 0px;
+}
+
+h3 {
+    letter-spacing: 5px;
+    text-transform: uppercase;
+    font: 30px "puhuiti", sans-serif;
+    font-weight: bold;
+    color: #111;
+    border: 0px;
+}
+
+h4 {
+    letter-spacing: 5px;
+    text-transform: uppercase;
+    font: 22px "puhuiti", sans-serif;
+    font-weight: bold;
+    color: #111;
+    border: 0px;
+}
+
+p {
+    color: #111;
+    font: 14px "puhuiti", sans-serif;
+}
 
 body,
 html {
@@ -66,6 +104,12 @@ html {
     /* 和侧边栏 同步圆角*/
 }
 
+.icon-bar-mobile a:hover {
+    background-color: rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+    /* 和侧边栏 同步圆角*/
+}
+
 .icon-bar-mobile {
     position: fixed;
     bottom: 0;
@@ -88,21 +132,15 @@ html {
     font-size: 24px;
 }
 
-.icon-bar-mobile a:hover {
-    background-color: rgba(0, 0, 0, 0.2);
-    border-radius: 8px;
-    /* 和侧边栏 同步圆角*/
+.icon-bar-margin {
+    margin: 4px 0px;
+    /* 添加上下边距 */
 }
 
 @media only screen and (max-width: 767px) {
     .active {
         border-radius: 0px;
     }
-}
-
-.icon-bar-margin {
-    margin: 4px 0;
-    /* 添加上下边距 */
 }
 
 /* 导航栏 */

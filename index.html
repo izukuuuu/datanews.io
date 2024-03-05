@@ -24,48 +24,6 @@
     <link rel="stylesheet" href="assets/css/style.min.css">
 </head>
 
-<style>
-    h1 {
-        letter-spacing: 5px;
-        text-transform: uppercase;
-        font: 50px "puhuiti", sans-serif;
-        color: #fff;
-        border: 0px;
-    }
-
-    h2 {
-        letter-spacing: 5px;
-        text-transform: uppercase;
-        font: 40px "puhuiti", sans-serif;
-        font-weight: bold;
-        color: #111;
-        border: 0px;
-    }
-
-    h3 {
-        letter-spacing: 5px;
-        text-transform: uppercase;
-        font: 30px "puhuiti", sans-serif;
-        font-weight: bold;
-        color: #111;
-        border: 0px;
-    }
-
-    h4 {
-        letter-spacing: 5px;
-        text-transform: uppercase;
-        font: 22px "puhuiti", sans-serif;
-        font-weight: bold;
-        color: #111;
-        border: 0px;
-    }
-
-    p {
-        color: #111;
-        font: 14px "puhuiti", sans-serif;
-    }
-</style>
-
 <body>
 
     <!-- 导航栏区域 -->
@@ -123,11 +81,11 @@
     </div>
     <div class="mobile-content">
         <div class="icon-bar-mobile">
-            <a href="#" id="home-button"><span class="material-symbols-outlined">home</span></a>  <!--页面顶部移动到顶部-->
+            <a class="icon-bar-margin" href="#" id="home-button"><span class="material-symbols-outlined">home</span></a>  <!--页面顶部移动到顶部-->
             <a class="icon-bar-margin" id="chapter-1-button" onclick="scrollToElement('chapter-1')"><span class="material-symbols-outlined">monitoring</span></a>  <!--页面顶部移动到chapter-1-header-->
             <a class="icon-bar-margin" id="chapter-2-button" onclick="scrollToElement('chapter-2')"><span class="material-symbols-outlined">join_right</span></a>  <!--页面顶部移动到chapter-2-header-->
             <a class="icon-bar-margin" id="chapter-3-button" onclick="scrollToElement('chapter-3')"><span class="material-symbols-outlined">diversity_2</span></a>  <!--页面顶部移动到chapter-3-header-->
-            <a id="chapter-4-button" onclick="scrollToElement('chapter-4')"><span class="material-symbols-outlined">workspaces</span></a>  <!--页面顶部移动到chapter-4-header-->
+            <a class="icon-bar-margin" id="chapter-4-button" onclick="scrollToElement('chapter-4')"><span class="material-symbols-outlined">workspaces</span></a>  <!--页面顶部移动到chapter-4-header-->
         </div>
     </div>
 
@@ -785,7 +743,7 @@
             element.scrollIntoView({ behavior: 'smooth' });
         }
     }
-    </script>
+</script>
 
 <script>
     window.addEventListener('scroll', function () {
