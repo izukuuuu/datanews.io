@@ -257,6 +257,9 @@ html {
         min-height: calc(100% - 60px) !important;
         height: calc(100% - 60px) !important;
     }
+    .mx-4 {
+        --bs-gutter-x: 0px !important;
+    }
 }
 
 /* 图表 */
