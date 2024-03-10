@@ -7,6 +7,13 @@
 
 @font-face {
     font-family: 'puhuiti';
+    src: url('fonts/Alibaba-PuHuiTi-Medium.ttf') format('truetype');
+    font-weight: medium;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'puhuiti';
     src: url('fonts/Alibaba-PuHuiTi-Bold.ttf') format('truetype');
     font-weight: bold;
     font-style: normal;
@@ -19,10 +26,47 @@
     font-style: normal;
 }
 
+html {
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+}
+
+.language-selector {
+    float: right;
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+    margin-right: 10px;
+}
+
+.language-selector span {
+    margin-right: 6px;
+}
+
+#language {
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 4px 8px;
+    font-size: 16px;
+    color: #999;
+}
+
+#language:focus {
+    outline: none;
+    border-color: #666;
+}
+
+#language option {
+    padding: 4px 8px;
+    font-size: 16px;
+    color: #666;
+}
+
 h1 {
     letter-spacing: 5px;
     text-transform: uppercase;
     font: 50px "puhuiti", sans-serif;
+    font-weight: bolder !important;
     color: #fff;
     border: 0px;
 }
@@ -31,7 +75,7 @@ h2 {
     letter-spacing: 5px;
     text-transform: uppercase;
     font: 40px "puhuiti", sans-serif;
-    font-weight: bold;
+    font-weight: bold !important;
     color: #111;
     border: 0px;
 }
@@ -40,7 +84,7 @@ h3 {
     letter-spacing: 5px;
     text-transform: uppercase;
     font: 30px "puhuiti", sans-serif;
-    font-weight: bold;
+    font-weight: bold !important;
     color: #111;
     border: 0px;
 }
@@ -49,7 +93,7 @@ h4 {
     letter-spacing: 5px;
     text-transform: uppercase;
     font: 22px "puhuiti", sans-serif;
-    font-weight: bold;
+    font-weight: medium;
     color: #111;
     border: 0px;
 }
@@ -57,6 +101,7 @@ h4 {
 p {
     color: #111;
     font: 14px "puhuiti", sans-serif;
+    font-weight: normal;
 }
 
 body,
@@ -73,6 +118,7 @@ html {
     /* 设置特定宽度 */
     background-color: rgba(255, 255, 255, 0.5);
     backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
     top: 50%;
     transform: translateY(-50%);
     left: 20px;
@@ -111,6 +157,7 @@ html {
     overflow: auto;
     background-color: rgba(255, 255, 255, 0.8);
     backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
     box-shadow: 0px -5px 10px rgba(0, 0, 0, 0.1);
     z-index: 998;
     /* 确保在页面上方 */
@@ -154,6 +201,7 @@ html {
     background-color: rgba(255, 255, 255, 0.8);
     /* 标题栏的背景色 */
     backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
     color: #111;
     /* 标题栏文本颜色 */
     padding: 10px;
@@ -217,18 +265,46 @@ html {
     margin: 0 auto;
 }
 
-@media only screen and (min-width: 768px) {
-    .chart-center {
-        width: 600px;
-    }
+/* 三栏图表 */
+.chart-col-md6 {
+    display: flexbox;
+    height: auto;
+    margin: 0 auto;
+    padding-top: 16px;
+    padding-bottom: 16px;
+    background-color: #fff;
+    border-radius: 16px;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.02);
+}
+
+.chart-md6 {
+    flex: 1;
+    height: auto;
+    margin: 0 auto;
+}
+
+.sunburstlayer {
+    scale: 1.5;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-16.75%, -12.5%);
+}
+
+.inner-text {
+    padding: 10px;
+}
+
+.chart-center {
+    width: 100%;
+    max-width: 600px;
 }
 
 @media only screen and (max-width: 767px) {
     .chart-center {
-        width: 320px;
+        max-width: 400px;
     }
 }
-
 
 .bgimg-2 {
     background-image: url("./img/chapter2.jpg");
@@ -264,6 +340,7 @@ html {
     color: #fff;
     background-color: rgba(0, 0, 0, 0.7);
     backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
     padding: 20px;
 }
 
