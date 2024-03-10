@@ -285,6 +285,7 @@ html {
 
 .sunburstlayer {
     scale: 1.5;
+    transform: scale(1.5);
     position: absolute;
     top: 50%;
     left: 50%;
