@@ -249,6 +249,11 @@ html {
     .bgimg-1 {
         background-image: url("./img/title1.png");
     }
+
+    .gallery-filter-wrapper {
+        margin-right: 1.5rem !important;
+        margin-left: 1.5rem !important;
+    }
 }
 
 @media only screen and (max-width: 767px) {
@@ -257,8 +262,10 @@ html {
         min-height: calc(100% - 60px) !important;
         height: calc(100% - 60px) !important;
     }
-    .mx-4 {
-        --bs-gutter-x: 0px !important;
+
+    .gallery-filter-wrapper {
+        margin-right: 0rem !important;
+        margin-left: 0rem !important;
     }
 }
 
