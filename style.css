@@ -117,8 +117,8 @@ html {
     position: fixed;
     width: 60px;
     background-color: rgba(255, 255, 255, 0.5);
-    backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
     top: 50%;
     transform: translateY(-50%);
     left: 20px;
@@ -150,8 +150,8 @@ html {
     width: 100%;
     overflow: auto;
     background-color: rgba(255, 255, 255, 0.8);
-    backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
     box-shadow: 0px -5px 10px rgba(0, 0, 0, 0.1);
     z-index: 998;
     /* 确保在页面上方 */
@@ -201,9 +201,8 @@ html {
     left: 0;
     right: 0;
     background-color: rgba(255, 255, 255, 0.8);
-    /* 标题栏的背景色 */
-    backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
     color: #111;
     /* 标题栏文本颜色 */
     padding: 10px;
@@ -352,8 +351,8 @@ html {
     width: 100%;
     color: #fff;
     background-color: rgba(80, 92, 116, 0.8);
-    backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
     padding: 20px;
 }
 
@@ -414,35 +413,19 @@ html {
 @media (max-width: 768px) {
     h1 {
         font-size: 40px;
-        /* 修改字体大小为40px */
     }
 
     h2 {
         font-size: 30px;
-        /* 修改字体大小为30px */
     }
 
     h3 {
         font-size: 20px;
-        /* 修改字体大小为20px */
     }
+
 }
 
-.line-height-2 {
-    line-height: 2;
-}
 
-.line-height-3 {
-    line-height: 2.5;
-}
-
-.container-padding-top {
-    padding-top: 50px;
-}
-
-.container-padding-top-first {
-    padding-top: 60px;
-}
 
 .shadow-box {
     box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.05);
@@ -457,6 +440,3 @@ html {
     font: 14px "SongTi", sans-serif;
 }
 
-.bottom-padding {
-    height: 5px;
-}

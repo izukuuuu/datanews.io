@@ -280,7 +280,7 @@ only screen and (min-width: 1200px) and (max-width: 1599px) {
 }
 
 .row {
-    --bs-gutter-x: 30px
+    --bs-gutter-x: 30px;
 }
 
 @media only screen and (min-width: 1600px) {
