@@ -41,25 +41,26 @@ html {
 
 .language-selector span {
     margin-right: 6px;
+    color: var(--color-dusty-blue);
 }
 
 #language {
-    border: 1px solid #ccc;
+    border: 1px solid var(--color-pastel-blue);
     border-radius: 8px;
     padding: 4px 8px;
     font-size: 16px;
-    color: #999;
+    color: var(--color-dusty-blue);
 }
 
 #language:focus {
     outline: none;
-    border-color: #666;
+    border-color: var(--color-faded-blue);
 }
 
 #language option {
     padding: 4px 8px;
     font-size: 16px;
-    color: #666;
+    color: var(--color-dusty-blue);
 }
 
 h1 {
@@ -115,7 +116,6 @@ html {
 .icon-bar {
     position: fixed;
     width: 60px;
-    /* 设置特定宽度 */
     background-color: rgba(255, 255, 255, 0.5);
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
@@ -126,22 +126,16 @@ html {
     border-radius: 16px;
     box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.1);
     z-index: 998;
-    /* 确保在页面上方 */
 }
 
 .icon-bar a {
-    display: block;
-    /* 使链接显示在彼此下方而不是并排显示 */
+    display: flex;
     text-align: center;
-    /* 居中对齐文本 */
-    padding: 16px;
-    /* 添加一些填充 */
+    justify-content: center;
+    padding-top: 24px;
+    padding-bottom: 24px;
     transition: all 0.3s ease;
-    /* 为悬停效果添加过渡 */
-    color: grey;
-    /* 白色文字颜色 */
     font-size: 24px;
-    /* 增加字体大小 */
 }
 
 .icon-bar a:hover {
@@ -183,6 +177,14 @@ html {
 .icon-bar-margin {
     margin: 4px 0px;
     /* 添加上下边距 */
+}
+
+.icon-bar span{
+    color: var(--color-navy-blue);
+}
+
+.icon-bar-mobile span{
+    color: var(--color-navy-blue);
 }
 
 @media only screen and (max-width: 767px) {
@@ -242,7 +244,7 @@ html {
     background-position: top right;
     min-height: 100%;
     height: auto;
-    background-color: #f6fbff;
+    background-color: var(--color-light-blue);
 }
 
 @media only screen and (min-width: 768px) {
@@ -321,7 +323,7 @@ html {
     background-image: url("./img/chapter2.jpg");
     background-repeat: no-repeat;
     background-position: center;
-    background-color: #d5e1ef;
+    background-color: var(--color-pastel-blue);
 }
 
 .bgimg-1,
@@ -336,8 +338,8 @@ html {
     position: absolute;
     bottom: 60px;
     left: 100px;
-    background-color: #d9e7f7;
-    color: #6089b8;
+    background-color: var(--color-pastel-blue);
+    color: var(--color-medium-blue);
     padding: 20px;
     margin: 0 auto;
 }
@@ -349,7 +351,7 @@ html {
     left: 0px;
     width: 100%;
     color: #fff;
-    background-color: rgba(0, 0, 0, 0.7);
+    background-color: rgba(80, 92, 116, 0.8);
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
     padding: 20px;
@@ -405,7 +407,7 @@ html {
 
 /* 背景色 */
 .bg-lightblue {
-    background-color: #f9fcff;
+    background-color: var(--color-light-blue);
 }
 
 /* 在小于等于768px的窗口宽度下修改字体大小 */

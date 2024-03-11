@@ -1,0 +1,128 @@
+<!--
+	THIS EXAMPLE WAS DOWNLOADED FROM https://echarts.apache.org/examples/en/editor.html?c=treemap-sunburst-transition&lang=js
+-->
+<!DOCTYPE html>
+<html lang="en" style="height: 100%">
+
+<!-- CSS -->
+<link rel="stylesheet" href="style.css" />
+<link rel="stylesheet" href="style_present.css" />
+
+<head>
+  <meta charset="utf-8">
+</head>
+
+<body style="height: 100%; margin: 0">
+  <div id="container" style="height: 100%"></div>
+
+  <script type="text/javascript" src="https://fastly.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.min.js"></script>
+  <script type="text/javascript" src="https://fastly.jsdelivr.net/npm/echarts@5.5.0/dist/echarts.min.js"></script>
+
+  <!-- Uncomment this line if you want to dataTool extension
+  <script type="text/javascript" src="https://fastly.jsdelivr.net/npm/echarts@5.5.0/dist/extension/dataTool.min.js"></script>
+  -->
+  <!-- Uncomment this line if you want to use gl extension
+  <script type="text/javascript" src="https://fastly.jsdelivr.net/npm/echarts-gl@2/dist/echarts-gl.min.js"></script>
+  -->
+  <!-- Uncomment this line if you want to echarts-stat extension
+  <script type="text/javascript" src="https://fastly.jsdelivr.net/npm/echarts-stat@latest/dist/ecStat.min.js"></script>
+  -->
+  <!-- Uncomment this line if you want to use map
+  <script type="text/javascript" src="https://fastly.jsdelivr.net/npm/echarts@4.9.0/map/js/china.js"></script>
+  <script type="text/javascript" src="https://fastly.jsdelivr.net/npm/echarts@4.9.0/map/js/world.js"></script>
+  -->
+  <!-- Uncomment these two lines if you want to use bmap extension
+  <script type="text/javascript" src="https://api.map.baidu.com/api?v=3.0&ak=YOUR_API_KEY"></script>
+  <script type="text/javascript" src="https://fastly.jsdelivr.net/npm/echarts@5.5.0/dist/extension/bmap.min.js"></script>
+  -->
+
+  <script type="text/javascript">
+    var myChart = echarts.init(document.getElementById('container'));
+
+    $.getJSON(
+      '/continent-2017.json',
+      function (data) {
+        // 获取 CSS 样式中定义的颜色变量
+        const rootStyles = getComputedStyle(document.documentElement);
+        const colorMap = {
+          亚洲: rootStyles.getPropertyValue('--color-asia'),
+          非洲: rootStyles.getPropertyValue('--color-africa'),
+          欧洲: rootStyles.getPropertyValue('--color-europe'),
+          北美洲: rootStyles.getPropertyValue('--color-north-america'),
+          南美洲: rootStyles.getPropertyValue('--color-south-america'),
+          大洋洲: rootStyles.getPropertyValue('--color-oceania')
+        };
+
+        const treemapOption = {
+          series: [
+            {
+              type: 'treemap',
+              id: 'echarts-package-size',
+              animationDurationUpdate: 1000,
+              roam: false,
+              nodeClick: undefined,
+              data: data.map(item => {
+                return {
+                  name: item.continent,
+                  value: item.population,
+                  itemStyle: {
+                    color: colorMap[item.continent] // 设置颜色
+                  }
+                };
+              }),
+              universalTransition: true,
+              label: {
+                show: true,
+                fontSize: 'auto'
+              },
+              breadcrumb: {
+                show: false
+              }
+            }
+          ]
+        };
+
+        const sunburstOption = {
+          series: [
+            {
+              type: 'sunburst',
+              id: 'echarts-package-size',
+              radius: ['20%', '90%'],
+              animationDurationUpdate: 1000,
+              nodeClick: undefined,
+              data: data.map(item => {
+                return {
+                  name: item.continent,
+                  value: item.population,
+                  itemStyle: {
+                    color: colorMap[item.continent] // 设置颜色
+                  }
+                };
+              }),
+              universalTransition: true,
+              itemStyle: {
+                borderWidth: 1,
+                borderColor: 'rgba(255,255,255,.5)'
+              },
+              label: {
+                show: true,
+                color: '#ffffff'
+              }
+            }
+          ]
+        };
+
+        let currentOption = treemapOption;
+        myChart.setOption(currentOption);
+        setInterval(function () {
+          currentOption =
+            currentOption === treemapOption ? sunburstOption : treemapOption;
+          myChart.setOption(currentOption);
+        }, 3000);
+      }
+    );
+
+  </script>
+</body>
+
+</html>

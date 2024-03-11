@@ -1,0 +1,32 @@
+[
+    {
+        "continent": "亚洲",
+        "population": 141071,
+        "percentage": 55.17
+    },
+    {
+        "continent": "非洲",
+        "population": 47511,
+        "percentage": 27.85
+    },
+    {
+        "continent": "欧洲",
+        "population": 13026,
+        "percentage": 15.30
+    },
+    {
+        "continent": "北美洲",
+        "population": 5435,
+        "percentage": 2.58
+    },
+    {
+        "continent": "南美洲",
+        "population": 2434,
+        "percentage": 9.47
+    },
+    {
+        "continent": "大洋洲",
+        "population": 1430,
+        "percentage": 3.27
+    }
+]
