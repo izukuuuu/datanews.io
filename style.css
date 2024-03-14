@@ -128,6 +128,28 @@ html {
     z-index: 998;
 }
 
+.icon-text{
+    display: block;
+    opacity: 0%;
+    padding-top: 12px;
+    position: absolute;
+    color: var(--color-navy-blue);
+    font-size: 13px;
+}
+
+.icon-bar span{
+    color: var(--color-navy-blue);
+    transition: all 0.3s ease;
+}
+
+.icon-bar a .icon-text{
+    transition: all 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.icon-bar-mobile span{
+    color: var(--color-navy-blue);
+}
+
 .icon-bar a {
     display: flex;
     text-align: center;
@@ -140,8 +162,26 @@ html {
 
 .icon-bar a:hover {
     background-color: rgba(0, 0, 0, 0.08);
-    border-radius: 16px;
-    /* 和侧边栏 同步圆角*/
+    border-radius: var(--iconbar-border-radius);
+}
+
+.icon-bar a:hover .icon-text{
+    opacity: 100%;
+    transform: translateY(4px);
+}
+
+.icon-bar a:hover span{
+    transform: translateY(-10px);
+}
+
+.top-icon{
+    border-top-left-radius: var(--iconbar-border-radius);
+    border-top-right-radius: var(--iconbar-border-radius);
+}
+
+.bottom-icon{
+    border-bottom-left-radius: var(--iconbar-border-radius);
+    border-bottom-right-radius: var(--iconbar-border-radius);
 }
 
 .icon-bar-mobile {
@@ -179,13 +219,6 @@ html {
     /* 添加上下边距 */
 }
 
-.icon-bar span{
-    color: var(--color-navy-blue);
-}
-
-.icon-bar-mobile span{
-    color: var(--color-navy-blue);
-}
 
 @media only screen and (max-width: 767px) {
     .active {

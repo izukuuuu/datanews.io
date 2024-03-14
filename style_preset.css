@@ -23,6 +23,11 @@
     --color-oceania: #81C784;
 }
 
+/* 预设值 */
+:root{
+    --iconbar-border-radius: 16px;
+}
+
 /* 渐变预设 */
 .text-gradient-1 {
     position: relative;
