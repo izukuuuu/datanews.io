@@ -25,18 +25,26 @@
 </head>
 
 <body>
-
     <header>
         <div class="language-selector">
             <span class="material-symbols-outlined">
                 language
             </span>
-            <select id="language">
-                <option value="zh">中文</option>
-                <option value="en">English</option>
-                <option value="es">Español</option>
-                <option value="pt">Português</option>
-            </select>
+            <nav>
+                <ul>
+                  <li class="dropdown">
+                    <a href="#" class="dropbtn" id="current-language">
+                        Choose Language
+                    </a>
+                    <div class="dropdown-content">
+                      <a href="index.html">中文</a>
+                      <a href="index_en.html">English</a>
+                      <a href="index_es.html">Español</a>
+                      <a href="index_pt.html">Português</a>
+                    </div>
+                  </li>
+                </ul>
+              </nav>
         </div>
     </header>
 
@@ -49,7 +57,6 @@
             <h3 class="title">前言</h3>
             <h4 class="secondary-header">在华留学生：文化的“跨界”使者</h4>
         </div>
-
     </div>
 
     <div id="chapter-2-header" class="text-center header shadow-box hidden">
@@ -112,23 +119,23 @@
         <div class="icon-bar-mobile">
             <a class="icon-bar-margin" href="#" id="home-button">
                 <span class="material-symbols-outlined">home</span>
-                <div class="icon-text">首页</div>
+                <!-- <div class="icon-text">首页</div> -->
             </a>
             <a class="icon-bar-margin" id="chapter-1-button" onclick="scrollToElement('chapter-1')">
                 <span class="material-symbols-outlined">monitoring</span>
-                <div class="icon-text">前言</div>
+                <!-- <div class="icon-text">前言</div> -->
             </a>
             <a class="icon-bar-margin" id="chapter-2-button" onclick="scrollToElement('chapter-2')">
                 <span class="material-symbols-outlined">join_right</span>
-                <div class="icon-text">第二章</div>
+                <!-- <div class="icon-text">第二章</div> -->
             </a>
             <a class="icon-bar-margin" id="chapter-3-button" onclick="scrollToElement('chapter-3')">
                 <span class="material-symbols-outlined">diversity_2</span>
-                <div class="icon-text">第三章</div>
+                <!-- <div class="icon-text">第三章</div> -->
             </a>
             <a class="icon-bar-margin" id="chapter-4-button" onclick="scrollToElement('chapter-4')">
                 <span class="material-symbols-outlined">workspaces</span>
-                <div class="icon-text">展望</div>
+                <!-- <div class="icon-text">展望</div> -->
             </a>
         </div>
     </div>
@@ -165,14 +172,14 @@
                     <div class="section-title text-center" style="padding-bottom: 0px;">
                         <div id="chapter-1-title"> <!-- 第一章标题（移动端换行）-->
                             <div class="desktop-content">
-                                <h2 class="title text-gradient-3">前言</h2>
+                                <h2 class="title text-gradient-2">前言</h2>
                                 <p></p>
-                                <h3 class="m-auto text-gradient-3">在华留学生：文化的“跨界”使者</h3>
+                                <h3 class="m-auto text-gradient-2">在华留学生：文化的“跨界”使者</h3>
                             </div>
                             <div class="mobile-content">
-                                <h2 class="title text-gradient-3">前言</h2>
+                                <h2 class="title text-gradient-2">前言</h2>
                                 <p></p>
-                                <h3 class="m-auto text-gradient-3">在华留学生：<br>文化的“跨界”使者</h3>
+                                <h3 class="m-auto text-gradient-2">在华留学生：<br>文化的“跨界”使者</h3>
                             </div>
                         </div>
                         <span class="d-flex justify-content-center"></span>
@@ -261,9 +268,9 @@
                             <div class="col-12" data-aos="fade-up" data-aos-duration="1100">
                                 <div class="section-title text-center">
                                     <div id="chapter-2-title"> <!-- 第二章标题 -->
-                                        <h2 class="title text-gradient-3">第二章</h2>
+                                        <h2 class="title text-gradient-2">第二章</h2>
                                         <p></p>
-                                        <h3 class="m-auto text-gradient-3">在华留学生与文化适应</h3>
+                                        <h3 class="m-auto text-gradient-2">在华留学生与文化适应</h3>
                                     </div>
                                     <span class="d-flex justify-content-center"></span>
                                     <p class="m-auto  line-height-3">
@@ -410,7 +417,11 @@
                                 <p class="m-auto line-height-3">
                                     而对于为何不使用国内的小红书、微博等平台，不少受访者还提出了使用方面的困难，<br>其中一位受访者表示：
                                 <p></p>
-                                <p class="m-auto line-height-3 cite">“翻译功能不是很好用。”</p>
+                                <div class="comic-container">
+                                    <div class="dialogue comic-center">
+                                      <p class="m-auto line-height-3 cite">“翻译功能不是很好用。”</p>
+                                    </div>
+                                </div>
                                 <p></p>
                                 <p class="m-auto line-height-3">另一位留学生则提到：</p>
                                 <p></p>
@@ -507,9 +518,9 @@
                 <div class="col-12" data-aos="fade-up" data-aos-duration="1100">
                     <div class="section-title text-center" style="padding-bottom: 0px;">
                         <div id="chapter-3-title"> <!-- 第三章标题 -->
-                            <h2 class="title text-gradient-3">第三章</h2>
+                            <h2 class="title text-gradient-2">第三章</h2>
                             <p></p>
-                            <h3 class="m-auto text-gradient-3">在华留学生与文化交际</h3>
+                            <h3 class="m-auto text-gradient-2">在华留学生与文化交际</h3>
                         </div>
                         <span class="d-flex justify-content-center"></span>
                         <p class="m-auto line-height-3">
@@ -632,9 +643,9 @@
                         data-aos-duration="1100">
                         <div class="section-title text-center" style="padding-bottom: 0px;">
                             <div id="chapter-4-title"> <!-- 第四章标题 -->
-                                <h2 class="title text-gradient-3">第四章</h2>
+                                <h2 class="title text-gradient-2">第四章</h2>
                                 <p></p>
-                                <h3 class="m-auto text-gradient-3">展望</h3>
+                                <h3 class="m-auto text-gradient-2">展望</h3>
                                 <span class="d-flex justify-content-center"></span>
                             </div>
                         </div>

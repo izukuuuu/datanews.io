@@ -42,10 +42,7 @@
     var option;
 
     option = {
-  color: ['#80FFA5', '#00DDFF', '#37A2FF', '#FF0087', '#FFBF00'],
-  title: {
-    text: 'Gradient Stacked Area Chart'
-  },
+  color: ['#80FFA5', '#00DDFF', '#37A2FF', '#FF0087', '#FFBF00', '#9CCC65'],
   tooltip: {
     trigger: 'axis',
     axisPointer: {
@@ -56,12 +53,7 @@
     }
   },
   legend: {
-    data: ['Line 1', 'Line 2', 'Line 3', 'Line 4', 'Line 5']
-  },
-  toolbox: {
-    feature: {
-      saveAsImage: {}
-    }
+    data: ['亚洲', '非洲', '欧洲', '北美洲', '南美洲', '大洋洲']
   },
   grid: {
     left: '3%',
@@ -73,7 +65,7 @@
     {
       type: 'category',
       boundaryGap: false,
-      data: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun']
+      data: ['2016', '2017', '2018', '2019', '2020', '2021', '2022']
     }
   ],
   yAxis: [
@@ -83,7 +75,7 @@
   ],
   series: [
     {
-      name: 'Line 1',
+      name: '亚洲',
       type: 'line',
       stack: 'Total',
       smooth: true,
@@ -107,10 +99,10 @@
       emphasis: {
         focus: 'series'
       },
-      data: [140, 232, 101, 264, 90, 340, 250]
+      data: [160000, 170593, 189191, 205970, 175484, 141071, 130000]
     },
     {
-      name: 'Line 2',
+      name: '非洲',
       type: 'line',
       stack: 'Total',
       smooth: true,
@@ -134,10 +126,10 @@
       emphasis: {
         focus: 'series'
       },
-      data: [120, 282, 111, 234, 220, 340, 310]
+      data: [50000, 49651, 57407, 63463, 58412, 47511, 43000]
     },
     {
-      name: 'Line 3',
+      name: '欧洲',
       type: 'line',
       stack: 'Total',
       smooth: true,
@@ -161,10 +153,10 @@
       emphasis: {
         focus: 'series'
       },
-      data: [320, 132, 201, 334, 190, 130, 220]
+      data: [32000, 35324, 39071, 42079, 25698, 13026, 13000]
     },
     {
-      name: 'Line 4',
+      name: '北美洲',
       type: 'line',
       stack: 'Total',
       smooth: true,
@@ -188,10 +180,10 @@
       emphasis: {
         focus: 'series'
       },
-      data: [220, 402, 231, 134, 190, 230, 120]
+      data: [12000, 12935, 14736, 14211, 8383, 5435, 4400]
     },
     {
-      name: 'Line 5',
+      name: '南美洲',
       type: 'line',
       stack: 'Total',
       smooth: true,
@@ -219,7 +211,38 @@
       emphasis: {
         focus: 'series'
       },
-      data: [220, 302, 181, 234, 210, 290, 150]
+      data: [3000, 3460, 3702, 3920, 3374, 2434, 2300]
+    },
+    {
+      name: '大洋洲',
+      type: 'line',
+      stack: 'Total',
+      smooth: true,
+      lineStyle: {
+        width: 0
+      },
+      showSymbol: false,
+      label: {
+        show: true,
+        position: 'top'
+      },
+      areaStyle: {
+        opacity: 0.8,
+        color: new echarts.graphic.LinearGradient(0, 0, 0, 1, [
+          {
+            offset: 0,
+            color: 'rgb(220, 237, 200)'
+          },
+          {
+            offset: 1,
+            color: 'rgb(156, 204, 101)'
+          }
+        ])
+      },
+      emphasis: {
+        focus: 'series'
+      },
+      data: [3000, 2846, 3394, 3429, 2441, 1430, 2300]
     }
   ]
 };
