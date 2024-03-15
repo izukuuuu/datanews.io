@@ -29,17 +29,7 @@
 /* 预设值 */
 :root {
     --iconbar-border-radius: 16px;
-}
-
-@keyframes slideBackground {
-    from {
-        background-position: 100% 50%;
-        opacity: 0.5;
-    }
-    to {
-        background-position: 0% 50%;
-        opacity: 1;
-    }
+    --transition-ease: all 0.3s ease;
 }
 
 /* 渐变预设 */
@@ -77,6 +67,17 @@
     -webkit-background-clip: text;
     background-clip: text;
     -webkit-text-fill-color: transparent;
+}
+
+@keyframes slideBackground {
+    from {
+        background-position: 100% 50%;
+        opacity: 0.5;
+    }
+    to {
+        background-position: 0% 50%;
+        opacity: 1;
+    }
 }
 
 .animate {

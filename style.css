@@ -32,11 +32,13 @@ html {
 }
 
 .language-selector {
-    float: right;
+    position: relative;
     display: flex;
+    float: right;
     align-items: center;
     margin-top: 10px;
     margin-right: 10px;
+    z-index: 3;
 }
 
 .language-selector span {
@@ -128,6 +130,10 @@ html {
     z-index: 998;
 }
 
+#icon-bar{
+    transition: var(--transition-ease);
+}
+
 .icon-text {
     display: block;
     opacity: 0%;
@@ -142,7 +148,7 @@ html {
 
 .icon-bar span {
     color: var(--color-navy-blue);
-    transition: all 0.3s ease;
+    transition: var(--transition-ease);
 }
 
 .icon-bar a .icon-text {
@@ -159,7 +165,7 @@ html {
     justify-content: center;
     padding-top: 24px;
     padding-bottom: 24px;
-    transition: all 0.3s ease;
+    transition: var(--transition-ease);
     font-size: 24px;
 }
 
@@ -200,12 +206,16 @@ html {
     /* 确保在页面上方 */
 }
 
+#icon-bar-mobile{
+    transition: var(--transition-ease);
+}
+
 .icon-bar-mobile a {
     float: left;
     width: 20%;
     text-align: center;
     padding-top: 6px;
-    transition: all 0.3s ease;
+    transition: var(--transition-ease);
     color: gray;
     font-size: 24px;
 }
@@ -266,11 +276,15 @@ html {
 
 /* 标题图片 */
 .bgimg-1 {
+    position: relative;
+    box-sizing: border-box;
+    background-position: center;
     background-repeat: no-repeat;
-    background-position: top right;
+    background-size: cover;
     min-height: 100%;
     height: auto;
     background-color: var(--color-light-blue);
+    z-index: -2;
 }
 
 @media only screen and (min-width: 768px) {
@@ -359,62 +373,34 @@ html {
     background-size: contain;
 }
 
-/* 标题 */
-.header-text {
-    position: absolute;
-    bottom: 60px;
-    left: 100px;
-    background-color: var(--color-pastel-blue);
-    color: var(--color-medium-blue);
-    padding: 20px;
-    margin: 0 auto;
+.title {
+    display: display-box;
+    height: 100%;
 }
 
-/* 标题-移动版 */
-.header-text-mobile {
-    position: absolute;
-    bottom: 60px;
-    left: 0px;
-    width: 100%;
-    color: #fff;
-    background-color: rgba(80, 92, 116, 0.8);
+/* 标题 */
+.title-text {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    width: max-content;
+    color: var(--color-navy-blue);
+    background-color: rgba(255, 255, 255, 0.8);
     -webkit-backdrop-filter: blur(10px);
     backdrop-filter: blur(10px);
-    padding: 20px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    z-index: 2;
 }
 
-/* 深灰色文本 */
-.caption {
-    position: absolute;
-    /* 设置左侧边距为10% */
-    left: 2%;
-    /* 设置右侧边距为10% */
-    right: 10%;
-    top: 50%;
-    /* 设置宽度为90%以保持总宽度不超过100% */
-    width: 88%;
-    /* 设置文本左对齐 */
-    text-align: left;
-    color: #000;
+.title-text-large {
+    font: 80px "SongTi", sans-serif;
 }
 
-.title-desktop {
-    font: 50px "puhuiti", sans-serif;
-    font-weight: bold;
-}
-
-.title-desktop-large {
-    font: 60px "puhuiti", sans-serif;
-    font-weight: bold;
-}
-
-.title-mobile {
-    font: 30px "puhuiti", sans-serif;
-    font-weight: bold;
-}
-
-.title-mobile-large {
-    font: 50px "puhuiti", sans-serif;
+.title-text-secondary {
+    font: 18px "puhuiti", sans-serif;
     font-weight: bold;
 }
 
@@ -451,8 +437,6 @@ html {
     }
 
 }
-
-
 
 .shadow-box {
     box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.05);
@@ -520,8 +504,8 @@ nav span {
     backdrop-filter: blur(10px);
 }
 
-#dropdown-content{
-    transition: all 0.3s ease;
+#dropdown-content {
+    transition: var(--transition-ease);
 }
 
 .dropdown-content a {
