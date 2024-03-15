@@ -150,7 +150,7 @@ window.addEventListener('scroll', function () {
 
 window.addEventListener('scroll', function () {
   const header = document.getElementById('icon-bar');
-  const targetElement = document.getElementById('chapter-1-title');
+  const targetElement = document.getElementById('chapter-1');
 
   // 获取目标元素的位置信息
   const targetElementRect = targetElement.getBoundingClientRect();
