@@ -123,14 +123,14 @@ html {
     backdrop-filter: blur(10px);
     top: 50%;
     transform: translateY(-50%);
-    left: 20px;
     margin: 0 auto;
     border-radius: 16px;
+    left: 24px;
     box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.1);
     z-index: 998;
 }
 
-#icon-bar{
+#icon-bar {
     transition: var(--transition-ease);
 }
 
@@ -206,7 +206,7 @@ html {
     /* 确保在页面上方 */
 }
 
-#icon-bar-mobile{
+#icon-bar-mobile {
     transition: var(--transition-ease);
 }
 
@@ -257,7 +257,7 @@ html {
     /* 确保标题栏在页面上方 */
 }
 
-.hidden {
+.invisible {
     opacity: 0;
     visibility: hidden;
 }
@@ -301,8 +301,6 @@ html {
 @media only screen and (max-width: 767px) {
     .bgimg-1 {
         background-image: url("./img/title2.png");
-        min-height: calc(100% - 60px) !important;
-        height: calc(100% - 60px) !important;
     }
 
     .gallery-filter-wrapper {
@@ -375,6 +373,7 @@ html {
 
 .title {
     display: display-box;
+    background-color: rgba(0, 0, 0, 0);
     height: 100%;
 }
 
@@ -554,4 +553,43 @@ nav span {
 
 .comic-center {
     background-color: #cdf;
+}
+
+.bubble-text {
+    /* 字体 */
+    font-family: sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.5;
+
+    /* 颜色 */
+    color: #333;
+
+    /* 边框 */
+    border: 1px solid #ddd;
+    border-radius: 4px;
+
+    /* 填充 */
+    padding: 10px;
+
+    /* 显示 */
+    display: inline-block;
+    margin: 10px;
+
+    /* 阴影 */
+    box-shadow: 0 0 4px rgba(0, 0, 0, 0.1);
+
+    /* 动画 */
+    transition: all 0.2s ease-in-out;
+}
+
+.bubble-text:hover {
+    /* 颜色 */
+    color: #fff;
+
+    /* 背景颜色 */
+    background-color: #333;
+
+    /* 边框颜色 */
+    border-color: #333;
 }
