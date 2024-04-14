@@ -394,6 +394,16 @@ html {
     z-index: -1;
 }
 
+.title-text::after {
+    content: "";
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    bottom: 10px;
+    left: 10px;
+    border: 2px solid var(--color-medium-blue);
+}
+
 .title-text-large {
     font: 80px "SongTi", sans-serif;
 }
