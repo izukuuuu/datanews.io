@@ -31,8 +31,13 @@ html {
     text-rendering: optimizeLegibility;
 }
 
+.headerbtn-block {
+    align-items: stretch;
+}
+
 .goto{
     position: relative;
+    display: flex;
     float: left;
     align-items: center;
     margin-top: 10px;
@@ -54,7 +59,8 @@ html {
     z-index: 3;
 }
 
-.language-selector span {
+.language-selector span,
+.goto span {
     margin-right: 6px;
     color: var(--color-dusty-blue);
 }
@@ -493,11 +499,19 @@ nav span {
     color: var(--color-dusty-blue);
 }
 
-.dropbtn,
 .clickbtn {
     border: 1px solid var(--color-pastel-blue);
     border-radius: 8px;
-    padding: 4px 8px;
+    padding: 0px 8px;
+    font-size: 16px;
+    color: var(--color-dusty-blue);
+    text-decoration: none;
+}
+
+.dropbtn {
+    border: 1px solid var(--color-pastel-blue);
+    border-radius: 8px;
+    padding: 6px 8px;
     font-size: 16px;
     color: var(--color-dusty-blue);
     text-decoration: none;
@@ -549,7 +563,8 @@ nav span {
     display: block;
 }
 
-.dropdown:hover .dropbtn {
+.dropdown:hover .dropbtn,
+.clickbtn:hover {
     background-color: var(--color-pastel-blue)
 }
 
