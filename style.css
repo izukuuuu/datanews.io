@@ -35,6 +35,21 @@ html {
     align-items: stretch;
 }
 
+.header-h1 {
+    margin: 0 4px;
+    font-size: 24px;
+    color: var(--color-dusty-blue);
+    position: relative;
+}
+.header-h1::after {
+    content: "\00B7"; /* 使用unicode表示圆点 */
+    position: flex;
+    top: 50%;
+    transform: translateY(-50%);
+    margin-left: 10px;
+    color: var(--color-dusty-blue);
+}
+
 .goto{
     position: relative;
     display: flex;
@@ -46,7 +61,7 @@ html {
 }
 
 .goto a{
-    margin-right: 6px;
+    margin-right: 10px;
 }
 
 .language-selector {
