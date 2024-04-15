@@ -31,6 +31,19 @@ html {
     text-rendering: optimizeLegibility;
 }
 
+.goto{
+    position: relative;
+    float: left;
+    align-items: center;
+    margin-top: 10px;
+    margin-left: 10px;
+    z-index: 4;
+}
+
+.goto a{
+    margin-right: 6px;
+}
+
 .language-selector {
     position: relative;
     display: flex;
@@ -480,7 +493,8 @@ nav span {
     color: var(--color-dusty-blue);
 }
 
-.dropbtn {
+.dropbtn,
+.clickbtn {
     border: 1px solid var(--color-pastel-blue);
     border-radius: 8px;
     padding: 4px 8px;
@@ -489,11 +503,13 @@ nav span {
     text-decoration: none;
 }
 
-.dropbtn:hover {
+.dropbtn:hover,
+.clickbtn:hover {
     color: var(--color-navy-blue);
 }
 
-.dropbtn:focus {
+.dropbtn:focus,
+.clickbtn:focus {
     color: var(--color-dusty-blue);
 }
 
