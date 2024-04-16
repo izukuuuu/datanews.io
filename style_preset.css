@@ -121,7 +121,7 @@
 }
 
 .text-margin-bottom {
-    margin-bottom: 30px;
+    margin-bottom: 30px !important;
 }
 
 .d-flex {
