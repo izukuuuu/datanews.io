@@ -50,6 +50,15 @@ html {
     color: var(--color-dusty-blue);
 }
 
+.adding-title {
+    position: absolute;
+    display: flex;
+    float: left;
+    margin: 0 4px;
+    font-size: 24px;
+    color: var(--color-dusty-blue);
+}
+
 .goto{
     position: relative;
     display: flex;
