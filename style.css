@@ -451,10 +451,19 @@ html {
     font: 80px "SongTi", sans-serif;
 }
 
+.title-text-large-latin {
+    font: 50px "SongTi", sans-serif;
+}
+
 .title-text-secondary {
     font: 18px "puhuiti", sans-serif;
     font-weight: bold;
 }
+
+.title-text-secondary-latin {
+    font: 14px "SongTi", sans-serif;
+}
+
 
 .margin-gap-30 {
     margin: 30px 0;
