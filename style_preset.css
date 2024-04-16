@@ -18,12 +18,14 @@
     
     --color-surface: #fff;
 
-    --color-asia: #FBC02D;
-    --color-africa: #ca8f7a;
-    --color-europe: #59bbc8;
-    --color-north-america: #8b76b0;
-    --color-south-america: #FF8A80;
-    --color-oceania: #81C784;
+    --color-asia: #2b73af;
+    --color-africa: #41ae3c;
+    --color-europe: #10aec2;
+    --color-north-america: #d44aaf;
+    --color-south-america: #e66158;
+    --color-oceania: #68c56d;
+
+    --color-text-gray: #aaaaaa;
 }
 
 /* 预设值 */
@@ -112,4 +114,12 @@
         margin-right: 0rem !important;
         margin-left: 0rem !important;
     }
+}
+
+.small {
+    color: var(--color-text-gray) !important;
+}
+
+.text-margin-bottom {
+    margin-bottom: 30px;
 }

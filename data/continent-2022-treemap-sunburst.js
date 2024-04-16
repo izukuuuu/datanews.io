@@ -1,4 +1,4 @@
-var myChart = echarts.init(document.getElementById('container'));
+var myChart = echarts.init(document.getElementById('container-treemap'));
 
 $.getJSON(
   './data/continent-2022.json',
@@ -15,6 +15,12 @@ $.getJSON(
     };
 
     const treemapOption = {
+      grid: {
+        left: '3%',
+        right: '4%',
+        bottom: '3%',
+        containLabel: true
+      },
       series: [
         {
           type: 'treemap',
@@ -34,7 +40,7 @@ $.getJSON(
           universalTransition: true,
           label: {
             show: true,
-            fontSize: 'auto'
+            fontSize: '16'
           },
           breadcrumb: {
             show: false
@@ -44,6 +50,12 @@ $.getJSON(
     };
 
     const sunburstOption = {
+      grid: {
+        left: '3%',
+        right: '4%',
+        bottom: '3%',
+        containLabel: true
+      },
       series: [
         {
           type: 'sunburst',
@@ -79,6 +91,6 @@ $.getJSON(
       currentOption =
         currentOption === treemapOption ? sunburstOption : treemapOption;
       myChart.setOption(currentOption);
-    }, 3000);
+    }, 6000);
   }
 );
