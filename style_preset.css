@@ -1,12 +1,12 @@
 /* 颜色配置 */
 :root {
-    --color-light-blue: rgb(240, 245, 249);
-    --color-pastel-blue: rgb(217, 231, 247);
-    --color-faded-blue: rgb(175, 188, 206);
-    --color-medium-blue: rgb(96, 137, 184);
-    --color-dusty-blue: rgb(118, 145, 176);
-    --color-dark-blue: rgb(0, 74, 159);
-    --color-navy-blue: rgb(80, 92, 116);
+    --color-light-pink: rgb(255, 235, 245);
+    --color-pastel-pink: rgb(238, 210, 227);
+    --color-faded-pink: rgb(210, 180, 195);  /* 饱和度较低的 */
+    --color-medium-pink: rgb(180, 120, 140);
+    --color-dusty-pink: rgb(160, 130, 145);  /* 饱和度较低的 */
+    --color-dark-pink: rgb(120, 60, 90);
+    --color-dead-pink: rgb(100, 80, 100);  /* 饱和度较低的 */
 
     --color-gradient-stop-1-1: #4285f4;
     --color-gradient-stop-1-2: #9b72cb;
