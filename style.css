@@ -164,7 +164,7 @@ html {
 }
 
 .icon-bar a:hover {
-    background-color: rgba(0, 0, 0, 0.08);
+    background-color: rgba(180, 120, 140, 0.08);
     border-radius: var(--iconbar-border-radius);
 }
 
@@ -215,7 +215,7 @@ html {
 }
 
 .icon-bar-mobile a:hover {
-    background-color: rgba(0, 0, 0, 0.08);
+    background-color: rgba(180, 120, 140, 0.08);
     border-radius: 24px;
     padding-bottom: 0px;
     /* 和侧边栏 同步圆角*/
@@ -352,7 +352,7 @@ html {
 }
 
 .bgimg-2 {
-    background-image: url("./img/chapter2.jpg");
+    background-image: url("./img/chapter2.png");
     background-repeat: no-repeat;
     background-position: center;
     background-color: var(--color-pastel-pink);
