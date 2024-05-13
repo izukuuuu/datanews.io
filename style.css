@@ -132,7 +132,7 @@ html {
     display: block;
     opacity: 0%;
     position: absolute;
-    color: var(--color-dead-pink);
+    color: var(--color-medium-pink);
     font-size: 13px;
 }
 
@@ -141,7 +141,7 @@ html {
 }
 
 .icon-bar span {
-    color: var(--color-dead-pink);
+    color: var(--color-medium-pink);
     transition: var(--transition-ease);
 }
 
@@ -150,7 +150,7 @@ html {
 }
 
 .icon-bar-mobile span {
-    color: var(--color-dead-pink);
+    color: var(--color-medium-pink);
 }
 
 .icon-bar a {
@@ -272,9 +272,9 @@ html {
 .bgimg-1 {
     position: relative;
     box-sizing: border-box;
-    background-position: bottom;
+    background-position: bottom center; /* 确保底部中心对齐 */
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: cover !important; /* 宽度自适应，高度始终填满 */
     min-height: 100%;
     height: auto;
     background-color: var(--color-light-pink);
