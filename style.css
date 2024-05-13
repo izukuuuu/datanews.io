@@ -272,7 +272,7 @@ html {
 .bgimg-1 {
     position: relative;
     box-sizing: border-box;
-    background-position: center;
+    background-position: bottom;
     background-repeat: no-repeat;
     background-size: cover;
     min-height: 100%;
@@ -374,7 +374,7 @@ html {
 /* 标题 */
 .title-text {
     position: fixed;
-    top: 50%;
+    top: 30%;
     left: 50%;
     transform: translate(-50%, -50%);
     text-align: center;
