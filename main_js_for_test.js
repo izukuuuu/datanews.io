@@ -105,19 +105,35 @@ window.onload = () => {
     updateImage();
 };
 // ------------------------------
-// 备用标题
+// 微信判断
 // ------------------------------
-document.addEventListener('DOMContentLoaded', function() {
-    var video = document.getElementById('bg-video');
-    var altTitle = document.getElementById('alt-title');
+function isWeChat() {
+    // 检查 userAgent 中是否包含 MicroMessenger
+    var ua = window.navigator.userAgent.toLowerCase();
+    return ua.match(/micromessenger/i) == 'micromessenger';
+}
 
-    video.addEventListener('canplay', function() {
-        // 视频可以正常播放时隐藏备用标题
-        altTitle.style.display = 'none';
-    });
+function showWeChatOverlay() {
+    // 创建覆盖层元素
+    var overlay = document.createElement('div');
+    overlay.style.position = 'fixed';
+    overlay.style.top = 0;
+    overlay.style.left = 0;
+    overlay.style.width = '100%';
+    overlay.style.height = '100%';
+    overlay.style.backgroundColor = 'rgba(0, 0, 0, 0.8)';
+    overlay.style.color = 'white';
+    overlay.style.display = 'flex';
+    overlay.style.justifyContent = 'center';
+    overlay.style.alignItems = 'center';
+    overlay.style.zIndex = 9999;
+    overlay.innerText = '请在浏览器中打开，微信不支持部分功能，会导致显示异常';
 
-    video.addEventListener('error', function() {
-        // 视频无法播放时显示备用标题
-        altTitle.style.display = 'block';
-    });
-});
+    // 将覆盖层添加到 body
+    document.body.appendChild(overlay);
+}
+
+// 判断是否在微信内，如果是则显示覆盖层
+if (isWeChat()) {
+    showWeChatOverlay();
+}
