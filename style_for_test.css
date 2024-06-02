@@ -161,3 +161,7 @@ mark.highlight.highlight-active::before {
     font: 14px "SongTi", sans-serif, bold;
     line-height: 2.5;
 }
+
+#intro-video-element {
+    display: none;
+}

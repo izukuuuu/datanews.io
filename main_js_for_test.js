@@ -137,3 +137,23 @@ function showWeChatOverlay() {
 if (isWeChat()) {
     showWeChatOverlay();
 }
+// ------------------------------
+// 点击开门
+// ------------------------------
+document.addEventListener("DOMContentLoaded", function() {
+    const playButton = document.getElementById("play-button");
+    const video = document.getElementById("intro-video-element");
+
+    playButton.addEventListener("click", function() {
+        playButton.style.display = "none";
+        video.style.display = "block";
+        video.play();
+
+        // 播放结束时触发的事件
+        video.addEventListener("ended", function() {
+            // 停在最后一帧
+            video.pause();
+            video.currentTime = video.duration;
+        });
+    });
+});
