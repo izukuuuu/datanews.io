@@ -34,7 +34,7 @@ html {
 h1 {
     letter-spacing: 5px;
     text-transform: uppercase;
-    font: 50px "puhuiti", sans-serif;
+    font: 60px "puhuiti", sans-serif;
     font-weight: bolder !important;
     color: #fff;
     border: 0px;
@@ -43,7 +43,7 @@ h1 {
 h2 {
     letter-spacing: 5px;
     text-transform: uppercase;
-    font: 40px "puhuiti", sans-serif;
+    font: 50px "puhuiti", sans-serif;
     font-weight: bold !important;
     color: #111;
     border: 0px;
@@ -52,7 +52,7 @@ h2 {
 h3 {
     letter-spacing: 5px;
     text-transform: uppercase;
-    font: 30px "puhuiti", sans-serif;
+    font: 40px "puhuiti", sans-serif;
     font-weight: bold !important;
     color: #111;
     border: 0px;
@@ -61,7 +61,7 @@ h3 {
 h4 {
     letter-spacing: 5px;
     text-transform: uppercase;
-    font: 22px "puhuiti", sans-serif;
+    font: 30px "puhuiti", sans-serif;
     font-weight: medium;
     color: #111;
     border: 0px;
@@ -69,8 +69,14 @@ h4 {
 
 p {
     color: #111;
-    font: 14px "puhuiti", sans-serif;
+    font: 18px "puhuiti", sans-serif;
     font-weight: normal;
+}
+
+@media only screen and (max-width: 767px) {
+    p {
+        font-size: 16px
+    }
 }
 
 body,
@@ -84,15 +90,15 @@ html {
 .icon-bar {
     position: fixed;
     width: 60px;
-    background-color: rgba(255, 255, 255, 0.5);
+    background-color: rgba(255, 255, 255, 0.8);
     -webkit-backdrop-filter: blur(10px);
     backdrop-filter: blur(10px);
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.1);
     top: 50%;
     transform: translateY(-50%);
     margin: 0 auto;
     border-radius: 16px;
     left: 24px;
-    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.1);
     z-index: 998;
 }
 
@@ -147,6 +153,38 @@ html {
 
 .icon-bar a:hover span {
     transform: translateY(-10px);
+}
+
+/* IconBar 悬浮Tooltip*/
+.tooltip {
+    display: flex;
+    opacity: 0%;
+    left: 60px;
+    max-height: 50px;
+    overflow: hidden;
+    transform: scaleX(0) translateY(-25%);
+    background-color: var(--color-light-pink);
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+    padding: 5px;
+    border-radius: 10px;
+    border-top-left-radius: 0px;
+    border-bottom-left-radius: 0px;
+    white-space: nowrap !important;
+    z-index: -10 !important;
+    transform-origin: left;
+    transition: transform 0.2s cubic-bezier(0.33, 0.04, 0, 0.95), opacity 0.5s cubic-bezier(0.47, 0.05, 0.06, 0.97);
+}
+
+.tooltip p{
+    color: var(--color-dead-pink);
+    font-size: 14px !important;
+}
+
+.icon-bar a:hover .tooltip {
+    display: block;
+    opacity: 100%;
+    transform: scaleX(1) translateY(-25%);
 }
 
 .top-icon {
@@ -327,7 +365,7 @@ html {
     background-image: url("./img/chapter2.png");
     background-repeat: no-repeat;
     background-position: center;
-    background-color: var(--color-pastel-pink);
+    background-color: var(--color-bgmain-pink);
 }
 
 .bgimg-1,
@@ -346,7 +384,7 @@ html {
 /* 标题 */
 .title-text {
     position: fixed;
-    top: 30%;
+    top: 32%;
     left: 50%;
     transform: translate(-50%, -50%);
     text-align: center;
@@ -355,38 +393,59 @@ html {
     background-color: rgba(255, 255, 255, 0.8);
     -webkit-backdrop-filter: blur(10px);
     backdrop-filter: blur(10px);
-    padding-top: 30px;
-    padding-bottom: 30px;
-    padding-left: 20px;
-    padding-right: 20px;
+    border-radius: 80px; /* 添加圆角 */
+    padding-top: 40px;
+    padding-bottom: 40px;
+    padding-left: 10px;
+    padding-right: 10px;
     z-index: -1;
 }
 
 .title-text::after {
     content: "";
     position: absolute;
+    border-radius: 72px; /* 添加圆角 */
     top: 10px;
-    right: 10px;
     bottom: 10px;
     left: 10px;
+    right: 10px;
     border: 2px solid var(--color-medium-pink);
 }
 
-.title-text-large {
-    font: 80px "SongTi", sans-serif;
+/* 媒体查询，大屏幕参数 */
+@media only screen and (min-width: 768px) {
+    .title-text {
+        border-radius: 40dvb; /* 大屏幕圆角 */
+        padding-top: 50px;
+        padding-bottom: 50px;
+        padding-left: 50px;
+        padding-right: 50px;
+    }
+
+    .title-text::after {
+        border-radius: 40dvb; /* 大屏幕圆角 */
+        top: 16px;
+        bottom: 16px;
+        left: 16px;
+        right: 16px;
+    }
 }
 
+.title-text-large {
+    font: 120px "Bubble", sans-serif;
+}
+
+/* 拉丁文本大小，启用，现在实际为移动设备标题文本大小 */
 .title-text-large-latin {
-    font: 50px "SongTi", sans-serif;
+    font: 60px "Bubble", sans-serif;
 }
 
 .title-text-secondary {
-    font: 18px "puhuiti", sans-serif;
-    font-weight: bold;
+    font: 60px "XiYue", sans-serif;
 }
 
 .title-text-secondary-latin {
-    font: 14px "SongTi", sans-serif;
+    font: 42px "XiYue", sans-serif;
 }
 
 
@@ -401,11 +460,6 @@ html {
     padding: 18px;
     box-sizing: border-box;
     letter-spacing: 10px;
-}
-
-/* 背景色 */
-.bg-lightblue {
-    background-color: var(--color-light-pink);
 }
 
 /* 在小于等于768px的窗口宽度下修改字体大小 */
@@ -432,6 +486,11 @@ html {
     border-radius: 16px;
     box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.1);
 }
+
+.little-title {
+    font: 24px "SongTi", sans-serif;
+}
+
 
 .cite {
     font: 14px "SongTi", sans-serif;
@@ -473,6 +532,12 @@ nav span {
 }
 
 .comic-center {
+    background-color: #cdf;
+}
+
+/* 复用一下，充当小标题 */
+.comic-title {
+    margin-top: 80px;
     background-color: #cdf;
 }
 

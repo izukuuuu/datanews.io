@@ -183,7 +183,7 @@ window.addEventListener('scroll', function () {
 // ------------------------------
 window.addEventListener('scroll', function () {
   const header = document.getElementById('icon-bar');
-  const targetElement = document.getElementById('chapter-1');
+  const targetElement = document.getElementById('parallax-1');
 
   // 获取目标元素的位置信息
   const targetElementRect = targetElement.getBoundingClientRect();
@@ -227,22 +227,25 @@ function scrollToElement(elementId) {
 // 标题文本自动隐藏
 // ------------------------------
 window.addEventListener('scroll', function () {
-  const titleText = document.querySelector('.title-text');
+  const titleTexts = document.querySelectorAll('.title-text');
   const content = document.getElementById('chapter-1');
 
-  const titleTextRect = titleText.getBoundingClientRect();
-  const contentRect = content.getBoundingClientRect();
+  titleTexts.forEach(titleText => {
+      const titleTextRect = titleText.getBoundingClientRect();
+      const contentRect = content.getBoundingClientRect();
 
-  // 如果滚动到下一个大的 div，则将 title-text 的 z-index 设置为低于 0，使其被下面的元素覆盖
-  if (contentRect.top <= titleTextRect.top) {
-    titleText.classList.add('invisible');
-    titleText.classList.remove('visible');
-  } else {
-    // 否则将 z-index 设置为较高的值，使其浮在最上层
-    titleText.classList.add('visible');
-    titleText.classList.remove('invisible');
-  }
+      // 如果滚动到下一个大的 div，则将 title-text 的 z-index 设置为低于 0，使其被下面的元素覆盖
+      if (contentRect.top <= titleTextRect.top) {
+          titleText.classList.add('invisible');
+          titleText.classList.remove('visible');
+      } else {
+          // 否则将 z-index 设置为较高的值，使其浮在最上层
+          titleText.classList.add('visible');
+          titleText.classList.remove('invisible');
+      }
+  });
 });
+
 
 // ------------------------------
 // 电脑、移动端元素切换

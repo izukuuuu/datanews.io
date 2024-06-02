@@ -48,11 +48,11 @@ textarea {
 }
 
 h1 {
-    font-size: 40px
+    font-size: 60px
 }
 
 h2 {
-    font-size: 36px
+    font-size: 48px
 }
 
 @media only screen and (max-width: 767px) {
@@ -398,14 +398,6 @@ only screen and (min-width: 1200px) and (max-width: 1599px) {
     margin-top: 20px;
     padding-bottom: 20px;
     display: block
-}
-
-.section-title span:after {
-    position: absolute;
-    content: '';
-    width: 60px;
-    height: 1px;
-    background: #8AAFCC
 }
 
 .section-title span.thick-border {

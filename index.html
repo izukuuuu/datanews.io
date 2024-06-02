@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta charset="UTF-8">
 
-    <title>“跨界”使者：跨文化视野下的在华留学生调查</title>
+    <title>“快来抱抱她”——不被看见的单亲母亲群体困境</title>
 
     <!-- 图标 -->
     <link rel="shortcut icon" href="assets/images/logo.png">
@@ -17,10 +17,19 @@
     <!-- CSS -->
     <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" href="style_preset.css" />
+    <link rel="stylesheet" href="style_for_test.css" />
     <!-- 模板CSS -->
     <link rel="stylesheet" href="assets/css/vendor/vendor.min.css">
     <link rel="stylesheet" href="assets/css/plugins/plugins.min.css">
     <link rel="stylesheet" href="assets/css/style.min.css">
+    <!--UE-->
+    <link href="./lib/UePageReset.css" rel="stylesheet" />
+    <link href="./lib/UePage.css" rel="stylesheet" />
+    <link href="./css/index.css" rel="stylesheet" />
+    <script src="./lib/UePage.umd.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/lipten/slidePage/dist/slidePage.min.css">
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/lipten/slidePage/dist/slidePage.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.5.2/animate.min.css">
 </head>
 
 <body>
@@ -29,7 +38,7 @@
     <div id="chapter-1-header" class="text-center header shadow-box invisible">
         <div class="desktop-content">
             <h1 class="adding-title">TEST-LEFT</h1>
-            <h4 class="m-auto">在华留学生：文化的“跨界”使者</h4>
+            <h4 class="m-auto">前言 | 她们，单亲母亲</h4>
         </div>
         <div class="mobile-content">
             <h3 class="title">前言</h3>
@@ -40,33 +49,33 @@
     <div id="chapter-2-header" class="text-center header shadow-box invisible">
         <div class="desktop-content">
             <h1 class="adding-title">TEST-LEFT</h1>
-            <h4 class="m-auto">第二章 | 在华留学生与文化适应</h4>
+            <h4 class="m-auto">第二章 | 蔷薇色尘埃</h4>
         </div>
         <div class="mobile-content">
             <h3 class="title">第二章</h3>
-            <h4 class="secondary-header">在华留学生与文化适应</h4>
+            <h4 class="secondary-header">蔷薇色尘埃</h4>
         </div>
     </div>
 
     <div id="chapter-3-header" class="text-center header shadow-box invisible">
         <div class="desktop-content">
             <h1 class="adding-title">TEST-LEFT</h1>
-            <h4 class="m-auto">第三章 | 在华留学生与文化交际</h4>
+            <h4 class="m-auto">第三章 | 羁绊与眼泪</h4>
         </div>
         <div class="mobile-content">
             <h3 class="title">第三章</h3>
-            <h4 class="secondary-header">在华留学生与文化交际</h4>
+            <h4 class="secondary-header">羁绊与眼泪</h4>
         </div>
     </div>
 
     <div id="chapter-4-header" class="text-center header shadow-box invisible">
         <div class="desktop-content">
             <h1 class="adding-title">TEST-LEFT</h1>
-            <h4 class="m-auto">第四章 | 展望</h4>
+            <h4 class="m-auto">第四章 | 曙光与融冰</h4>
         </div>
         <div class="mobile-content">
             <h3 class="title">第四章</h3>
-            <h4 class="secondary-header">展望</h4>
+            <h4 class="secondary-header">曙光与融冰</h4>
         </div>
     </div>
 
@@ -77,22 +86,37 @@
             <a href="#" class="top-icon" id="home-button">
                 <span class="material-symbols-outlined">home</span>
                 <div class="icon-text">首页</div>
+                <div class="tooltip">
+                    <p>“快来抱抱她”<br>不被看见的单亲母亲群体困境</p>
+                </div>
             </a>
             <a class="icon-bar-margin" id="chapter-1-button" onclick="scrollToElement('chapter-1')">
                 <span class="material-symbols-outlined">monitoring</span>
                 <div class="icon-text">前言</div>
+                <div class="tooltip">
+                    <p>前言：<br>她们，单亲母亲</p>
+                </div>
             </a>
             <a class="icon-bar-margin" id="chapter-2-button" onclick="scrollToElement('chapter-2')">
                 <span class="material-symbols-outlined">join_right</span>
                 <div class="icon-text">第二章</div>
+                <div class="tooltip">
+                    <p>第二章<br>蔷薇色尘埃</p>
+                </div>
             </a>
             <a class="icon-bar-margin" id="chapter-3-button" onclick="scrollToElement('chapter-3')">
                 <span class="material-symbols-outlined">diversity_2</span>
                 <div class="icon-text">第三章</div>
+                <div class="tooltip">
+                    <p>第三章<br>羁绊与眼泪</p>
+                </div>
             </a>
             <a class="bottom-icon" id="chapter-4-button" onclick="scrollToElement('chapter-4')">
                 <span class="material-symbols-outlined">workspaces</span>
-                <div class="icon-text">展望</div>
+                <div class="icon-text">第四章</div>
+                <div class="tooltip">
+                    <p>第四章<br>曙光与融冰</p>
+                </div>
             </a>
         </div>
     </div>
@@ -116,7 +140,7 @@
             </a>
             <a class="icon-bar-margin" id="chapter-4-button" onclick="scrollToElement('chapter-4')">
                 <span class="material-symbols-outlined">workspaces</span>
-                <!-- <div class="icon-text">展望</div> -->
+                <!-- <div class="icon-text">曙光与融冰</div> -->
             </a>
         </div>
     </div>
@@ -125,99 +149,456 @@
     <div class="title">
         <!-- 标题区域 -->
         <div class="bgimg-1"></div>
-        <div class="title-text">
-            <span class="title-text-large">单亲<br>妈妈</span>
-            <p style="height: 20px;"></p>
-            <span class="title-text-secondary">需要长点副标题单亲妈妈调查</span>
+        <div class="desktop-content">
+            <div class="title-text">
+                <span class="title-text-large">“快来抱抱她”</span>
+                <p style="height: 0px;"></p>
+                <span class="title-text-secondary">不被看见的单亲母亲群体困境</span>
+            </div>
         </div>
+        <div class="mobile-content">
+            <div class="title-text">
+                <span class="title-text-large-latin">“快来抱抱她”</span>
+                <p style="height: 10px;"></p>
+                <span class="title-text-secondary-latin">不被看见的<br>单亲母亲群体困境</span>
+            </div>
+        </div>
+
     </div>
     <!-- Title Section End -->
 
-
     <!-- 第一章 -->
+    <section class="parallax-container">
+        <section class="parallax" id="parallax-1">
+            <div class="parallax-content">
+                <h1 class="parallax-title">前言：</h1>
+                <h1 class="parallax-title">她们，单亲母亲</h1>
+            </div>
+        </section>
+    </section>
+
     <div class="section" id="chapter-1" style="background-color: white;">
         <div class="container pt-5 row col-12 mx-auto" data-aos="fade-up" data-aos-duration="1100">
             <div class="text-center" id="chapter-1-title"> <!-- 第一章标题（移动端换行）-->
                 <div class="desktop-content">
                     <h2 class="title text-gradient-2">前言</h2>
                     <p></p>
-                    <h3 class="m-auto text-gradient-2">在华留学生：文化的“跨界”使者</h3>
+                    <h3 class="m-auto text-gradient-2">她们，单亲母亲</h3>
                 </div>
                 <div class="mobile-content">
                     <h2 class="title text-gradient-2">前言</h2>
                     <p></p>
-                    <h3 class="m-auto text-gradient-2">在华留学生：<br>文化的“跨界”使者</h3>
+                    <h3 class="m-auto text-gradient-2">她们，单亲母亲</h3>
                 </div>
             </div>
         </div>
-        <div class="container col-12 section-title text-center" style="padding-top: 0px;" data-aos="fade-up"
+        <div class="container col-12 section-title text-start" style="padding-top: 0px;" data-aos="fade-up"
             class="d-flex justify-content-center">
-            <span class="d-flex justify-content-center"></span>
-            <p class="m-auto line-height-3">
-                我国一直以来都欢迎世界各地的留学生来华学习，我国对留学生提供了一系列的优惠政策，包括奖学金、简化签证手续、扩大就业范围等。如教育部《关于规范我高等学校接受国际学生有关工作的通知》等，均为国际学生进入中国高等院校本专科阶段学习提供了良好的政策。随着我国国际地位的不断提高，来华留学生的数量也在逐年增加。在华留学生在享受我国提供的便利的同时，也需要适应我国的文化和生活方式，这是一个双向的过程，也是世界了解我国的一个重要途径。
+            <span class="d-flex justify-content-center split"></span> <!-- 这是分割线 -->
+            <p class="m-auto line-height-3 font-songti">
+                &nbsp;&nbsp;&nbsp;&nbsp;提及单亲母亲，你能想到什么？
             </p>
-            <span class="d-flex justify-content-center"></span>
-            <p class="m-auto line-height-3">
-                截至2022年底，我国共有来自214个国家和地区的25.5万名在华留学生。
+            <p class="m-auto line-height-3 font-songti">
+                &nbsp;&nbsp;&nbsp;&nbsp;是不易？
             </p>
-            <!-- 条形图 -->
-            <div class="col-md-6 chart-center" id="container-trend"></div>
-            <p class="small m-auto line-height-3">
-                数据来源：《中国教育统计年鉴》（2012-2022）<br><br>
+            <p class="m-auto line-height-3 font-songti">
+                &nbsp;&nbsp;&nbsp;&nbsp;是坚韧？
             </p>
-            <p class="m-auto line-height-3">
-                其中亚洲国家占比最高，达到66.9%。
+            <p class="m-auto line-height-3 font-songti">
+                &nbsp;&nbsp;&nbsp;&nbsp;还是无私的爱？
             </p>
-            <p class="m-auto line-height-3">
-                其次为非洲，占比为22.5%，<br>成为既亚洲之外的第二大来华留学输出地。
+            <p class="m-auto line-height-3 font-songti">
+                &nbsp;&nbsp;&nbsp;&nbsp;亦或是，带着偏见、歧视？
             </p>
-            <div class="col-md-6 chart-center" id="container-treemap"></div>
-            <p class="small m-auto line-height-3">
-                数据来源：《中国教育统计年鉴》（2022）<br><br>
-            </p>
-            <!-- 电脑端内容 -->
-            <div class="desktop-content">
-                <p class="m-auto line-height-3">
-                    对于在华留学生而言，跨越国界仅是开始，更为重要的是他们在文化领域的跨界融合。
+            <p class="m-auto line-height-3 font-songti">
+                &nbsp;&nbsp;&nbsp;&nbsp;——这一日常生活中被忽视的群体，每每提及，却总是伴随着不合时宜的贬损与污名化，被人们带着有色眼睛去审视。
+            </p>            
+            <div id="ue-page" class="ue-page-fa2f2 page-editor-d6a06"><!---->
+                <div id="hSGsGuba" data-key="案例" data-effect="imageAnimate" data-layout-name="layoutGroup"
+                    class="layout-group-c08f7">
+                    <div class="layout-group-inner-wrapper-d86bc"><!---->
+                        <section class="layout_group-limit_content-bd8af">
+                            <section class="layout-container-d811a">
+                                <section class="layout-body-f0b12">
+                                    <section id="AhJZWmgC" data-layout-name="layoutRow"
+                                        class="page-layout-row-wrapper-f6543">
+                                        <div class="layout_row-margin_top-e2d5e"></div>
+                                        <div class="page-layout-row-container-dc0ac"><!---->
+                                            <section class="page-layout-row-feee0"><!---->
+                                                <div class="page-layout-row-inner-ab83f">
+                                                    <div id="bdtAhoil" data-layout-name="layoutCol"
+                                                        class="page-layout-col-dom-eaac1" style="position: relative;">
+                                                        <div class="layout-inner-wrapper-c1718 oper-area-bdtAhoil">
+                                                            <div class="enter-animate-aa9db"><!----><!---->
+                                                                <div class="layout-col-container-aa69d">
+                                                                    <div class="layout-col-inner-e7875">
+                                                                        <section id="ZpQACeoR"
+                                                                            data-layout-name="layoutBlock">
+                                                                            <section data-effect="normal"
+                                                                                data-theme="NO04"
+                                                                                class="layout-card-block-d692b">
+                                                                                <div>
+                                                                                    <div class="card-list-e19cd">
+                                                                                        <div class="card-item-ced72">
+                                                                                            <div
+                                                                                                class="item-inner-e288d">
+                                                                                                <div
+                                                                                                    class="item-index-aa0e7">
+                                                                                                    <span
+                                                                                                        class="text-f25bb">
+                                                                                                        01 </span>
+                                                                                                </div>
+                                                                                                <div
+                                                                                                    class="item-thumb-box-ea296">
+                                                                                                    <div data-image-ratio="4-3"
+                                                                                                        class="item-thumb-d4899"
+                                                                                                        style="--aspect-w: 4; --aspect-h: 3; background-image: url(&quot;./images/dba33222842e3a568703735ec490edbc.png&quot;); background-position: 35% 39%;">
+                                                                                                        <img src="./images/dba33222842e3a568703735ec490edbc.png"
+                                                                                                            alt="">
+                                                                                                    </div>
+                                                                                                </div>
+                                                                                                <div
+                                                                                                    class="item-info-d1db3">
+                                                                                                    <div
+                                                                                                        class="item-info-inner-eb03b">
+                                                                                                        <div
+                                                                                                            class="item-title-cab46">
+                                                                                                            <span
+                                                                                                                class="text-f25bb">
+                                                                                                                离异带两娃
+                                                                                                            </span>
+                                                                                                        </div>
+                                                                                                        <div
+                                                                                                            class="item-subtitle-fccf5">
+                                                                                                            <span
+                                                                                                                class="text-f25bb">
+                                                                                                                “离婚还带着两个孩子，真不知道她怎么把孩子带好。”
+                                                                                                            </span>
+                                                                                                        </div>
+                                                                                                        <div
+                                                                                                            class="item-desc-bb806">
+                                                                                                            <div
+                                                                                                                class="text-f25bb">
+                                                                                                                描述
+                                                                                                            </div>
+                                                                                                        </div>
+                                                                                                    </div>
+                                                                                                </div>
+                                                                                            </div>
+                                                                                        </div>
+                                                                                        <div class="card-item-ced72">
+                                                                                            <div
+                                                                                                class="item-inner-e288d">
+                                                                                                <div
+                                                                                                    class="item-index-aa0e7">
+                                                                                                    <span
+                                                                                                        class="text-f25bb">
+                                                                                                        02 </span>
+                                                                                                </div>
+                                                                                                <div
+                                                                                                    class="item-thumb-box-ea296">
+                                                                                                    <div data-image-ratio="4-3"
+                                                                                                        class="item-thumb-d4899"
+                                                                                                        style="--aspect-w: 4; --aspect-h: 3; background-image: url(&quot;./images/9a549e3b9d7adc194523fae3610ef8fe.png&quot;);">
+                                                                                                        <img src="./images/9a549e3b9d7adc194523fae3610ef8fe.png"
+                                                                                                            alt="">
+                                                                                                    </div>
+                                                                                                </div>
+                                                                                                <div
+                                                                                                    class="item-info-d1db3">
+                                                                                                    <div
+                                                                                                        class="item-info-inner-eb03b">
+                                                                                                        <div
+                                                                                                            class="item-title-cab46">
+                                                                                                            <span
+                                                                                                                class="text-f25bb">
+                                                                                                                女主带球跑
+                                                                                                            </span>
+                                                                                                        </div>
+                                                                                                        <div
+                                                                                                            class="item-subtitle-fccf5">
+                                                                                                            <span
+                                                                                                                class="text-f25bb">
+                                                                                                                “还怀着孕呢就敢离婚，去父留子，真不要脸。”
+                                                                                                            </span>
+                                                                                                        </div>
+                                                                                                        <div
+                                                                                                            class="item-desc-bb806">
+                                                                                                            <div
+                                                                                                                class="text-f25bb">
+                                                                                                                描述
+                                                                                                            </div>
+                                                                                                        </div>
+                                                                                                    </div>
+                                                                                                </div>
+                                                                                            </div>
+                                                                                        </div>
+                                                                                        <div class="card-item-ced72">
+                                                                                            <div
+                                                                                                class="item-inner-e288d">
+                                                                                                <div
+                                                                                                    class="item-index-aa0e7">
+                                                                                                    <span
+                                                                                                        class="text-f25bb">
+                                                                                                        03 </span>
+                                                                                                </div>
+                                                                                                <div
+                                                                                                    class="item-thumb-box-ea296">
+                                                                                                    <div data-image-ratio="4-3"
+                                                                                                        class="item-thumb-d4899"
+                                                                                                        style="--aspect-w: 4; --aspect-h: 3; background-image: url(&quot;./images/1201137f7b77e7b7560d4e254b6f45be.png&quot;); background-position: 28% 38%;">
+                                                                                                        <img src="./images/1201137f7b77e7b7560d4e254b6f45be.png"
+                                                                                                            alt="">
+                                                                                                    </div>
+                                                                                                </div>
+                                                                                                <div
+                                                                                                    class="item-info-d1db3">
+                                                                                                    <div
+                                                                                                        class="item-info-inner-eb03b">
+                                                                                                        <div
+                                                                                                            class="item-title-cab46">
+                                                                                                            <span
+                                                                                                                class="text-f25bb">
+                                                                                                                还记得吗
+                                                                                                                这是我们的孩子啊
+                                                                                                            </span>
+                                                                                                        </div>
+                                                                                                        <div
+                                                                                                            class="item-subtitle-fccf5">
+                                                                                                            <span
+                                                                                                                class="text-f25bb">
+                                                                                                                “离婚了还有胆要抚养费，和怨鬼一样。”
+                                                                                                            </span>
+                                                                                                        </div>
+                                                                                                        <div
+                                                                                                            class="item-desc-bb806">
+                                                                                                            <div
+                                                                                                                class="text-f25bb">
+                                                                                                                描述
+                                                                                                            </div>
+                                                                                                        </div>
+                                                                                                    </div>
+                                                                                                </div>
+                                                                                            </div>
+                                                                                        </div>
+                                                                                        <div class="card-item-ced72">
+                                                                                            <div
+                                                                                                class="item-inner-e288d">
+                                                                                                <div
+                                                                                                    class="item-index-aa0e7">
+                                                                                                    <span
+                                                                                                        class="text-f25bb">
+                                                                                                        04 </span>
+                                                                                                </div>
+                                                                                                <div
+                                                                                                    class="item-thumb-box-ea296">
+                                                                                                    <div data-image-ratio="4-3"
+                                                                                                        class="item-thumb-d4899"
+                                                                                                        style="--aspect-w: 4; --aspect-h: 3; background-image: url(&quot;./images/9915997da18fe2176b8e165d518aa192.png&quot;);">
+                                                                                                        <img src="./images/9915997da18fe2176b8e165d518aa192.png"
+                                                                                                            alt="">
+                                                                                                    </div>
+                                                                                                </div>
+                                                                                                <div
+                                                                                                    class="item-info-d1db3">
+                                                                                                    <div
+                                                                                                        class="item-info-inner-eb03b">
+                                                                                                        <div
+                                                                                                            class="item-title-cab46">
+                                                                                                            <span
+                                                                                                                class="text-f25bb">
+                                                                                                                第一章
+                                                                                                                回国
+                                                                                                            </span>
+                                                                                                        </div>
+                                                                                                        <div
+                                                                                                            class="item-subtitle-fccf5">
+                                                                                                            <span
+                                                                                                                class="text-f25bb">
+                                                                                                                “在国外乱搞完被抛弃了就算了，还回国丢脸来了。”
+                                                                                                            </span>
+                                                                                                        </div>
+                                                                                                        <div
+                                                                                                            class="item-desc-bb806">
+                                                                                                            <div
+                                                                                                                class="text-f25bb">
+                                                                                                                描述
+                                                                                                            </div>
+                                                                                                        </div>
+                                                                                                    </div>
+                                                                                                </div>
+                                                                                            </div>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </section>
+                                                                        </section>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </section>
+                                        </div>
+                                        <div class="layout_row-margin_bottom-b3e51"></div>
+                                    </section>
+                                </section>
+                            </section>
+                        </section>
+                    </div>
+                </div>
+                <p class="small m-auto line-height-3 text-center">
+                    （移动到图片上显示相应文字）
                 </p>
-                <p class="m-auto line-height-3">
-                    不仅仅是因为身处中国而跨越国界，更因为他们在文化层面展开了深刻的“跨界”探索。
-                </p>
-                <p class="m-auto line-height-3">
-                    如今，在华留学生已逐渐崭露头角，成为国际文化交流的关键推动力。
-                </p>
-                <p class="m-auto line-height-3">
-                    他们在中国学习、生活、工作，不仅深刻感受中国文化的魅力，同时也将自己的文化特色传播开来。
-                </p>
-                <p class="m-auto line-height-3">这种文化交融与传播，正是“跨界”的真正本质，使留学生成为文化的“跨界”使者。</p>
             </div>
-            <!-- 移动端内容-->
-            <div class="mobile-content">
-                <p class="m-auto line-height-3">
-                    对于在华留学生而言，<br>跨越国界仅是开始，<br>更为重要的是他们在文化领域的跨界融合。
-                </p>
-                <p></p>
-                <p class="m-auto line-height-3">
-                    不仅仅是因为身处中国而跨越国界，<br>更因为他们在文化层面展开了深刻的“跨界”探索。
-                </p>
-                <p></p>
-                <p class="m-auto line-height-3">
-                    如今，在华留学生已逐渐崭露头角，<br>成为国际文化交流的关键推动力。
-                </p>
-                <p></p>
-                <p class="m-auto line-height-3">
-                    他们在中国学习、生活、工作，<br>不仅深刻感受中国文化的魅力，<br>同时也将自己的文化特色传播开来。
-                </p>
-                <p></p>
-                <p class="m-auto line-height-3">这种文化交融与传播，<br>正是“跨界”的真正本质，<br>使留学生成为文化的“跨界”使者。</p>
+            <p class="m-auto line-height-3">
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;这些令人啼笑皆非的网络热梗，常被网友无意识挂在嘴边，不论场合内容，轻描淡写，似乎稀释了背后的艰辛，而这，却掩盖了这些女性背后所承受的沉重负担和不易被察觉的困境。
+            </p>
+            <p class="m-auto line-height-3 font-songti">
+                &nbsp;&nbsp;&nbsp;&nbsp;她们——单亲母亲，真的那么坚强吗？
+            <p class="m-auto line-height-3 font-songti">
+                &nbsp;&nbsp;&nbsp;&nbsp;她们的困境真的被社会所真正理解和重视了吗？
+            </p>
+            <p class="m-auto line-height-3 font-songti">
+                &nbsp;&nbsp;&nbsp;&nbsp;她们——单亲母亲，真的如表面看起来那样轻松吗？
+            </p>
+            <p class="m-auto line-height-3 font-songti">
+                &nbsp;&nbsp;&nbsp;&nbsp;真的值得她们自己感到骄傲吗？
+            </p>
+            <div class="comic-container">
+                <div class="dialogue comic-title">
+                    <p class="m-auto little-title">单亲母亲已超2000万</p>
+                </div>
+            </div>
+            <div class="sticker-container"> <!-- 这是小贴纸 -->
+                <img src="img/mother-child-sticker.png" alt="Image">
+            </div>
+            <p class="m-auto line-height-3">
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;“单亲母亲”，亦称“独抚母亲”，是指因离婚、丧偶、未婚生育或其他原因，独自抚养未成年子女的女性。
+            </p>
+            <div class="dynamic-text-container">
+                <span class="dynamic-text">2800万</span>
+            </div>
+            <p class="m-auto line-height-3">
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;截至2018年底，全国已有<mark class="highlight">2800万单亲家庭</mark>。
+            </p>
+            <div class="dynamic-text-container">
+                <span class="dynamic-text">70%</span>
+            </div>
+            <p class="m-auto line-height-3">
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;其中<mark class="highlight">约70%的单亲家庭</mark>是孩子和母亲一起生活。
+            </p>
+            <div class="dynamic-text-container">
+                <span class="dynamic-text">2000万</span>
+            </div>
+            <p class="m-auto line-height-3">
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;根据2019年中国婚姻家庭研究会的《十城市单亲母亲生活状况及需求调研》的保守推算，全国包括离异和丧偶在内的<mark
+                    class="highlight">单亲母亲数量超过2000万</mark>。更有数据推断，当前全国单亲母亲总数可达3000万。
+            </p>
+            <div class="comic-container"> <!-- 这是小标题 -->
+                <div class="dialogue comic-title">
+                    <p class="m-auto little-title">单亲母亲，也有不同</p>
+                </div>
+            </div>
+            <p class="m-auto line-height-3">
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;为了更准确的定义单亲母亲，中国人口研究学者刘鸿雁根据其形成原因将其分为四类：
+            </p>
+            <p class="m-auto line-height-3">
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1.丧偶式单亲母亲：由于丈夫意外或疾病等原因去世，母亲独自抚养未婚子女。
+            </p>
+            <p class="m-auto line-height-3">
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2.离异单亲母亲：因离婚而独自抚养未婚子女的母亲。
+            </p>
+            <p class="m-auto line-height-3">
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;3.未婚单亲母亲：未婚但生育子女并独自抚养的母亲。
+            </p>
+            <p class="m-auto line-height-3">
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;4.分居单亲母亲：因夫妻分居而独自抚养子女的母亲。
+            </p>
+            <span class="d-flex justify-content-center split"></span> <!-- 这是分割线 -->
+            <div class="sticker-container"> <!-- 这是小贴纸 -->
+                <img src="img/devorce.png" alt="Image">
+            </div>
+            <p class="m-auto line-height-3">
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;在家庭形态日益多元化的社会变革中，单亲家庭迅速崛起，成为增长最快的家庭类型之一，欧美与中国均不例外。
+            </p>
+            <p class="m-auto line-height-3">
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;针对不同年代单亲家庭成因的研究，国外学者早有探讨，并梳理了各年代单亲母亲的变化趋势。随着时间的推移，单亲家庭的形成原因经历了显著变化：从20世纪中叶因丧偶导致的单亲，到20世纪70年代和80年代因离婚率上升形成的单亲，再到2000年代因未婚生育导致的单亲家庭数量不断增加。
+            </p>
+            <p class="m-auto line-height-3">
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;这里是一张图
+            </p>
+            <span class="d-flex justify-content-center split"></span> <!-- 这是分割线 -->
+            <p class="m-auto line-height-3">
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;而在国内，随着时间的推移，单亲家庭的形成原因和结构也在不断变化。
+            </p>
+            <p class="m-auto line-height-3">
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;上世纪中叶，除因工作等原因两地分居外，<mark
+                    class="highlight">丧偶是主要成因</mark>。中国的单亲家庭主要由于配偶去世而形成。而受社会保障体系不健全影响，单亲母亲往往需要依靠亲戚和社区的帮助来抚养子女。
+            </p>
+            <p class="m-auto line-height-3">
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;在21世纪之前，基于相关研究的调研结果，在1982年，我国单亲家庭主要以分居式为主，其次是丧偶式和离婚式。到了1990年，单亲家庭的整体比例有所下降，但分居式单亲家庭仍然占据主要地位。其中单亲家庭总体水平的下降主要原因是：一方面分居式单亲家庭大幅度降低，丧偶式单亲家庭的比重也在下降，并且随着人们的生活水平的提高，医疗保健技术的进步，丧偶式单亲家庭的比例会继续下降。而另一方面<mark
+                    class="highlight">离婚式单亲家庭却在上升</mark>，且上升的幅度很大。
+            </p>
+            <span class="d-flex justify-content-center split"></span> <!-- 这是分割线 -->
+            <p class="m-auto line-height-3">
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;随着社会发展和西方思想的影响，我国也逐渐接受离婚家庭，但非婚生育家庭仍是个别现象。非婚生育家庭在我国仍然较为罕见，主要原因在于社会伦理的不认可和法律上的不支持。
+            </p>
+            <p class="m-auto line-height-3">
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;自20世纪90年代以来，世界各地的家庭结构发生了急剧变化。婚姻关系的减少和单亲家庭的增加在许多国家已成为普遍的社会现象。随着改革开放的推进，我国的社会结构也经历了巨大变化，传统婚姻观念开始松动，离婚逐渐成为较为普遍的现象。女性的教育水平和经济独立能力的提高，使她们更有勇气结束不幸福的婚姻，更多女性成为单亲母亲。尽管如此，社会对离婚的接受度仍然较低，离婚女性常常面临社会歧视和经济困境。
+            </p>
+            <p class="m-auto line-height-3">
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;我国在进入21世纪之后，离婚是成为单身母亲的主要原因。梳理单身母亲的成因，大致呈现出三个阶段：
+            </p>
+            <p class="m-auto line-height-3">
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2000年前后，离婚率较低，单亲母亲主要由丧偶和离婚女性组成，社会对离婚女性的接受度较低，导致离婚女性比例较少。
+            </p>
+            <p class="m-auto line-height-3">
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2010年前后，离婚率显著上升，离婚成为单亲母亲的主要成因，女性独立意识增强，更多女性选择结束不幸福的婚姻。
+            </p>
+            <p class="m-auto line-height-3">
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2020年至今，尽管《民法典》对离婚手续进行了限制，但离婚率仍然保持在较高水平。未婚生育的单亲母亲数量有所增加，但仍处于较低比例。
+            </p>
+            <span class="d-flex justify-content-center split"></span> <!-- 这是分割线 -->
+            <p class="m-auto line-height-3">
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;根据EPS数据平台和中国民政数据库的数据，从2000年到2020年，我国离婚率从0.96‰上升到3.1‰，单亲家庭数量持续增加，主要成因为离异和丧偶。随着《民法典》的出台，离婚率虽有下降，但相较于20世纪的前十年，仍保持着较为高位的水平。
+            </p>
+            <p class="m-auto line-height-3">
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;而从2009年至2021年的离婚办理案件数中，总离婚案件数在2020年受《民法典》出台的影响有所下降，但仍然保持在较高水平。调解离婚的比例在2012年达到最高值519242件，整体在40-50万件/年左右徘徊。判决离婚的数量也显示出波动，但没有明显的下降趋势。
+            </p>
+            <p class="m-auto line-height-3">
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;在婚姻状况变化方面，根据全国人口抽样情况的数据，离婚占比逐年上升，从2013年的1.32%增加到2022年的1.99%。男性离婚人口占比从2013年的1.50%上升到2022年的2.22%，女性离婚人口占比从2013年的1.13%上升到2022年的1.77%。总体来看，离婚占比在男女之间都有显著增长，且男性离婚占比始终高于女性。此外，丧偶率在2013年至2022年间相对稳定，女性丧偶比例远高于男性，是男性的三倍以上。
+            </p>
+            <p class="m-auto line-height-3">
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;同时，由于近年总体资料的缺失，我们对于近年来的单亲家庭成因只能从部分个体研究中窥见一斑。
+            </p>
+            <p class="m-auto line-height-3">
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;一项基于十城市的单亲母亲的调研显示，在成为单亲母亲的原因方面，离异的单亲母亲最多；其次是丧偶，仅占不到五分之一；另外，未婚生子、婚内分居也占一定比例。
+            </p>
+            <p class="m-auto line-height-3">
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;另外，基于统计区域的不同，离异的占比比重差别较大。在一项基于对吉林省内多个社区201位单亲母亲的调查中显示，在成为单亲母亲的原因方面，离异的单亲母亲最多，占比
+                84.1%，其次是丧偶的单亲母亲，占比 11.4%，未婚妈妈占据 4.5%。
+            </p>
+            <p class="m-auto line-height-3">
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;在抚养孩子的数量方面，84.6%的单亲母亲正在抚养 1 个孩子，13.9%的单亲母亲正在抚养 2
+                个孩子，有 1.5%单亲母亲正在抚养的孩子超过 3 个。
+            </p>
+            <div class="comic-container">
+                <div class="dialogue comic-title">
+                    <p class="m-auto little-title">但更重要的是，她们不能被忽视</p>
+                </div>
+            </div>
+            <div class="image-container">
+                <img id="scroll-image" data-aos="fade-in" data-aos-duration="1100" src="img/1.png" alt="Image">
             </div>
         </div>
         <div id="chapter-1-bottom"></div> <!-- 底部 -->
         <div class="padding-bottom"></div>
     </div>
-    </div>
 
     <!-- 第二章 -->
+
     <div class="section bgimg-2" id="chapter-2">
         <!-- 标题 -->
         <div class="bgimg-2"> <!-- 视差滚动 -->
@@ -227,166 +608,67 @@
                         <div id="chapter-2-title"> <!-- 第二章标题 -->
                             <h2 class="title text-gradient-2">第二章</h2>
                             <p></p>
-                            <h3 class="m-auto text-gradient-2">在华留学生与文化适应</h3>
+                            <h3 class="m-auto text-gradient-2">蔷薇色尘埃</h3>
                         </div>
-                        <span class="d-flex justify-content-center"></span>
-                        <!-- 电脑端内容 -->
-                        <div class="desktop-content">
-                            <p class="m-auto line-height-3">
-                                来自五湖四海的留学生们，带着对未来的憧憬，踏上了中国这片神秘的土地。
-                            </p>
-                            <p></p>
-                            <p class="m-auto line-height-3">
-                                他们带着好奇心，探索着这个拥有悠久历史、灿烂文化的国度。成为国际文化交流的关键推动力。
-                            </p>
-                        </div>
-                        <!-- 移动端内容 -->
-                        <div class="mobile-content">
-                            <p class="m-auto line-height-3">
-                                来自五湖四海的留学生们，<br>带着对未来的憧憬，<br>踏上了中国这片神秘的土地。
-                            </p>
-                            <p></p>
-                            <p class="m-auto line-height-3">
-                                他们带着好奇心，<br>探索着这个拥有悠久历史、灿烂文化的国度。<br>成为国际文化交流的关键推动力。
-                            </p>
-                        </div>
+                    </div>
+                    <div class="section-title text-start">
+                        <span class="d-flex justify-content-center split"></span>
+                        <p class="m-auto line-height-3 font-mingchao">
+                            &nbsp;&nbsp;在古代，我国有“四大贤母”，位居首位者乃孟母。孟母早年丧夫，但她坚守节操，不改嫁，孤身一人，含辛茹苦，将孟子养育成人，孟母三迁的故事更是家喻户晓。
+                        </p>
+                        <p class="m-auto line-height-3 font-mingchao">
+                            &nbsp;&nbsp;东晋名将陶侃之母同样早年丧夫，家境贫寒，但她坚韧不拔，以纺纱织麻为生，供给陶侃读书。陶母在物质上艰辛养家，同时在精神上给予陶侃深远的教育，陶侃在日后的军事和政治生涯中受益匪浅，成为了一位杰出的将领。
+                        </p>
+                        <p class="m-auto line-height-3 font-mingchao">
+                            &nbsp;&nbsp;欧阳修之母，丈夫在儿子四岁那年便去世了，原本富裕的家境急转直下，到了“房无一间，地无一垄”的地步。但欧母靠自己的辛勤劳动，将儿子养大。欧母以芦苇代笔，在地上铺沙，以地为纸，一笔一画地教欧阳修读书识字、为人处世，这便是著名的“画荻教子”的由来。
+                        </p>
                     </div>
                 </div>
             </div>
         </div>
         <!-- 正文 -->
         <div style="background-color: var(--color-bg-pink);">
-            <div class="container col-12 section-title text-center" style="padding-top: 0px;" data-aos="fade-up"
+            <div class="container col-12 section-title text-start" style="padding-top: 0px;" data-aos="fade-up"
                 class="d-flex justify-content-center">
-                <p class="m-auto  line-height-3">
-                    文化适应指个体在进入一个新的文化环境后，通过学习和调整，逐渐适应新的文化规范和价值观，从而减少文化冲突和压力，提高生活和工作的满意度和效率的过程。文化适应是一个复杂而动态的过程，受到个体和环境的多种因素的影响。在华留学生作为跨文化者，他们在中国所经历的文化适应过程也因个体与环境的多重因素而变得复杂而动态。
-                </p>
-                <span class="d-flex justify-content-center"></span>
                 <p class="m-auto line-height-3">
-                    我们对北京高校的在华留学生展开了问卷与访谈调查，问题主要集中于留学生的跨文化适应。根据相关结果，我们收集到了关于在中国学习期间遇到的主要困难的相关数据。</p>
-                <p></p>
-                <div class="text-center">
-                    <!-- 这里需要一张图表 -->
-                    <div class="chart-center" id="chart_2"></div>
-                    <span class="d-flex justify-content-center"></span>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;这些身处古代、教育背景受限的单身母亲，却持有超越时代的教育理念，培养出了青史留名的杰出人才。然而，人们在传颂子女辉煌成就的同时，却往往忽略了这些伟大母亲在背后默默付出的艰辛与努力。
+                </p>
+                <div class="row justify-content-center" style="padding-top: 60px;">
+                    <div class="col-md-6 col-lg-6 m-b-50">
+                        <img src="img/new-media.png"> <!-- 影视作品照片墙 -->
+                    </div>
                 </div>
-                <p class="m-auto line-height-3">
-                    根据调查，约有 60%
-                    的受访者表示在中国学习期间，他们遇到了适应中国的教育和学习方法方面的困难，<br>包括对不同的教学风格、考核方式和学术文化的不熟悉。
+                <p class="small m-auto line-height-3 text-center"> <!-- 这是数据注释 -->
+                    （影视作品相关资料）
                 </p>
+                <p class="m-auto line-height-3">
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;在当代的影视作品中，单亲母亲的形象塑造常常成为网络上的热门话题。在《隐秘的角落》中，朱朝阳的母亲，一位与前夫离婚后对儿子有着强烈控制欲的单亲妈妈，她对于儿子的教育方式引发了广泛的讨论；《我是真的爱你》中，单身母亲陈娇蕊离婚带娃依然“狠遍职场”，给人留下深刻印象；《好事成双》中，张小斐试验的林双为带女儿辞职在家，也为了和水性杨花的丈夫争夺女儿抚养权孤注一掷、放手一搏；而在《加油！妈妈》中，张雨绮饰演的单亲妈妈在工作和家庭的双重压力下，依然积极面对生活，触动许多网友的心弦。
+                </p>
+                <p class="m-auto line-height-3 font-songti-large text-center">
+                    那现实生活中，单亲母亲的真实处境是怎么样的？
+                </p>
+                <div class="comic-container"> <!-- 这是小标题 -->
+                    <div class="dialogue comic-title">
+                        <p class="m-auto little-title">“被忽视”的她们&nbsp;</p>
+                    </div>
+                </div>
+                <div class="comic-container"> <!-- 这是小标题 -->
+                    <div class="dialogue comic-title">
+                        <p class="m-auto little-title">“被牺牲”的单亲母亲</p>
+                    </div>
+                </div>
+                <div class="comic-container"> <!-- 这是小标题 -->
+                    <div class="dialogue comic-title">
+                        <p class="m-auto little-title">成为单亲母亲后，她们和社会有了距离</p>
+                    </div>
+                </div>
+                <div class="comic-container"> <!-- 这是小标题 -->
+                    <div class="dialogue comic-title">
+                        <p class="m-auto little-title">不容忽视的污名化现象</p>
+                    </div>
+                </div>
 
-                <p></p>
-                <p class="m-auto line-height-3">
-                    超过 70% 的受访者提到，学习和使用汉语是他们在中国学习过程中面临的主要挑战之一，<br>这表明语言障碍对留学生来说可能是一个重要的文化适应问题。
-                </p>
-                <p></p>
-                <p class="m-auto line-height-3">
-                    大约 45% 的受访者表示在中国处理日常生活问题时遇到了挑战，<br>包括住宿安排、搭乘公共交通、购物以及适应中国货币的使用等。
-                </p>
-                <p></p>
-                <p class="m-auto line-height-3">
-                    近 30% 的受访者提到他们在与中国学生建立友谊关系方面遇到了困难，<br>涉及到文化差异、语言障碍或社交环境的不同。
-                </p>
-                <p></p>
-                <p class="m-auto line-height-3">
-                    大约 20% 的受访者表示在保持身体健康方面存在挑战，<br>包括适应不同的气候、饮食和生活方式等。
-                </p>
-                <p></p>
-                <p class="m-auto line-height-3">
-                    约有 50% 的受访者提到他们在中国学习期间面临学业压力，可能与不同的学习环境和要求有关。
-                </p>
-                <span class="d-flex justify-content-center"></span>
-                <p class="m-auto line-height-3">
-                    具体而言，语言障碍可能是最直观的困难之一。<br>
-                    根据调查，有许多在华留学生表示，语言障碍是最大的挑战：</p>
-                <p></p>
-                <div class="comic-container">
-                    <div class="dialogue comic-left">
-                        <p class="text-start m-auto line-height-3 cite">
-                            “对我来说听力是最难的，当我对别人说对不起，我没听清时，他们只是重复一样的话，说的更慢一些。但我需要的是他们换一个近义词来替换我不理解的地方。”
-                        </p>
-                    </div>
-                </div>
-                <div class="comic-container">
-                    <div class="dialogue comic-right">
-                        <p class="text-start m-auto line-height-3 cite">
-                            “一些中文词汇的词义对于外国人来说很难理解，有的时候我很想和一个人交流，但是当我不能理解时谈话就难以再继续下去了。”<br>
-                        </p>
-                    </div>
-                </div>
-                <div class="comic-container">
-                    <div class="dialogue comic-left">
-                        <p class="text-start m-auto line-height-3 cite">
-                            “我很难听懂很多人的口音，就算是细微的口音差异都会让我难以理解，一些很普通的词在稍微不同的读音下对我而言很难听懂。”<br>
-                        </p>
-                    </div>
-                </div>
-                <span class="d-flex justify-content-center"></span>
-                <p class="m-auto line-height-3">
-                    除了语言障碍外，在华留学生还要面对中西方文化之间的差异。<br>这些文化差异在无形之间也导致在华留学生产生文化冲突、文化失落或者文化隔阂的情绪。<br>
-                </p>
-                <span class="d-flex justify-content-center"></span>
-                <p class="m-auto line-height-3 ">
-                    在本次研究中，我们还发现大多数在华留学生倾向于使用国外的社交平台，<br>如 WhatsApp、Instagram、Facebook 和 Tiktok 等。<br>
-                    就如日常的通讯社交而言，很多在华留学生一开始根本没有听说过微信，也不知道如何注册、使用。<br><br>
-                </p>
-                <div class="row justify-content-center">
-                    <div class="col-md-6 col-lg-4 m-b-50">
-                        <img src="img/q1.png">
-                    </div>
-                </div>
-                <div class="comic-container">
-                    <div class="dialogue comic-left">
-                        <p class="text-start m-auto line-height-3 cite">
-                            “有一次我在网上和一个女生交流，她提出我们可以加一些绿色的东西，我上网搜索了很久也不知道她是什么意思，后来我明白她是在指微信。”<br>
-                        </p>
-                    </div>
-                </div>
-                <div class="comic-container">
-                    <div class="dialogue comic-right">
-                        <p class="text-start m-auto line-height-3 cite">
-                            “当你刚认识一个中国人时，人们很容易习惯性地要加你的微信。这对我来说也有一些不适应，在一些情况下，对于那些之前没有接触过的人，我可能会拒绝加微信好友，或者加了也没有聊过。”<br>
-                        </p>
-                    </div>
-                </div>
-                <p class="m-auto line-height-3">
-                    于此同时，在华留学生在我国的主流社交平台上活跃度较低，<br>在我们的调查中，仅约 10%的受访者表示使用抖音，微博、B 站、小红书等平台的使用率则更低。<br>
-                    <br>
-                    针对这一现象，我们进一步探讨了原因。<br>许多受访者表示，他们之所以倾向于使用国外社交平台，<br>一方面是因为已经形成了使用习惯，<br>另一方面则是因为我国的社交平台在功能和使用习惯上与他们所熟悉的平台存在较大差异。
-                </p>
-                <p></p>
-                <div class="comic-container">
-                    <div class="dialogue comic-center">
-                        <p class="m-auto line-height-3 cite">
-                            “试过，但是我发现我对它们的功能和使用方式不太熟悉，所以我还是更喜欢使用那些平台。”<br>
 
-                            “我觉得使用国外的社交平台让我更有归属感，因为我可以与我原来的朋友们保持联系。而在我国的社交平台上，我可能会感到有些孤独。”<br>
-
-                            ……
-                        </p>
-                    </div>
-                </div>
-                <p></p>
-                <p class="m-auto line-height-3">
-                    而对于为何不使用国内的小红书、微博等平台，不少受访者还提出了使用方面的困难，<br>其中一位受访者表示：
-                <p></p>
-                <div class="comic-container">
-                    <div class="dialogue comic-center">
-                        <p class="m-auto line-height-3 cite">“翻译功能不是很好用。”</p>
-                    </div>
-                </div>
-                <p></p>
-                <p class="m-auto line-height-3">另一位留学生则提到：</p>
-                <p></p>
-                <div class="comic-container">
-                    <div class="dialogue comic-center">
-                        <p class="m-auto line-height-3 cite">“很多地方，像是评论没法翻译，这对我的使用造成了困难”。</p>
-                    </div>
-                </div>
-                <p></p>
-                <p class="m-auto line-height-3">
-                    由此可见，除了线下学习与生活中遇到的语言上的障碍，当前网络环境中，受相关翻译功能的限制以及影响，留学生也不能很好的参与线上社交互动，以及信息的获取。
-                </p>
             </div>
             <div id="chapter-2-bottom"></div> <!-- 底部 -->
             <div class="padding-bottom"></div>
@@ -402,112 +684,151 @@
                     <div id="chapter-3-title"> <!-- 第三章标题 -->
                         <h2 class="title text-gradient-2">第三章</h2>
                         <p></p>
-                        <h3 class="m-auto text-gradient-2">在华留学生与文化交际</h3>
+                        <h3 class="m-auto text-gradient-2">羁绊与眼泪</h3>
                     </div>
-                    <span class="d-flex justify-content-center"></span>
-                    <p class="m-auto line-height-3">
-                        在当今全球化时代，教育跨足国界，留学生们成为连接不同文化和国家的桥梁。在华留学生们既传播本国文化，又将中华文化播撒向世界。
-                    <p>
+                    <span class="d-flex justify-content-center split"></span>
+                    <p class="m-auto line-height-3 font-songti-large text-start">
+                        &nbsp;&nbsp;&nbsp;&nbsp;"Being a single mother is twice the work, twice the stress, and twice
+                        the tears."
+                    </p>
+                    <p class="m-auto line-height-3 font-songti-small text-end">
+                        &nbsp;&nbsp;&nbsp;&nbsp;"作为一个单亲母亲，需要付出双倍的努力，承受双倍的压力和流下双倍的眼泪。"
+                    </p>
+                    <p class="m-auto line-height-3 font-songti-small text-end">
+                        &nbsp;&nbsp;&nbsp;&nbsp;—— Tamaira Marie Pointer
+                    </p>
+                    <p class="m-auto line-height-3 font-songti text-start">
+                        &nbsp;&nbsp;&nbsp;&nbsp;《小王子》中狐狸曾说“想要和人制造羁绊，就要承担流泪的风险。我们不怕掉眼泪，但是，要值得”。单身母亲们不计代价地扛起抚养小孩的责任，付出辛酸与努力。
+                    </p>
+                    <div class="sticker-container"> <!-- 这是小贴纸 -->
+                        <img src="img/twice.png" alt="Image">
+                    </div>
                 </div>
             </div>
         </div>
         <!-- 正文 -->
-        <div class="col-12 section-title text-center" style="padding-bottom: 0px;" data-aos="fade-up"
+        <div class="col-12 section-title text-start" style="padding-bottom: 0px;" data-aos="fade-up"
             data-aos-duration="1100">
             <div class="container pt-5">
-                <!-- 电脑端内容 -->
-                <div class="desktop-content">
-                    <p class="m-auto line-height-3">
-                        留学生们通过举办各种活动，如外国文化节、文化周等，将丰富多彩的异域文化带入校园，与中国文化相互交融。
-                        他们的文字和歌谣，如五彩的羽翼，轻盈地穿越语言的障碍，与中国文化交织成美妙的乐章。留学生把多元丰富的异域文化带到校园，文化的多元碰撞构成了校园里的一道风景线。
-                        “世界文化节”、“世界文化周”……在这些多姿多彩的外国文化节中，外国留学生成为文化交流的使者，竞相在舞台上展示不同民族的灿烂文化。
-                    </p>
-                    <p></p>
-                </div>
-                <!-- 移动端内容 -->
-                <div class="mobile-content">
-                    <p class="m-auto line-height-3">
-                        留学生们通过举办各种活动，如外国文化节、文化周等，将丰富多彩的异域文化带入校园，与中国文化相互交融。
-                        他们的文字和歌谣，如五彩的羽翼，轻盈地穿越语言的障碍，与中国文化交织成美妙的乐章。留学生把多元丰富的异域文化带到校园，文化的多元碰撞构成了校园里的一道风景线。
-                        “世界文化节”、“世界文化周”……在这些多姿多彩的外国文化节中，外国留学生成为文化交流的使者，竞相在舞台上展示不同民族的灿烂文化。
-                    </p>
-                </div>
-                <!-- 图片 -->
-                <div class="section gallery-section" style="padding-top: 30px; padding-bottom: 30px;">
-                    <div class="row">
-                        <div class="col-lg-12" data-aos="fade-up" data-aos-duration="1800">
-                            <div class="row gallery-filter-wrapper m-b-n50">
-                                <div class="col-md-6 col-lg-4 m-b-50 filter-item">
-                                    <!-- Single Gallery Start -->
-                                    <div class="single-gallery">
-                                        <div class="gallery-thumb">
-                                            <img class="fit-image" src="img/detail1.jpg" alt="Gallery Image">
-                                        </div>
-                                    </div>
-                                    <!-- Single Gallery End -->
-                                </div>
-                                <div class="col-md-6 col-lg-4 m-b-50 filter-item">
-                                    <!-- Single Gallery Start -->
-                                    <div class="single-gallery">
-                                        <div class="gallery-thumb">
-                                            <img class="fit-image" src="img/detail2.jpg" alt="Gallery Image">
-                                        </div>
-                                    </div>
-                                    <!-- Single Gallery End -->
-                                </div>
-                                <div class="col-md-6 col-lg-4 m-b-50 filter-item">
-                                    <!-- Single Gallery Start -->
-                                    <div class="single-gallery">
-                                        <div class="gallery-thumb">
-                                            <img class="fit-image" src="img/detail3.jpg" alt="Gallery Image">
-                                        </div>
-                                    </div>
-                                    <!-- Single Gallery End -->
-                                </div>
-                            </div>
-                        </div>
+                <div class="comic-container"> <!-- 这是小标题 -->
+                    <div class="dialogue comic-title">
+                        <p class="m-auto little-title">单亲母亲与单亲父亲群体经济差异</p>
                     </div>
                 </div>
-                <!-- 电脑端内容 -->
-                <div class="desktop-content">
-                    <p class="m-auto line-height-3">
-                        在这里，他们是中外文化的交汇处，是跨越国界的心灵相遇点。<br>
-                        在华留学生不仅是异域文化的传播者，更是中华文化向外传播的有机渠道。<br>
-                        他们在学习、见证、传播中国政治、经济、文化的同时，为世界各国提供了了解真实中国的窗口。<br>
-                        在中外交流中起到了重要的桥梁作用，对于向世界展现我国的真实面貌发挥了重要作用。<br>
-                        在美丽的校园里，来自世界各地的留学生们汇聚一堂，共同学习、交流、成长。他们不仅为中华文化注入了新的活力，还将我国的优秀传统文化传播到了世界的各个角落。<br>
-                        <br>
-                        在我们的调查中，来自法国的留学生玛丽（化名）在我国学习期间，被中国书法的魅力深深吸引。<br>
-                        她不仅自己勤学苦练，还积极向法国的朋友们介绍书法艺术。<br>
-                        玛丽回到法国后，与志同道合的朋友们一起创办了一个书法协会，<br>
-                        定期举办书法展览和交流活动，让更多的人了解到了中国传统文化的魅力。<br>
-                        <br>
-                        不仅如此，许多留学生还将我国的传统节日晒到社交媒体上，与世界各地的朋友们分享。<br>
-                        例如，在春节期间，留学生们会通过照片和视频展示中国新年的独特氛围，如贴春联、包饺子、放鞭炮等。<br>
-                        这些富有中国特色的习俗吸引了世界各地的目光，让更多的人了解到了中国的传统文化和习俗。<br>
-                        用自己的实际行动，为世界提供了解真实中国的窗口，对向世界展现我国的真实面貌发挥了重要作用。
-                    </p>
+                <p class="m-auto line-height-3">
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;为什么要更关注单亲母亲群体？
+                </p>
+                <p class="m-auto line-height-3">
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;可能在我们的认知中，单亲家庭普遍面临类似的挑战，例如抚养孩子的责任和心理压力。但是分类讨论单亲母亲和单亲爸爸还是非常有必要的。
+                </p>
+                <p class="m-auto line-height-3">
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;由于可见的社会背景，包括性别间的社会经济差异，以及在抚养孩子方面，单亲母亲往往承担更多的责任。而尽管已有研究指出了男性和女性之间，尤其是女性在怀孕后的收入差距，但这些研究大多集中在一般家庭中，对单亲家庭的收入差距和贫困状况了解不足。
+                </p>
+                <span class="d-flex justify-content-center split"></span> <!-- 这是分割线 -->
+                <p class="m-auto line-height-3">
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;国外针对这一方面已有相关研究，基于2020年美国的一篇研究表明，单亲母亲家庭的贫困率和收入不平等程度要显著高于单亲父亲家庭。
+                </p>
+                <p class="m-auto line-height-3">
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;在美国，根据2018年皮尤研究中心对美国人口普查局数据的分析，大约有2400万，即所有18岁以下美国儿童的三分之一，与未婚父母生活在一起。81%的单亲家庭由母亲担任户主。
+                </p>
+                <p class="m-auto line-height-3">
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;每八个家庭中就有一个是单身母亲的户主。虽然美国只有10%的家庭生活在贫困中，但近40%的单身母亲家庭生活在贫困中。单亲母亲家庭生活在贫困中的可能性是双亲家庭的五倍。
+                </p>
+                <p class="m-auto line-height-3">
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;与此同时，“单身母亲”群体作为名义上的弱势群体中的一员，其收入显著低于单亲父亲，超32.6%的单亲母亲处于危机贫困状态，同时单亲母亲的应税收入显著低于单亲父亲的应税收入。
+                </p>
+                <p class="m-auto line-height-3">
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;为什么单身母亲家庭比其他家庭更挣扎？绝大多数单身妈妈都在工作；然而，单身母亲往往没有获得高薪所需的教育或工作经验。单亲母亲的平均总收入仅为四万美元，低于单亲家庭或双亲家庭的平均收入。同时，照顾孩子也同时意味着长时间工作很困难，在全职工作率上相对于其他群体更低。
+                </p>
+                <span class="d-flex justify-content-center split"></span> <!-- 这是分割线 -->
+                <p class="m-auto line-height-3">
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;而在中国，在20世纪八十年代至21世纪的前十年，离婚多发生在社会经济地位较高（城镇、非农职业）的群体，女性的离婚风险与其受教育程度正相关。
+                </p>
+                <p class="m-auto line-height-3">
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;然而，近年来离婚率高企，离婚开始向社会经济地位较低的人群扩展。最新一轮的北大中国家庭追踪调查显示，单亲家庭的城乡分布在过去十年间出现了逆转：2010年单亲家庭在城镇的比例高于农村，而到了2020年，单亲家庭在农村的比例超过了城镇。
+                </p>
+                <p class="m-auto line-height-3">
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;而根据调查显示，离异单亲父母的社会经济地位也相对较高，表现在离异单亲母亲的社会经济地位（如学历、收入、城乡分布）普遍高于在婚母亲，离异单亲父亲的社会经济地位与在婚父亲则不相上下。
+                </p>
+                <p class="m-auto line-height-3">
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;这意味着，除了城市中的单亲母亲外，还有一大部分居住在乡村的单亲母亲同样值得我们关注。
+                </p>
+                                
+                <div class="comic-container"> <!-- 这是小标题 -->
+                    <div class="dialogue comic-title">
+                        <p class="m-auto little-title">单亲母亲的收入水平</p>
+                    </div>
                 </div>
-                <!-- 移动端内容 -->
-                <div class="mobile-content">
-                    <p class="m-auto line-height-3">
-                        在这里，他们是中外文化的交汇处，是跨越国界的心灵相遇点。<br>
-                        在华留学生不仅是异域文化的传播者，更是中华文化向外传播的有机渠道。<br>
-                        他们在学习、见证、传播中国政治、经济、文化的同时，为世界各国提供了了解真实中国的窗口。<br>
-                        在中外交流中起到了重要的桥梁作用，对于向世界展现我国的真实面貌发挥了重要作用。<br>
-                        在美丽的校园里，来自世界各地的留学生们汇聚一堂，共同学习、交流、成长。他们不仅为中华文化注入了新的活力，还将我国的优秀传统文化传播到了世界的各个角落。<br>
-                        <br>
-                        在我们的调查中，来自法国的留学生玛丽（化名）在我国学习期间，被中国书法的魅力深深吸引。<br>
-                        她不仅自己勤学苦练，还积极向法国的朋友们介绍书法艺术。<br>
-                        玛丽回到法国后，与志同道合的朋友们一起创办了一个书法协会，<br>
-                        定期举办书法展览和交流活动，让更多的人了解到了中国传统文化的魅力。<br>
-                        <br>
-                        不仅如此，许多留学生还将我国的传统节日晒到社交媒体上，与世界各地的朋友们分享。<br>
-                        例如，在春节期间，留学生们会通过照片和视频展示中国新年的独特氛围，如贴春联、包饺子、放鞭炮等。<br>
-                        这些富有中国特色的习俗吸引了世界各地的目光，让更多的人了解到了中国的传统文化和习俗。<br>
-                        用自己的实际行动，为世界提供了解真实中国的窗口，对向世界展现我国的真实面貌发挥了重要作用。
-                    </p>
+                <p class="m-auto line-height-3">
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;放眼全球，即使在西方发达国家，单身妈妈的贫困率数据也显示出不容乐观的情况。即使在西方发达国家，单亲母亲的贫困率仍然较高。美国的单亲母亲贫困率尤其突出，高达41.27%，是所有被调查国家中最高的。
+                </p>
+                <p class="m-auto line-height-3">
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;在中国，单亲母亲群体面临的挑战同样显著且复杂。由于相关总体资料的缺失，我们只能从部分资料中窥见一斑。
+                </p>
+                <p class="m-auto line-height-3">
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;根据《十城市单亲母亲生活状况及需求调研报告》的数据，34.3%的单亲母亲月收入在2000元及以下，29.2%在2001-4000元之间。月收入在4001-6000元的占25.4%，在6001-10000元的占17.8%，月收入超过10000元的仅占6.2%。
+                </p>
+                <p class="m-auto line-height-3">
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;尽管不少单亲母亲都在工作，但通常因缺乏获得高薪工作的教育或经验而难以获得较高收入。此外，养育孩子的责任使得她们难以全职工作，“带孩”与“工作”的难以平衡，进一步限制了她们的工作收入。
+                </p>
+                <p class="m-auto line-height-3">
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;根据一项对西安市的单亲母亲的研究，与已婚女性相比，单亲母亲的生活质量显著较低，这种差异主要体现在经济收入、健康状况、抚养子女及住房压力等方面。
+                </p>
+                <p class="m-auto line-height-3">
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;而放眼可见的，更广泛的非一线城市、农村地区......在那些没人关注的角落，这个数据只会更糟糕。根据北大中国家庭追踪调查的数据显示，农村单亲母亲的贫困率显著高于城镇单亲母亲。在农村，单亲母亲的收入水平普遍低于全国平均水平，生活质量也显著低于城镇居民。这些单亲母亲隐藏在广阔的社会角落里，极少受到关注。
+                </p>                
+                <div class="comic-container"> <!-- 这是小标题 -->
+                    <div class="dialogue comic-title">
+                        <p class="m-auto little-title">消失的他，与缺失的抚养费</p>
+                    </div>
                 </div>
+                <p class="m-auto line-height-3">
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;关于离婚抚养费的问题，在《中华人民共和国民法典》中，第一千零八十五条明确规定，离婚后，子女由一方直接抚养的，另一方应当负担部分或者全部抚养费。负担费用的多少和期限的长短，由双方协议；协议不成的，由人民法院判决。
+                </p>
+                <p class="m-auto line-height-3">
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;此外，根据最高法对民法典婚姻编解释第四十九条，抚养费的数额可以根据子女的实际需要、父母双方的负担能力和当地的实际生活水平确定。对于有固定收入的，抚养费一般可以按其月总收入的百分之二十至三十的比例给付；无固定收入的，抚养费的数额可以依据当年总收入或者同行业平均收入参照上述比例确定。这表明，抚养费的数额更加注重实际情况，考虑了子女的实际需要和父母双方的负担能力。
+                </p>
+                <p class="m-auto line-height-3">
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;具体而言，抚养费的数额和支付方式应根据具体情况而定，包括子女的实际需求、父母的经济能力以及当地的生活水平等因素。父母有固定收入的，抚养费一般可按其月总收入的20%至30%的比例支付。负担两个以上子女抚养费的，比例可以适当提高，但一般不得超过月总收入的50%。
+                </p>
+                <p class="m-auto line-height-3">
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;但现实真的是这样的吗？
+                </p>
+                <p class="m-auto line-height-3">
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;《十城市单亲母亲生活状况及需求调研报告》中提出，近8成单亲母亲无法得到前任配偶足够的抚养费，面临阶段性或持续的经济压力。
+                </p>
+                <p class="m-auto line-height-3">
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;一项对271位离异单亲母亲的调查显示，前夫从未支付过抚养费的比例高达59.4%，即使有支付的，其实际支付金额也大多低于法院判决的抚养费金额。
+                </p>
+                <p class="m-auto line-height-3">
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;根据香港妇女中心协会2017年的调查数据显示，香港超六成的离婚女性在收取赡养费时遇到困难。其中，超过90%的受访女性曾被拖欠赡养费，约四成的女性曾因赡养费问题被前夫辱骂。
+                </p>
+                <p class="m-auto line-height-3">
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;......
+                </p>
+                <p class="m-auto line-height-3">
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;而对于那些未婚先孕或因丧偶而成为单亲母亲的女性来说，她们在经济上往往只能依靠自己，面临着更为复杂和严峻的挑战。
+                </p>
+                <div class="comic-container"> <!-- 这是小标题 -->
+                    <div class="dialogue comic-title">
+                        <p class="m-auto little-title">抚养人类幼崽，需要多少钱</p>
+                    </div>
+                </div>
+                <p class="m-auto line-height-3">
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;然而，仅凭一人的经济实力抚养一只人类幼崽谈何容易？
+                </p>
+                <p class="m-auto line-height-3">
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;独自承担抚养孩子的经济责任，对于单亲母亲来说，无疑是一项艰巨的挑战。《十城市单亲母亲生活状况及需求调研报告》指出，大约46%的单亲母亲在照料孩子和维系亲子关系方面感到力不从心，认为自己对孩子有所亏欠。经济压力更是沉重，高达76.9%的单亲母亲每月在育儿上的支出超过其总收入的一半，而88.0%的人表示在支付育儿费用时感到困难。
+                </p>
+                <p class="m-auto line-height-3">
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;而基于相关报告，全国家庭养育0-17岁孩子的平均成本为53.8万元，而从出生到大学本科毕业的养育成本则高达约68万元。城乡差异也十分显著，城镇孩子的养育成本平均为66.7万元，而农村孩子则为36.5万元。
+                </p>
+                <p class="m-auto line-height-3">
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;从国际视角来看，中国养育孩子的成本相对于人均GDP的倍数几乎是全球最高的，达到6.3倍。相比之下，澳大利亚为2.08倍，法国为2.24倍，瑞典为2.91倍，德国为3.64倍，美国为4.11倍，日本为4.26倍。这一比较突显了中国单亲母亲在养育孩子时所面临的独特经济压力。
+                </p>
+                <p class="m-auto line-height-3">
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;调查显示，单亲母亲为了保障孩子的成长，大部分在自己身上节约开支，而与孩子相关的娱乐、照料、医疗方面的支出则没有发生变化，甚至有一半的人在成为单亲母亲后加大了对孩子教育的投入。综合多篇论文的研究数据，在中国，每生一个孩子会导致女性工资率下降12%-17%，其中12%的下限是同一篇论文里的控制其他变量以后的估算。
+                </p>                
             </div>
             <div id="chapter-3-bottom"></div> <!-- 底部 -->
             <div class="padding-bottom"></div>
@@ -524,43 +845,170 @@
                         <div id="chapter-4-title"> <!-- 第四章标题 -->
                             <h2 class="title text-gradient-2">第四章</h2>
                             <p></p>
-                            <h3 class="m-auto text-gradient-2">展望</h3>
-                            <span class="d-flex justify-content-center"></span>
+                            <h3 class="m-auto text-gradient-2">曙光与融冰</h3>
+                            <span class="d-flex justify-content-center split"></span>
                         </div>
+                        <p class="m-auto line-height-3 font-songti-large">
+                            “After all, tomorrow is another day!”
+                        </p>
+                        <p class="m-auto line-height-3 text-start font-songti">
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;——在玛格丽特·米切尔的小说《飘》中，斯嘉丽·奥哈拉作为一个坚强独立的女性形象。在她的第三任丈夫瑞德·巴特勒离开她之后，她有一句非常著名的台词：“明天又是新的一天。”
+                        </p>
                     </div>
                 </div>
             </div>
             <!-- 正文 -->
-            <div class="col-12 section-title text-center" style="padding-top: 0px;" data-aos="fade-up"
+            <div class="col-12 section-title text-start" style="padding-top: 0px;" data-aos="fade-up"
                 data-aos-duration="1100">
+                <div class="comic-container"> <!-- 这是小标题 -->
+                    <div class="dialogue comic-title">
+                        <p class="m-auto little-title">关注单身母亲群体心理健康议题</p>
+                    </div>
+                </div>
                 <p class="m-auto line-height-3">
-                    党的十八大以来，习近平总书记多次就来华留学工作作出指示批示并多次致信来华留学生，充分体现了党中央对新时代来华留学工作的亲切关怀，对国内外来华留学战线的肯定和激励。<br><br>
-                    2020年5月17日，总书记给北京科技大学全体巴基斯坦留学生回信时，提到对在华留学生的期望，希望留学生们多了解中国、多向世界讲讲所看到的中国。<br><br>
-                    2021年6月，总书记给北京大学的留学生们回信，希望外国留学生多了解中国、多向世界讲讲他们所看到的中国。<br><br>
-                    2024年1月17日，总书记复信北京交通大学的肯尼亚留学生及校友代表，鼓励他们继续为中肯和中非友好事业发光发热。在信中，总书记提到中肯友谊源远流长，共建“一带一路”倡议将中肯发展振兴的理想变为现实，将两国人民的福祉紧密相连。总书记强调，展望未来，“一带一路”的壮丽画卷和中肯全面战略合作伙伴关系的宏伟蓝图需要包括留学生们在内的更多有为青年来实现。留学生因这条“幸福路”与中国结缘，成为中肯和中非友好合作的见证者、受益者，更是建设者和传播者。他希望留学生们学好专业知识，赓续传统友谊，投身两国合作，讲好中非友好故事，为推动构建高水平中非命运共同体作出更大贡献。
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;相比于其他类型家庭中的妈妈，由于部分家庭成员的缺位，单亲母亲们不仅要在亲子关系中担任着“孩子生活中的照料者”，发挥家庭经济功能、孩子养育功能、家务处理功能、安全功能，还要成为“孩子人生路上的导师”，承担起学科辅导、升学压力、兴趣安排、情绪状态与思维发展、性别意识培养等关键养育安排的决策。
                 </p>
-                <span class="d-flex justify-content-center"></span>
                 <p class="m-auto line-height-3">
-                    随着全球疫情的逐渐控制，在华留学生的生活也将逐渐恢复正常。
-                    在疫情期间，很多留学生不得不在自己的国家进行线上学习，与老师和同学们进行远程交流。线上形式的交流虽能够维持学习的进行，但却无法取代面对面的交流与互动。<br>
-                    <br>
-                    在全球疫情逐渐受到控制的背景下，对于在华留学生而言，生活正逐渐恢复正常。在此过程中，我们必须认识到在来华留学生在重返线下，回到校园所经历的挑战与困难。<br>
-                    <br>
-                    观之于此，首先需关注留学生在华学习和生活中所面临的实际问题。诸如留学生在华期间所面临的身份认证、银行开户、网络支付绑卡等问题仍阻扰着在华留学生的生活环境。
-                    对于现在可以返回线下交流的留学生而言，这是一个重要的转折点。但于此同时也遇到了相应的困难。
-                    政协常委贾庆国在今年两会上提出相关建议，其在《关于加大吸引外国学生来华学习力度的提案》和《关于鼓励民间对外讲好中国故事工作的提案》中提及，
-                    外国留学生在华期间遇到的诸如身份认证、银行开户、网络支付绑卡等困难亟需解决，以优化他们的学习和生活环境。<br>
-                    <br>
-                    另需言之，在后疫情时代，我们希望在华留学生能够更加积极地参与到跨文化交际中来。
-                    同时，我们亦可借助疫情期间的经验，探索新的跨文化交际方式。可以通过线上交流平台，组织跨文化交流活动，让更多人参与其中。利用社交媒体等工具，建立跨文化的社群，促进不同文化之间的交流和互动。<br><br>
-                    在跨文化适应领域，我们还需要加强对留学生的心理支持和辅导。很多留学生面临着各种压力和挑战，如孤独、焦虑、抑郁等。因此，需要提供适当的心理支持和辅导，帮助他们更好地适应新环境，缓解压力和负面情绪。
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;多重身份认同使得单亲母亲经历的负面情感更为复杂。在《在线社会支持对身份认同的影响在单研究》的问卷调查中显示，在单亲生活中，由于自己的决定导致家庭成员缺席，43.8%的受访妈妈会对孩子有一种愧疚自责感；45.1%的受访者会怀疑自己培养孩子的方式是否正确，存在一定的育儿焦虑；47.8%的受访妈妈会因为自己有太多责任而感到不安。
                 </p>
-                <span class="d-flex justify-content-center"></span>
                 <p class="m-auto line-height-3">
-                    在华留学生不仅是文化交流的使者，也是中华文化的传播者。我们期待通过心灵的碰撞，能够更好地通过在华留学生群体，传播中华文化，让更多的人了解和理解中国。
-                    通过开展相关活动，让留学生们能够深入学习和体验中华文化。通过阅读中国经典文献，参加各类文化活动，学习中国传统艺术和技艺等方式，深入理解和体验中华文化。将真实的、有深度的中华文化传播给世界。
-                    其次，我们希望留学生们能够用自己的语言和方式，将中华文化传播给世界。利用社交媒体平台，分享自己在中国的生活和学习经历，让更多的人了解中国。同时，他们也可以通过自己的行动，展示中华文化的价值观和精神风貌，让更多的人感受到中华文化的魅力。
-                    中华文化博大精深，以开放和包容的态度，面对文化的差异和冲突，才能有效传播中华文化。尊重和理解不同文化的存在和发展，以平等和互信的态度，让不同的文化交流碰撞。这样，才能最大程度发挥在华留学生传播中华文化的作用，真正成为文化交流的使者和桥梁，促进不同文化之间的交流和理解。
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;由于个人社会支持资源有限，大多数妈妈们处在职业发展与孩子养育的冲突与矛盾中，当现实养育条件与理想养育条件或离婚前的养育条件产生较大差异时，受访妈妈容易产生自我怀疑感与愧疚自责感。此外，情感上的失败会带来较长时间的心理阵痛期，加之单亲与带孩子的生活状态让妈妈们将自己归为婚恋市场中的弱势群体。这都使得她们产生自我否定，降低自我价值感。
+                </p>
+                <p class="m-auto line-height-3">
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;值得注意的是，这些负面体验在一定时期内是一种持续性的情感状态，且基于特定的生活场景与事件而发生的。对于负面情绪的出现也会出现周期性的循环往复，这都与妈妈们进入单亲生活后的心理恢复状态有关。
+                </p>
+                <div class="comic-container">
+                    <div class="dialogue comic-left">
+                        <p class="text-start m-auto line-height-3 cite">
+                            “2017年，怀孕的消息本应是我们共同的喜悦，却因为彩礼等一连串的婚前问题，最终导致了我们的分手。那时的我，心如刀绞，每天将自己封闭起来，拒绝与外界交流，沉默成为我唯一的语言。在那段暗无天日的日子里，我仿佛被悲伤和失望的阴影笼罩，不知道未来该如何面对。”
+                        </p>
+                    </div>
+                </div>
+                <div class="comic-container">
+                    <div class="dialogue comic-right">
+                        <p class="text-start m-auto line-height-3 cite">
+                            “我以为我早已走出来了，可是当我再次看到婚礼录像带的时候，我看到那个以为自己奔向幸福的、义无反顾的、天真的女孩，还是控制不住地流眼泪，太痛苦了，我可能一生都无法治愈。”
+                        </p>
+                    </div>
+                </div>
+                <div class="comic-container">
+                    <div class="dialogue comic-left">
+                        <p class="text-start m-auto line-height-3 cite">
+                            “还是要对最爱的女儿说无数句抱歉。我打破了她对于一家三口幸福家庭的执念。这是无论多少句‘对不起’都无法完全弥补的。这是我作为母亲最不愿看到的。”
+                        </p>
+                    </div>
+                </div>
+                <div class="comic-container">
+                    <div class="dialogue comic-right">
+                        <p class="text-start m-auto line-height-3 cite">
+                            “那个年代，大概十年前吧，我们也很羞于启齿说，‘我离婚了嗷，还带个小孩’。对我们那时候的女性来说，感觉有很多人还会认为是女性的错。女性没有包容她的先生。”
+                        </p>
+                    </div>
+                </div>
+                <div class="comic-container">
+                    <div class="dialogue comic-left">
+                        <p class="text-start m-auto line-height-3 cite">
+                            “我当时离婚后一直抑郁症，就疯狂找人聊天，在交流的过程里面是很坦诚的，这个就像溺水的人在喊救命一样，你得先真实地喊出来，别人才能听见，才知道怎么帮你。”
+                        </p>
+                    </div>
+                </div>   
+                <p class="small m-auto line-height-3 text-center"> <!-- 这是数据注释 -->
+                    （以上对话摘抄自对单亲妈妈的深访）
+                </p>             
+                <span class="d-flex justify-content-center split"></span> <!-- 这是分割线 -->
+                <p class="m-auto line-height-3 font-songti">
+                    &nbsp;&nbsp;&nbsp;&nbsp;“妈妈，我放学啦，快来接我！”
+                </p>
+                <p class="m-auto line-height-3 font-songti">
+                    &nbsp;&nbsp;&nbsp;&nbsp;她的脸上又洋溢出幸福微笑。
+                </p>
+                <p class="m-auto line-height-3 font-songti">
+                    &nbsp;&nbsp;&nbsp;&nbsp;尽管单身母亲不容易，
+                </p>
+                <p class="m-auto line-height-3 font-songti">
+                    &nbsp;&nbsp;&nbsp;&nbsp;但是她们并未退缩。
+                </p>
+                <p class="m-auto line-height-3 font-songti">
+                    &nbsp;&nbsp;&nbsp;&nbsp;依然活跃于职场、社交、婚姻等领域当中绽放自我。
+                </p>
+                <p class="m-auto line-height-3 font-songti">
+                    &nbsp;&nbsp;&nbsp;&nbsp;同时，她们也倾尽所有将孩子抚养好。
+                </p>
+                <p class="m-auto line-height-3 font-songti">
+                    &nbsp;&nbsp;&nbsp;&nbsp;或许很多单身母亲默默隐忍着辛酸，
+                </p>
+                <p class="m-auto line-height-3 font-songti">
+                    &nbsp;&nbsp;&nbsp;&nbsp;但现在，越来越多的单身母亲在为自己、为千千万万个相同处境的自己发声。
+                </p>
+                <p class="m-auto line-height-3 font-songti">
+                    &nbsp;&nbsp;&nbsp;&nbsp;去交流，去表达，让自己被祛魅，在这个过程中重塑作为单身母亲的性格。
+                </p>
+                
+                <div class="comic-container"> <!-- 这是小标题 -->
+                    <div class="dialogue comic-title">
+                        <p class="m-auto little-title">社会支持，给予点点星光</p>
+                    </div>
+                </div>
+                <p class="m-auto line-height-3 font-songti">
+                    &nbsp;&nbsp;&nbsp;&nbsp;我们，应该立足平等的高度，
+                </p>
+                <p class="m-auto line-height-3 font-songti">
+                    &nbsp;&nbsp;&nbsp;&nbsp;给予她们一些关怀、理解，敬意，
+                </p>
+                <p class="m-auto line-height-3 font-songti">
+                    &nbsp;&nbsp;&nbsp;&nbsp;即使没有淋过失婚、丧偶的大雨，
+                </p>
+                <p class="m-auto line-height-3 font-songti">
+                    &nbsp;&nbsp;&nbsp;&nbsp;我们也可以为单身母亲们，
+                </p>
+                <p class="m-auto line-height-3 font-songti">
+                    &nbsp;&nbsp;&nbsp;&nbsp;撑起一把大伞。
+                </p>                
+                <span class="d-flex justify-content-center split"></span> <!-- 这是分割线 -->
+                <p class="m-auto line-height-3">
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1996年，我国第一家民间妇女公益组织——北京红枫心理咨询中心成立。1998年，红枫在热线咨询中最早发现了单亲母亲问题，于同年成立了关于单亲家庭的重要公益品牌项目“方舟家庭中心”。其主要以线上咨询热线、线下培训社区工作者并辐射北京单亲家庭工作坊相结合的服务模式。但这种传统的公益运营模式具有很强的地域限制，而且其传播方式不利于实现大规模群体性传播，难以在短时间内解决单亲母亲的实际困难。
+                </p>
+                <p class="m-auto line-height-3">
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;随着新媒体时代的到来，媒介技术的进步不仅赋予了女性更多的话语权与发声空间，而且为公益组织触达单亲母亲群体并开展服务工作带来了新的契机。
+                </p>
+                <p class="m-auto line-height-3">
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;如今，有越来越多扶持单亲母亲的公益组织依托社交媒体平台，搭建母亲电台、心理直播间、微信公益社群等，多形式互动与多平台传播实现了单亲母亲、公益组织、各领域专家资源之间的密切交流与良性互动。同时，公益联盟成员之间通过赋能培训、平台资源共享优化、灵活项目资助以及联合社会倡导四大举措共同推动公益圈生态效应进一步加强，改变了分散、疏于联系的公益组织格局，正在改善着单亲母亲群体的生活与自我认知。
+                </p>
+                <p class="m-auto line-height-3">
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;许多单亲母亲在婚姻破裂后自我价值感降低，常感到自卑和被社会孤立。研究表明，增强社会支持网络，提供心理辅导和情感支持，可以有效提升单亲母亲的自信心和生活满意度。
+                </p>                
+                <div class="comic-container"> <!-- 这是小标题 -->
+                    <div class="dialogue comic-title">
+                        <p class="m-auto little-title">政策完善，照亮前行之路</p>
+                    </div>
+                </div>
+                <p class="m-auto line-height-3">
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;然而，相关法律仍然亟待完善。
+                </p>
+                <p class="m-auto line-height-3">
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;近年来，多个国家纷纷出台政策，致力于改善单亲母亲及其家庭的生活状况。在美国，单亲母亲可以通过临时援助贫困家庭（TANF）、儿童健康保险计划（CHIP）和食品券计划（SNAP）获得经济支持和医疗保障。此外，住房选择券计划（Section 8）帮助她们获得安全稳定的住房。英国则通过工作与家庭福利（Universal Credit）和免费学龄前教育等措施，提供全面的经济支持和教育资源。加拿大提供加拿大儿童福利金（CCB）、托儿补助和社会援助，以减轻单亲家庭的生活压力。而德国通过育儿津贴、单亲家庭津贴和社会住房等政策，确保单亲母亲及其子女能够获得必要的经济支持和居住保障。
+                </p>
+                <p class="m-auto line-height-3">
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;近年来，中国在保障单亲母亲及其家庭方面采取了多项措施，包括最低生活保障、社会救助、住房保障和教育资助等，旨在确保低收入家庭的基本生活需求。然而，现有政策仍不足以覆盖单亲母亲的急切需求。
+                </p>
+                <p class="m-auto line-height-3 font-songti">
+                    &nbsp;&nbsp;&nbsp;&nbsp;因此，我们提出以下倡议：
+                </p>
+                <p class="m-auto line-height-3 font-songti">
+                    &nbsp;&nbsp;&nbsp;&nbsp;· 设立专门法律法规，给予经济支持，尤其是在女方待业的情况下。
+                </p>
+                <p class="m-auto line-height-3 font-songti">
+                    &nbsp;&nbsp;&nbsp;&nbsp;· 医疗、教育、交通、饮食、住房、社会福利等方面，应给予单亲母亲及其孩子专门的支持与补助。
+                </p>
+                <p class="m-auto line-height-3 font-songti">
+                    &nbsp;&nbsp;&nbsp;&nbsp;· 成立官方的单亲母亲互助机构，成员不限于单亲母亲，任何愿意提供经验帮助的人都可以参与其中，为相互扶持打造一个平台。
+                </p>
+                <p class="m-auto line-height-3">
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;此外，完善法律援助和心理健康支持对于单亲母亲的全面发展至关重要。政府应提供更多的法律援助，帮助她们解决离婚、抚养权和家庭暴力等问题，保护其合法权益。同时，通过社区活动和志愿服务，帮助单亲母亲建立社会支持网络，促进社会融入和心理健康。
+                </p>                
+                <span class="d-flex justify-content-center split"></span> <!-- 这是分割线 -->
+                <p class="m-auto line-height-3 font-songti-large">
+                    “再见，女士！祝你永远明媚，和小天使一切安好！”
                 </p>
             </div>
             <div id="chapter-4-bottom"></div> <!-- 底部 -->
@@ -576,14 +1024,24 @@
                 <div class="col-12" data-aos="fade-up" data-aos-anchor-placement="top-bottom" data-aos-duration="1100">
                     <div class="section-title text-center">
                         <p class="m-auto line-height-3">
-                            《不知道起啥名字》
+                            《“快来抱抱她”——不被看见的单亲母亲群体困境》
                         </p>
-                        <span class="d-flex justify-content-center"></span>
-                        <p class="m-auto line-height-3">小组成员：张思锐 韩子涵 张鹤馨 谢建双</p>
-                        <p class="m-auto line-height-3">数据收集：张思锐 韩子涵 谢建双</p>
-                        <p class="m-auto line-height-3">网站设计：张鹤馨</p>
-                        <p class="m-auto line-height-3">网站制作：谢建双</p>
-                        <span class="d-flex justify-content-center"></span>
+                        <span class="d-flex justify-content-center split"></span>
+                        <p class="m-auto line-height-3">小组成员：张思锐 谢建双 张鹤馨 韩子涵</p>
+                        <span class="d-flex justify-content-center split"></span>
+                        <p class="m-auto line-height-3 small">数据及制作</p>
+                        <p class="m-auto line-height-3">数据收集：谢建双 张思锐 张鹤馨</p>
+                        <p class="m-auto line-height-3">文献调研：谢建双 张思锐 张鹤馨</p>
+                        <p class="m-auto line-height-3">网站制作及数据可视化：谢建双</p>
+                        <p class="m-auto line-height-3">平面设计：张鹤馨</p>
+                        <span class="d-flex justify-content-center split"></span>
+                        <p class="m-auto line-height-3 small">内容文案</p>
+                        <p class="m-auto line-height-3">文案撰写及配图制作：张思锐 韩子涵 谢建双</p>
+                        <span class="d-flex justify-content-center split"></span>
+                        <p class="m-auto line-height-3 small">个案探析</p>
+                        <p class="m-auto line-height-3">深度访谈：韩子涵</p>
+                        <p class="m-auto line-height-3">（感谢愿意参与深访的五位单亲母亲）</p>
+                        <span class="d-flex justify-content-center split"></span>
                         <p class="m-auto line-height-3">资料引用：</p>
                         <p class="small m-auto line-height-3">
                             [1]光明网.2022年来华留学相关盘点[EB/OL].<br>https://epaper.gmw.cn/lx/html/2022-12/20/nw.D110000lx_20221220_3-05.htm,2022-12-20.<br>
@@ -609,7 +1067,9 @@
 
 <!--Main JS-->
 <script src="main.js"></script>
+<script src="main_js_for_test.js"></script>
 <script src="assets/js/main.js"></script>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
 <!-- 自定义图表 -->
 <script src="data/area.js"></script>
