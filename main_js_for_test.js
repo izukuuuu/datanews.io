@@ -63,7 +63,9 @@ $(document).ready(function () {
         $('#parallax-4').css('background-position', 'center ' + (scrollTop * 0.1 - 180) + 'px');
     });
 });
-
+// ------------------------------
+// 滑动切换图片
+// ------------------------------
 const images = [
     "img/1.png",
     "img/2.png",
@@ -102,3 +104,20 @@ window.addEventListener("scroll", () => {
 window.onload = () => {
     updateImage();
 };
+// ------------------------------
+// 备用标题
+// ------------------------------
+document.addEventListener('DOMContentLoaded', function() {
+    var video = document.getElementById('bg-video');
+    var altTitle = document.getElementById('alt-title');
+
+    video.addEventListener('canplay', function() {
+        // 视频可以正常播放时隐藏备用标题
+        altTitle.style.display = 'none';
+    });
+
+    video.addEventListener('error', function() {
+        // 视频无法播放时显示备用标题
+        altTitle.style.display = 'block';
+    });
+});
