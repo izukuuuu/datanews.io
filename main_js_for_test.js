@@ -79,7 +79,7 @@ function updateImage() {
     setTimeout(() => {
         imageElement.src = images[currentIndex];
         imageElement.classList.add("active");
-    }, 600); // 缩短切换时间
+    }, 100); // 缩短切换时间
 }
 
 window.addEventListener("scroll", () => {
