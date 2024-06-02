@@ -1,64 +1,94 @@
-var dom = document.getElementById('money');
-var myChart = echarts.init(dom, null, {
-    renderer: 'canvas',
-    useDirtyRect: false
-});
-
-var app = {};
+var chartDom = document.getElementById('money-chart');
+var myChart = echarts.init(chartDom);
 var option;
 
 const pathSymbols = {
-    money: 'path://M9.9,0.1C4.5,0.1,0.1,4.5,0.1,9.9C0.1,15.4,4.5,19.8,9.9,19.8c5.4,0,9.8-4.4,9.8-9.8C19.8,4.5,15.4,0.1,9.9,0.1z M9.9,17.8c-4.4,0-8-3.6-8-8c0-4.4,3.6-8,8-8c4.4,0,8,3.6,8,8C17.8,14.2,14.2,17.8,9.9,17.8z M11.4,10.3c0,0.3-0.2,0.5-0.4,0.7c-0.4,0.3-0.9,0.6-1.3,0.7v0.5c0,0.3-0.2,0.5-0.5,0.5s-0.5-0.2-0.5-0.5v-0.5c-0.5-0.1-0.9-0.3-1.3-0.7c-0.3-0.2-0.4-0.4-0.4-0.7c0-0.3,0.2-0.5,0.4-0.7c0.4-0.3,0.9-0.6,1.3-0.7V8.4c-0.5-0.1-0.9-0.3-1.3-0.7C8.2,7.5,8,7.3,8,7c0-0.3,0.2-0.5,0.4-0.7C8.8,6,9.2,5.7,9.7,5.6V5.1c0-0.3,0.2-0.5,0.5-0.5s0.5,0.2,0.5,0.5v0.5c0.5,0.1,0.9,0.3,1.3,0.7C12.8,6.5,13,6.7,13,7c0,0.3-0.2,0.5-0.4,0.7c-0.4,0.3-0.9,0.6-1.3,0.7v0.5c0.5,0.1,0.9,0.3,1.3,0.7C11.3,9.8,11.4,10,11.4,10.3z'
+  money:
+    'path://M632-477q29 0 48.5-20.2T700-545q0-27.6-19.5-47.8-19.5-20.2-48-20.2T584-592.8q-20 20.2-20 47.8 0 27.6 20.2 47.8Q604.4-477 632-477Zm-364-61h252v-119H268v119ZM121-81Q85-205 48.5-327.36 12-449.72 12-580q0-108.09 75.78-183.55Q163.56-839 271-839h231q34.29-38 80.88-59 46.59-21 97.12-21 40 0 69 27.12 29 27.13 29 66.88 0 8-1.5 16.5T773-792q-2 8-4 14.5t-4 13.33L829-699h117v346l-128 40-69 232H464v-80h-56v80H121Zm103-136h56v-80h311v80h55l62-203 102-30v-113h-38L632-703q0-17.7 2-36.35 2-18.65 6-36.65-24 11-41.5 30T569-703H271q-50.61 0-86.81 35.54Q148-631.93 148-580q0 93.62 25.5 182.81T224-217Zm256-280Z'
 };
-
 const labelSetting = {
-    show: true,
-    position: 'top',
-    fontSize: 16,
-    formatter: '{c}%'
+  show: true,
+  position: 'right',
+  offset: [10, 0],
+  fontSize: 16,
+  color: 'pink',
+  formatter: '{c}%'
 };
-
 option = {
-    title: {
-        text: '十城市单亲母亲月收入分布'
+  title: {
+    text: '单亲妈妈月收入情况'
+  },
+  legend: {
+    data: ['月收入']
+  },
+
+  grid: {
+    containLabel: true,
+    left: 20
+  },
+  yAxis: {
+    data: [
+      '30001元及以上',
+      '10001-30000元',
+      '4001-10000元',
+      '2001-4000元',
+      '2000元及以下'
+    ],
+    inverse: true,
+    axisLine: { show: false },
+    axisTick: { show: false },
+    axisLabel: {
+      margin: 30,
+      fontSize: 14
     },
-    tooltip: {
-        trigger: 'item',
-        formatter: '{b}: {c}%'
-    },
-    xAxis: {
-        type: 'category',
-        data: ['2000元及以下', '2001-4000元', '4001-6000元', '6001-10000元', '10000元以上'],
-        axisLabel: {
-            fontSize: 14
-        }
-    },
-    yAxis: {
-        type: 'value',
-        max: 40,
-        axisLabel: {
-            formatter: '{value}%'
-        }
-    },
-    series: [{
-        type: 'pictorialBar',
-        data: [
-            { value: 34.3, symbol: pathSymbols.money },
-            { value: 29.2, symbol: pathSymbols.money },
-            { value: 25.4, symbol: pathSymbols.money },
-            { value: 17.8, symbol: pathSymbols.money },
-            { value: 6.2, symbol: pathSymbols.money }
-        ],
-        symbolRepeat: 'fixed',
-        symbolMargin: '10%',
-        symbolClip: true,
-        symbolSize: 30,
-        symbolBoundingData: 40,
-        itemStyle: {
-            color: '#c23531'
+    axisPointer: {
+      label: {
+        show: true,
+        margin: 30
+      }
+    }
+  },
+  xAxis: {
+    splitLine: { show: false },
+    axisLabel: { show: false },
+    axisTick: { show: false },
+    axisLine: { show: false }
+  },
+  series: [
+    {
+      name: '月收入',
+      type: 'pictorialBar',
+      label: labelSetting,
+      symbolRepeat: true,
+      symbolSize: ['80%', '60%'],
+      barCategoryGap: '40%',
+      itemStyle: {
+        color: 'pink'
+      },
+      data: [
+        {
+          value: 1.3,
+          symbol: pathSymbols.money
         },
-        label: labelSetting
-    }]
+        {
+          value: 4.9,
+          symbol: pathSymbols.money
+        },
+        {
+          value: 30.2,
+          symbol: pathSymbols.money
+        },
+        {
+          value: 29.2,
+          symbol: pathSymbols.money
+        },
+        {
+          value: 34.3,
+          symbol: pathSymbols.money
+        }
+      ]
+    }
+  ]
 };
 
-myChart.setOption(option);
+option && myChart.setOption(option);
