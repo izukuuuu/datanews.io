@@ -165,3 +165,7 @@ mark.highlight.highlight-active::before {
 #intro-video-element {
     display: none;
 }
+
+#intro-title {
+    transition: opacity 1s;
+}

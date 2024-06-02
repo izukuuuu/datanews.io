@@ -143,17 +143,37 @@ if (isWeChat()) {
 document.addEventListener("DOMContentLoaded", function() {
     const playButton = document.getElementById("play-button");
     const video = document.getElementById("intro-video-element");
+    const introTitle = document.getElementById("intro-title");
+    const titles = [
+        '"您好，女士！我是之前和您预约过的记者！"',
+        '"小锐你来啦，快进屋坐。"',
+        '——你来到了一位单亲妈妈的家中，准备开始采访。'
+    ];
+    let titleIndex = 0;
 
     playButton.addEventListener("click", function() {
         playButton.style.display = "none";
         video.style.display = "block";
         video.play();
+        changeTitle();
+    });
 
-        // 播放结束时触发的事件
-        video.addEventListener("ended", function() {
-            // 停在最后一帧
-            video.pause();
-            video.currentTime = video.duration;
-        });
+    function changeTitle() {
+        if (titleIndex < titles.length) {
+            introTitle.style.opacity = 0;
+            setTimeout(() => {
+                introTitle.innerHTML = titles[titleIndex];
+                introTitle.style.opacity = 1;
+                titleIndex++;
+                setTimeout(changeTitle, 2000);
+            }, 1000);
+        }
+    }
+
+    // 播放结束时触发的事件
+    video.addEventListener("ended", function() {
+        // 停在最后一帧
+        video.pause();
+        video.currentTime = video.duration;
     });
 });
