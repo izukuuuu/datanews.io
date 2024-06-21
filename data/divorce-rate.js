@@ -1,6 +1,4 @@
-window.onload = function() {
-    // 基于准备好的 DOM，初始化 echarts 实例
-    var myChart = echarts.init(document.getElementById('devorce'));
+    var divorceRateChart = echarts.init(document.getElementById('divorce-rate'));
 
     // 指定图表的配置项和数据
     var option = {
@@ -40,5 +38,4 @@ window.onload = function() {
     };
 
     // 使用刚指定的配置项和数据显示图表。
-    myChart.setOption(option);
-};
+    divorceRateChart.setOption(option);

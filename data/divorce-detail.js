@@ -1,4 +1,4 @@
-var dom = document.getElementById('devorce-detail');
+var dom = document.getElementById('divorce-detail');
 var myChart = echarts.init(dom, null, {
     renderer: 'canvas',
     useDirtyRect: false

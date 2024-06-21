@@ -152,6 +152,11 @@ mark.highlight.highlight-active::before {
     line-height: 2.5;
 }
 
+.font-songti-medium{
+    font: 24px "SongTi", sans-serif, bold;
+    line-height: 2.5;
+}
+
 .font-songti{
     font: 20px "SongTi", sans-serif, bold;
     line-height: 2.5;
