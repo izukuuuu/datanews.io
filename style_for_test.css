@@ -174,3 +174,30 @@ mark.highlight.highlight-active::before {
 #intro-title {
     transition: opacity 1s;
 }
+
+.comic-container.fixed {
+    position: fixed;
+    top: 0px;
+    left: 20px;
+    width: 400px;
+    z-index: 1000;
+    justify-content: left;
+    opacity: 0;
+    transition: opacity 0.5s ease, transform 0.5s ease;
+    transform: translateY(-20px);
+}
+
+.comic-container.fixed.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.comic-container.fixed.hide-up {
+    opacity: 0;
+    transform: translateY(-20px);
+}
+
+.comic-container.fixed.hide-down {
+    opacity: 0;
+    transform: translateY(20px);
+}

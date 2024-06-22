@@ -177,3 +177,84 @@ document.addEventListener("DOMContentLoaded", function() {
         video.currentTime = video.duration;
     });
 });
+// ------------------------------
+// 固定小标题
+// ------------------------------
+document.addEventListener('DOMContentLoaded', function () {
+    var lastScrollTop = 0;
+
+    // 获取所有的 comic-container 元素
+    var containers = document.querySelectorAll('.comic-container');
+    var pairs = [];
+
+    containers.forEach(function (container) {
+        var id = container.id;
+        if (id.endsWith('-start')) {
+            var baseId = id.slice(0, -6); // 移除 -start 后缀
+            var endElement = document.getElementById(baseId + '-end');
+            if (endElement) {
+                pairs.push({
+                    startElement: container,
+                    endElement: endElement,
+                    baseId: baseId,
+                    replaceText: container.getAttribute('replace') || null
+                });
+            }
+        }
+    });
+
+    pairs.forEach(function (pair) {
+        var startElement = pair.startElement;
+        var endElement = pair.endElement;
+        var fixedElement;
+
+        function createFixedElement() {
+            fixedElement = startElement.cloneNode(true);
+            fixedElement.id = pair.baseId + '-fixed';
+            fixedElement.classList.add('fixed');
+
+            // 如果存在 replace 属性，替换文本内容并处理换行符
+            if (pair.replaceText) {
+                var textElement = fixedElement.querySelector('.little-title');
+                if (textElement) {
+                    var replacedText = pair.replaceText.replace(/\[br\]/g, '<br>');
+                    textElement.innerHTML = replacedText;
+                }
+            }
+
+            document.body.appendChild(fixedElement);
+        }
+
+        function onScroll() {
+            var startRect = startElement.getBoundingClientRect();
+            var endRect = endElement.getBoundingClientRect();
+            var currentScrollTop = window.pageYOffset || document.documentElement.scrollTop;
+
+            if (startRect.top < 0 && endRect.top > 0) {
+                if (!fixedElement) {
+                    createFixedElement();
+                }
+                fixedElement.classList.add('show');
+                fixedElement.classList.remove('hide-up', 'hide-down');
+            } else {
+                if (fixedElement) {
+                    if (currentScrollTop > lastScrollTop) {
+                        // Scrolling down
+                        fixedElement.classList.add('hide-down');
+                    } else {
+                        // Scrolling up
+                        fixedElement.classList.add('hide-up');
+                    }
+                    fixedElement.classList.remove('show');
+                    if (endRect.top <= 0) {
+                        fixedElement.remove();
+                        fixedElement = null;
+                    }
+                }
+            }
+            lastScrollTop = currentScrollTop <= 0 ? 0 : currentScrollTop; // For Mobile or negative scrolling
+        }
+
+        window.addEventListener('scroll', onScroll);
+    });
+});
