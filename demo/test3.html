@@ -1,202 +1,138 @@
 <!DOCTYPE html>
 <html style="height: 100%">
-
 <head>
-    <meta charset="UTF-8">
-    <title>ECharts</title>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/echarts/5.3.0/echarts.min.js"></script>
-    <script src="https://fastly.jsdelivr.net/npm/d3-hierarchy@2.0.0/dist/d3-hierarchy.min.js"></script>
+    <meta charset="utf-8">
+    <script src="https://cdn.jsdelivr.net/npm/echarts/dist/echarts.min.js"></script>
 </head>
-
 <body style="height: 100%; margin: 0">
     <div id="main" style="height: 100%"></div>
     <script type="text/javascript">
-        document.addEventListener('DOMContentLoaded', function () {
-            const rawData = {
-                name: "root",
-                children: [
-                    {
-                        name: "参与社群的妈妈",
-                        value: 148,
-                    },
-                    {
-                        name: "未参与社群的妈妈",
-                        value: 53,
-                        children: [
-                            {
-                                name: "没资源或者渠道接触",
-                                value: 26,
-                            },
-                            {
-                                name: "没有时间社交",
-                                value: 23,
-                            },
-                            {
-                                name: "自己可以应付生活与工作，没有这种需求",
-                                value: 18,
-                            }
-                        ]
-                    }
-                ]
-            };
+        let xAxisData = ['身体条件', '自理水平', '寂寞心理', '尊重心理', '工作性质', '月均收入', '家庭负债', '五险一金', '申请低保', '抚养压力', '生病照顾', '住房产权', '住房面积', '旅游活动', '社区或社交活动', '经济状况满意度', '居住条件满意度', '生活总体满意度'];
 
-            const myChart = echarts.init(document.getElementById('main'));
+        let marriedData = [
+            { name: '健康', value: 56.22, category: '身体条件' }, { name: '亚健康', value: 33.64, category: '身体条件' }, { name: '患病', value: 10.14, category: '身体条件' }, 
+            { name: '能自理能劳动', value: 85.71, category: '自理水平' }, { name: '能自理不能劳动', value: 11.53, category: '自理水平' }, { name: '不能自理不能劳动', value: 2.76, category: '自理水平' },
+            { name: '感到寂寞', value: 21.20, category: '寂寞心理' }, { name: '没感到寂寞', value: 78.80, category: '寂寞心理' }, 
+            { name: '感到被歧视', value: 24.42, category: '尊重心理' }, { name: '感到尊重', value: 75.58, category: '尊重心理' },
+            { name: '全职', value: 47.93, category: '工作性质' }, { name: '半职', value: 34.10, category: '工作性质' }, { name: '失业或离职', value: 17.97, category: '工作性质' },
+            { name: '低于平均水平', value: 60.83, category: '月均收入' }, { name: '高于平均水平', value: 39.17, category: '月均收入' },
+            { name: '有', value: 37.79, category: '家庭负债' }, { name: '无', value: 62.21, category: '家庭负债' },
+            { name: '有', value: 40.51, category: '五险一金' }, { name: '无或不全', value: 59.49, category: '五险一金' },
+            { name: '是', value: 8.29, category: '申请低保' }, { name: '无但准备', value: 18.43, category: '申请低保' }, { name: '无但不考虑', value: 73.28, category: '申请低保' },
+            { name: '可以承受', value: 45.62, category: '抚养压力' }, { name: '有压力', value: 33.64, category: '抚养压力' }, { name: '压力很大', value: 20.74, category: '抚养压力' },
+            { name: '独自', value: 6.91, category: '生病照顾' }, { name: '有人帮忙', value: 93.09, category: '生病照顾' },
+            { name: '自有自住', value: 78.34, category: '住房产权' }, { name: '与父母同住', value: 2.76, category: '住房产权' }, { name: '租住', value: 18.90, category: '住房产权' },
+            { name: '高于平均水平', value: 37.79, category: '住房面积' }, { name: '低于平均水平', value: 62.21, category: '住房面积' },
+            { name: '无或极少', value: 10.14, category: '旅游活动' }, { name: '一般', value: 39.17, category: '旅游活动' }, { name: '经常', value: 50.69, category: '旅游活动' },
+            { name: '无或极少', value: 11.98, category: '社区或社交活动' }, { name: '一般', value: 27.65, category: '社区或社交活动' }, { name: '经常', value: 60.37, category: '社区或社交活动' },
+            { name: '很满意', value: 6.91, category: '经济状况满意度' }, { name: '满意', value: 14.29, category: '经济状况满意度' }, { name: '一般', value: 35.48, category: '经济状况满意度' }, { name: '不满意', value: 29.11, category: '经济状况满意度' }, { name: '很不满意', value: 14.21, category: '经济状况满意度' },
+            { name: '很满意', value: 17.97, category: '居住条件满意度' }, { name: '满意', value: 32.26, category: '居住条件满意度' }, { name: '一般', value: 29.95, category: '居住条件满意度' }, { name: '不满意', value: 13.83, category: '居住条件满意度' }, { name: '很不满意', value: 5.99, category: '居住条件满意度' },
+            { name: '很满意', value: 15.21, category: '生活总体满意度' }, { name: '满意', value: 32.72, category: '生活总体满意度' }, { name: '一般', value: 35.94, category: '生活总体满意度' }, { name: '不满意', value: 7.37, category: '生活总体满意度' }, { name: '很不满意', value: 8.76, category: '生活总体满意度' }
+        ];
 
-            const seriesData = [];
-            let maxDepth = 0;
+        let singleData = [
+            { name: '健康', value: 28.57, category: '身体条件' }, { name: '亚健康', value: 55.30, category: '身体条件' }, { name: '患病', value: 16.13, category: '身体条件' }, 
+            { name: '能自理能劳动', value: 89.71, category: '自理水平' }, { name: '能自理不能劳动', value: 9.22, category: '自理水平' }, { name: '不能自理不能劳动', value: 1.38, category: '自理水平' },
+            { name: '感到寂寞', value: 82.95, category: '寂寞心理' }, { name: '没感到寂寞', value: 17.05, category: '寂寞心理' }, 
+            { name: '感到被歧视', value: 65.90, category: '尊重心理' }, { name: '感到尊重', value: 34.10, category: '尊重心理' },
+            { name: '全职', value: 50.69, category: '工作性质' }, { name: '半职', value: 29.96, category: '工作性质' }, { name: '失业或离职', value: 19.35, category: '工作性质' },
+            { name: '低于平均水平', value: 87.10, category: '月均收入' }, { name: '高于平均水平', value: 12.90, category: '月均收入' },
+            { name: '有', value: 58.99, category: '家庭负债' }, { name: '无', value: 41.01, category: '家庭负债' },
+            { name: '有', value: 43.32, category: '五险一金' }, { name: '无或不全', value: 56.68, category: '五险一金' },
+            { name: '是', value: 10.60, category: '申请低保' }, { name: '无但准备', value: 37.33, category: '申请低保' }, { name: '无但不考虑', value: 52.07, category: '申请低保' },
+            { name: '可以承受', value: 12.91, category: '抚养压力' }, { name: '有压力', value: 35.02, category: '抚养压力' }, { name: '压力很大', value: 52.07, category: '抚养压力' },
+            { name: '独自', value: 80.65, category: '生病照顾' }, { name: '有人帮忙', value: 19.35, category: '生病照顾' },
+            { name: '自有自住', value: 29.49, category: '住房产权' }, { name: '与父母或亲朋同住', value: 35.02, category: '住房产权' }, { name: '租住', value: 35.49, category: '住房产权' },
+            { name: '高于平均水平', value: 21.20, category: '住房面积' }, { name: '低于平均水平', value: 78.80, category: '住房面积' },
+            { name: '无或极少', value: 37.33, category: '旅游活动' }, { name: '一般', value: 40.09, category: '旅游活动' }, { name: '经常', value: 22.58, category: '旅游活动' },
+            { name: '无或极少', value: 32.72, category: '社区或社交活动' }, { name: '一般', value: 42.86, category: '社区或社交活动' }, { name: '经常', value: 24.42, category: '社区或社交活动' },
+            { name: '很满意', value: 1.38, category: '经济状况满意度' }, { name: '满意', value: 3.70, category: '经济状况满意度' }, { name: '一般', value: 19.81, category: '经济状况满意度' }, { name: '不满意', value: 35.94, category: '经济状况满意度' }, { name: '很不满意', value: 39.17, category: '经济状况满意度' },
+            { name: '很满意', value: 4.61, category: '居住条件满意度' }, { name: '满意', value: 5.99, category: '居住条件满意度' }, { name: '一般', value: 20.28, category: '居住条件满意度' }, { name: '不满意', value: 37.33, category: '居住条件满意度' }, { name: '很不满意', value: 31.79, category: '居住条件满意度' },
+            { name: '很满意', value: 3.23, category: '生活总体满意度' }, { name: '满意', value: 7.83, category: '生活总体满意度' }, { name: '一般', value: 23.96, category: '生活总体满意度' }, { name: '不满意', value: 42.40, category: '生活总体满意度' }, { name: '很不满意', value: 22.58, category: '生活总体满意度' }
+        ];
 
-            function convert(source, basePath, depth) {
-                if (!source) return;
-                if (maxDepth > 5) return;
-                maxDepth = Math.max(depth, maxDepth);
-                seriesData.push({
-                    id: basePath,
-                    value: source.value || 0,
-                    depth: depth,
-                    index: seriesData.length,
-                    name: source.name
-                });
-                if (source.children) {
-                    source.children.forEach((child, index) => {
-                        convert(child, `${basePath}.${index}`, depth + 1);
-                    });
-                }
+        var emphasisStyle = {
+            itemStyle: {
+                shadowBlur: 10,
+                shadowColor: 'rgba(0,0,0,0.3)'
             }
+        };
 
-            convert(rawData, 'option', 0);
+        let seriesData = [];
 
-            const displayRoot = d3
-                .stratify()
-                .parentId(d => d.id.substring(0, d.id.lastIndexOf('.')))(seriesData)
-                .sum(d => d.value)
-                .sort((a, b) => b.value - a.value);
-
-            function overallLayout(params, api) {
-                const context = params.context;
-                d3.pack()
-                    .size([api.getWidth() - 2, api.getHeight() - 2])
-                    .padding(3)(displayRoot);
-                context.nodes = {};
-                displayRoot.descendants().forEach(node => {
-                    context.nodes[node.id] = node;
-                });
-            }
-
-            function renderItem(params, api) {
-                const context = params.context;
-                if (!context.layout) {
-                    context.layout = true;
-                    overallLayout(params, api);
-                }
-                const nodePath = api.value('id');
-                const node = context.nodes[nodePath];
-                if (!node) return;
-                const isLeaf = !node.children || !node.children.length;
-                const nodeName = isLeaf ? node.data.name : '';
-                return {
-                    type: 'circle',
-                    shape: {
-                        cx: node.x,
-                        cy: node.y,
-                        r: node.r
-                    },
-                    transition: ['shape'],
-                    z2: api.value('depth') * 2,
-                    textContent: {
-                        type: 'text',
-                        style: {
-                            text: nodeName,
-                            fontFamily: 'Arial',
-                            fontSize: Math.max(node.r / 5, 10) // Smaller font size
-                        },
-                        emphasis: {
-                            style: {
-                                fontSize: Math.max(node.r / 5, 10)
-                            }
-                        }
-                    },
-                    textConfig: {
-                        position: 'inside'
-                    },
-                    style: {
-                        fill: api.visual('color')
-                    },
-                    emphasis: {
-                        style: {
-                            shadowBlur: 20,
-                            shadowOffsetX: 3,
-                            shadowOffsetY: 5,
-                            shadowColor: 'rgba(0,0,0,0.3)'
-                        }
-                    }
-                };
-            }
-
-            const option = {
-                title: {
-                    text: '单亲母亲社群参与情况',
-                    left: 'center'
-                },
-                tooltip: {
-                    trigger: 'item',
-                    formatter: function (params) {
-                        return `${params.data.name}: ${params.data.value}`;
-                    }
-                },
-                dataset: {
-                    source: seriesData
-                },
-                visualMap: [
-                    {
-                        show: false,
-                        min: 0,
-                        max: maxDepth,
-                        dimension: 'depth',
-                        inRange: {
-                            color: ['#F4E4E8', '#E8CAD3', '#DDB0BE', '#D194A9', '#C67893'] // Lighter Morandi pink colors
-                        }
-                    }
-                ],
-                hoverLayerThreshold: Infinity,
-                series: {
-                    type: 'custom',
-                    renderItem: renderItem,
-                    progressive: 0,
-                    coordinateSystem: 'none',
-                    encode: {
-                        tooltip: 'value',
-                        itemName: 'name'
-                    }
-                }
-            };
-
-            myChart.setOption(option);
-
-            myChart.on('click', { seriesIndex: 0 }, function (params) {
-                drillDown(params.data.id);
+        xAxisData.forEach(category => {
+            seriesData.push({
+                name: '已婚-' + category,
+                type: 'bar',
+                stack: category,
+                emphasis: emphasisStyle,
+                data: marriedData.filter(item => item.category === category).map(item => item.value)
             });
-
-            function drillDown(targetNodeId) {
-                let targetNode = displayRoot;
-                if (targetNodeId != null) {
-                    targetNode = displayRoot.descendants().find(node => node.data.id === targetNodeId);
-                }
-                targetNode.parent = null;
-                myChart.setOption({
-                    dataset: {
-                        source: seriesData
-                    }
-                });
-            }
-
-            myChart.getZr().on('click', function (event) {
-                if (!event.target) {
-                    drillDown();
-                }
+            seriesData.push({
+                name: '单亲-' + category,
+                type: 'bar',
+                stack: category,
+                emphasis: emphasisStyle,
+                data: singleData.filter(item => item.category === category).map(item => item.value)
             });
         });
 
+        var option = {
+            legend: {
+                data: seriesData.map(item => item.name),
+                left: '10%'
+            },
+            brush: {
+                toolbox: ['rect', 'polygon', 'lineX', 'lineY', 'keep', 'clear'],
+                xAxisIndex: 0
+            },
+            toolbox: {
+                feature: {
+                    magicType: {
+                        type: ['stack']
+                    },
+                    dataView: {}
+                }
+            },
+            tooltip: {},
+            xAxis: {
+                data: xAxisData,
+                name: '变量',
+                axisLine: { onZero: true },
+                splitLine: { show: false },
+                splitArea: { show: false }
+            },
+            yAxis: {},
+            grid: {
+                bottom: 100
+            },
+            series: seriesData
+        };
+
+        var myChart = echarts.init(document.getElementById('main'));
+        myChart.setOption(option);
+
+        myChart.on('brushSelected', function (params) {
+            var brushed = [];
+            var brushComponent = params.batch[0];
+            for (var sIdx = 0; sIdx < brushComponent.selected.length; sIdx++) {
+                var rawIndices = brushComponent.selected[sIdx].dataIndex;
+                brushed.push('[Series ' + sIdx + '] ' + rawIndices.join(', '));
+            }
+            myChart.setOption({
+                title: {
+                    backgroundColor: '#333',
+                    text: 'SELECTED DATA INDICES: \n' + brushed.join('\n'),
+                    bottom: 0,
+                    right: '10%',
+                    width: 100,
+                    textStyle: {
+                        fontSize: 12,
+                        color: '#fff'
+                    }
+                }
+            });
+        });
     </script>
 </body>
-
 </html>
