@@ -174,8 +174,8 @@
     <section class="parallax-container">
         <section class="parallax" id="parallax-1">
             <div class="parallax-content">
-                <h1 class="parallax-title">第一章</h1>
-                <h1 class="parallax-title">她们，单亲母亲</h1>
+                <h1 class="parallax-title">她们，</h1>
+                <h1 class="parallax-title">单亲母亲</h1>
             </div>
         </section>
     </section>
@@ -469,7 +469,7 @@
             <p class="m-auto line-height-3 font-songti">
                 &nbsp;&nbsp;&nbsp;&nbsp;真的值得她们自己感到骄傲吗？
             </p>
-            <div class="comic-container">
+            <div class="comic-container" id="单亲母亲数量-start">
                 <div class="dialogue comic-title">
                     <p class="m-auto little-title">单亲母亲已超2000万</p>
                 </div>
@@ -499,6 +499,34 @@
                 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;根据2019年中国婚姻家庭研究会的《十城市单亲母亲生活状况及需求调研》的保守推算，全国包括离异和丧偶在内的<mark
                     class="highlight">单亲母亲数量超过2000万</mark>。更有数据推断，当前全国单亲母亲总数可达3000万。
             </p>
+            <div id="单亲母亲数量-end"></div>
+            <div class="comic-container" id="单亲母亲分布-start"> <!-- 这是小标题 -->
+                <div class="dialogue comic-title">
+                    <p class="m-auto little-title">单亲母亲分布</p>
+                </div>
+            </div>
+            <p class="m-auto line-height-3">
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;在中国，单亲母亲的分布具有显著的地域特征，尤其在各大城市尤为明显。根据北京大学家庭跟踪调查（2020）中的51291个案例基础上，共筛选出411名单亲母亲，并对其所在的省份分布进行了初步探索。
+            </p>
+            <div class="row justify-content-center">
+                <div class="col-md-6 col-lg-8 m-b-50">
+                    <img src="img/province-distribution.jpg"> <!-- 这是一张图片 -->
+                </div>
+            </div>
+            <p class="small m-auto line-height-3 text-center"> <!-- 这是数据注释 -->
+                数据来源：北大家庭跟踪调查（2020），筛选出单亲母亲样本N=411。
+            </p>
+            <p class="m-auto line-height-3">
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;分析结果揭示，广东省、四川省和河南省的单亲母亲案例数位居前三，同时，辽宁省、甘肃省、河北省等省份也记录了相当数量的单亲母亲案例。综合来看，单亲母亲在全国各省市自治区均有分布，但具体数量存在区域差异。广东省作为经济大省，吸引了大量的外来人口，婚姻稳定性较低，单亲母亲数量相对较多。
+            </p>
+            <div class="chart-center" id="rural-city-contrib" style="max-width: 1000px;"></div>
+            <p class="small m-auto line-height-3 text-center"> <!-- 这是数据注释 -->
+                数据来源：北大家庭跟踪调查（2020），筛选出单亲母亲样本N=411。
+            </p>
+            <p class="m-auto line-height-3">
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;同时，单亲母亲个案在城镇和乡村的分布显示出一定的差异。例如，在广东省，城镇地区的单亲母亲个案数量为32，而乡村地区为10，显示出城镇地区的单亲母亲数量较多。同样，河南省的城镇地区有20名单亲母亲，而乡村地区有18名。
+            </p>
+            <div id="单亲母亲分布-end"></div>
             <div class="comic-container" id="不同-start"> <!-- 这是小标题 -->
                 <div class="dialogue comic-title">
                     <p class="m-auto little-title">单亲母亲，也有不同</p>
@@ -1072,8 +1100,12 @@
                         <p class="m-auto little-title">抚养人类幼崽，需要多少钱</p>
                     </div>
                 </div>
+                <div class="chart-center" id="raise-cost"></div>
+                <p class="small m-auto line-height-3 text-center"> <!-- 这是数据注释 -->
+                    数据来源：育娲人口研究. (2022). 中国婚姻家庭报告 2022 版. 北京: 社会科学文献出版社.
+                </p>
                 <p class="m-auto line-height-3">
-                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;然而，仅凭一人的经济实力抚养一只人类幼崽谈何容易？
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;仅凭一人的经济实力抚养一只人类幼崽谈何容易？
                 </p>
                 <p class="m-auto line-height-3">
                     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;独自承担抚养孩子的经济责任，对于单亲母亲来说，无疑是一项艰巨的挑战。《十城市单亲母亲生活状况及需求调研报告》指出，大约46%的单亲母亲在照料孩子和维系亲子关系方面感到力不从心，认为自己对孩子有所亏欠。经济压力更是沉重，高达76.9%的单亲母亲每月在育儿上的支出超过其总收入的一半，而88.0%的人表示在支付育儿费用时感到困难。
@@ -1421,6 +1453,7 @@
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
 <!-- 自定义图表 -->
+<script src="data/rural-city.js"></script>
 <script src="data/divorce-detail.js"></script>
 <script src="data/rate-divorce-compare.js"></script>
 <script src="data/rate-widowhood-compare.js"></script>
@@ -1433,5 +1466,6 @@
 <script src="data/income-bin.js"></script>
 <script src="data/income-rural.js"></script>
 <script src="data/money.js"></script>
+<script src="data/raise-cost.js"></script>
 
 </html>
