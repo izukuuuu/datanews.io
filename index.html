@@ -685,6 +685,13 @@
             <p class="m-auto line-height-3">
                 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;在婚姻状况变化方面，根据全国人口抽样情况的数据，离婚占比逐年上升，从2013年的1.32%增加到2022年的1.99%。男性离婚人口占比从2013年的1.50%上升到2022年的2.22%，女性离婚人口占比从2013年的1.13%上升到2022年的1.77%。总体来看，离婚占比在男女之间都有显著增长，且男性离婚占比始终高于女性。此外，丧偶率在2013年至2022年间相对稳定，女性丧偶比例远高于男性，是男性的三倍以上。
             </p>
+            <div class="chart-center" id="child-birth-year"></div>
+            <p class="small m-auto line-height-3 text-center"> <!-- 这是数据注释 -->
+                数据来源：北大家庭跟踪调查（2020），筛选出单亲母亲样本N=411，统计一胎出生时间样本N=407。
+            </p>
+            <p class="m-auto line-height-3">
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;而从单亲母亲一胎孩子出生时间来看。在1990年代至2010年代，随着中国经济的快速发展，女性的社会地位和经济独立性显著提高，以及改革开放以来离婚率的上升，这使得单亲妈妈在独自抚养方面有更多的自主选择权。然而，近年来，经济增速放缓，生活成本上升，尤其是育儿和教育费用增加，叠加单亲母亲年龄等因素，导致2015-2020年出生比例下降。
+            </p>
             <p class="m-auto line-height-3">
                 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;同时，由于近年总体资料的缺失，我们对于近年来的单亲家庭成因只能从部分个体研究中窥见一斑。
             </p>
@@ -860,7 +867,7 @@
                     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;基于《十城市单亲母亲生活状况及需求调研报告》，超七成的单亲母亲在离婚后没有情感生活，有过1-2次情感交往经验的只有不到三成。并且，53.1%的单亲母亲在婚恋、工作等诸多方面觉察到来自他人异样的目光甚至不友好态度。
                 </p>
                 <p class="m-auto line-height-3">
-                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;同样的单亲母亲的社交情况也不容乐观。
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;同样的，单亲母亲的社交情况也不容乐观。
                 </p>
                 <p class="m-auto line-height-3">
                     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;根据《在线社会支持对单亲母亲群体身份认同的影响研究》，在201位受访者中，共有148位妈妈加入过单亲母亲社群，微信群、QQ群、带有#单亲母亲#标签的话题讨论是她们主要参与的社群类型。53位妈妈未参加过单亲母亲社群，原因包括“没资源或者渠道接触”（49.1%）、“没有时间社交”（43.4%）和“自己可以应付生活与工作，没有这种需求”（34%）。
@@ -1459,6 +1466,7 @@
 <script src="main_js_for_test.js"></script>
 <script src="assets/js/main.js"></script>
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://fastly.jsdelivr.net/npm/d3-hierarchy@2.0.0/dist/d3-hierarchy.min.js"></script>
 
 <!-- 自定义图表 -->
 <script src="data/rural-city.js"></script>
@@ -1477,5 +1485,6 @@
 <script src="data/raise-cost.js"></script>
 <script src="data/marital-status.js"></script>
 <script src="data/raise-num.js"></script>
+<script src="data/child-birth-year.js"></script>
 
 </html>

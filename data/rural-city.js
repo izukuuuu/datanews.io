@@ -75,7 +75,7 @@
     }
     option = {
         title: {
-            text: '单亲母亲分省份城镇/农村分布',
+            text: '单亲母亲分省份城镇/乡村分布',
             left: 'center'
         },
         legend: {
