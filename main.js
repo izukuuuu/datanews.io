@@ -17,47 +17,6 @@ document.querySelectorAll('.dropbtn').forEach(button => {
     dropdownContent.style.display = (dropdownContent.style.display === 'block') ? 'none' : 'block';
   });
 });
-
-// ------------------------------
-// 多语言选择
-// ------------------------------
-// jQuery 代码
-$(document).ready(function () {
-  // 获取当前页面的语言
-  var currentLanguage = window.location.pathname.split('.')[0].split('_')[1];
-
-  // 更新当前语言显示
-  var currentLanguageElement = $('#current-language');
-  switch (currentLanguage) {
-    case 'en':
-      currentLanguageElement.text('English');
-      break;
-    case 'es':
-      currentLanguageElement.text('Español');
-      break;
-    case 'pt':
-      currentLanguageElement.text('Português');
-      break;
-    default:
-      currentLanguageElement.text('中文');
-  }
-
-  // 为语言选择器添加事件处理程序
-  $('#language-selector a').click(function (e) {
-    e.preventDefault();
-
-    // 阻止默认行为
-
-    var href = $(this).attr('href');
-
-    // 获取链接地址
-
-    window.location.href = href;
-
-    // 跳转到新页面
-  });
-});
-
 // ------------------------------
 // 文字渐变背景动画
 // ------------------------------
