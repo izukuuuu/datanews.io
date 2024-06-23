@@ -12,19 +12,27 @@ new UePage().init({
     },
 });
 // ------------------------------
-// 字体从下向上滚动变大
+// 字体从下向上滚动变大，超出一定距离后不再增大
 // ------------------------------
 window.addEventListener('scroll', function () {
     var windowHeight = window.innerHeight;
     var dynamicTexts = document.querySelectorAll('.dynamic-text');
+    var maxFontSize = 4; // 最大字体大小（单位：rem）
 
     dynamicTexts.forEach(function (dynamicText) {
         var rect = dynamicText.getBoundingClientRect();
         if (rect.top >= 0 && rect.bottom <= windowHeight) {
             // 元素在视图内，根据元素距离窗口顶部的位置调整字体大小
             var relativePosition = windowHeight - rect.top;
-            var newFontSize = 2 + relativePosition / 400 + 'rem';
-            dynamicText.style.fontSize = newFontSize;
+            var newFontSize = 2 + relativePosition / 400;
+            if (newFontSize > maxFontSize) newFontSize = maxFontSize;
+            dynamicText.style.fontSize = newFontSize + 'rem';
+        } else if (rect.bottom > 0 && rect.top < windowHeight) {
+            // 元素部分在视图内，根据元素距离窗口顶部的位置调整字体大小
+            var relativePosition = windowHeight - Math.max(0, rect.top);
+            var newFontSize = 2 + relativePosition / 400;
+            if (newFontSize > maxFontSize) newFontSize = maxFontSize;
+            dynamicText.style.fontSize = newFontSize + 'rem';
         } else {
             // 元素不在视图内，恢复到初始字体大小
             dynamicText.style.fontSize = '2rem';
@@ -77,11 +85,13 @@ let currentIndex = 0;
 const imageElement = document.getElementById("scroll-image");
 
 function updateImage() {
-    imageElement.classList.remove("active");
+    imageElement.classList.remove("fade-in");
+    imageElement.classList.add("fade-out");
     setTimeout(() => {
         imageElement.src = images[currentIndex];
-        imageElement.classList.add("active");
-    }, 100); // 缩短切换时间
+        imageElement.classList.remove("fade-out");
+        imageElement.classList.add("fade-in");
+    }, 500); // This delay should match the fade-out duration
 }
 
 window.addEventListener("scroll", () => {
@@ -100,9 +110,10 @@ window.addEventListener("scroll", () => {
     }
 });
 
-// 初始化时显示第一张图片
+// Initialize the first image
 window.onload = () => {
-    updateImage();
+    imageElement.src = images[currentIndex];
+    imageElement.classList.add("fade-in");
 };
 // ------------------------------
 // 微信判断

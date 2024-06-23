@@ -201,3 +201,25 @@ mark.highlight.highlight-active::before {
     opacity: 0;
     transform: translateY(20px);
 }
+
+.full-width-background {
+    position: relative;
+    width: 100%;
+    height: auto;
+    background: linear-gradient(to right, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.8) 30%, rgba(255, 255, 255, 0.8) 70%, rgba(255, 255, 255, 0.2)), url('img/totheend.png');
+    background-size: cover;
+    background-position: center;
+}
+
+#scroll-image {
+    opacity: 0;
+    transition: opacity 0.5s cubic-bezier(0, 0, 0, 0.99)
+}
+
+#scroll-image.fade-in {
+    opacity: 1;
+}
+
+#scroll-image.fade-out {
+    opacity: 0;
+}
