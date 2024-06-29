@@ -123,7 +123,7 @@
   var varWindow = $(window);
   varWindow.on('load', function() {
     AOS.init({
-      once: true,
+      once: false,
     });
   });
 
