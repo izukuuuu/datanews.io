@@ -75,10 +75,10 @@ $(document).ready(function () {
 // 滑动切换图片
 // ------------------------------
 const images = [
-    "img/1.png",
-    "img/2.png",
-    "img/3.png",
-    "img/4.png"
+    "img/1.webp",
+    "img/2.webp",
+    "img/3.webp",
+    "img/4.webp"
 ];
 
 let currentIndex = 0;
