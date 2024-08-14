@@ -32,27 +32,6 @@
 }
 
 @font-face {
-    font-family: 'puhuiti';
-    src: url('fonts/Alibaba-PuHuiTi-Regular.ttf') format('truetype');
-    font-weight: normal;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: 'puhuiti';
-    src: url('fonts/Alibaba-PuHuiTi-Medium.ttf') format('truetype');
-    font-weight: medium;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: 'puhuiti';
-    src: url('fonts/Alibaba-PuHuiTi-Bold.ttf') format('truetype');
-    font-weight: bold;
-    font-style: normal;
-}
-
-@font-face {
     font-family: 'SongTi';
     src: url('fonts/SongTi.ttf') format('truetype');
     font-weight: normal;

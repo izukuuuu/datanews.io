@@ -49,7 +49,7 @@ html {
 h1 {
     letter-spacing: 5px;
     text-transform: uppercase;
-    font: 60px "puhuiti", sans-serif;
+    font: 60px "Alibaba PuHuiTi", sans-serif;
     font-weight: bolder !important;
     color: #fff;
     border: 0px;
@@ -58,7 +58,7 @@ h1 {
 h2 {
     letter-spacing: 5px;
     text-transform: uppercase;
-    font: 50px "puhuiti", sans-serif;
+    font: 50px "Alibaba PuHuiTi", sans-serif;
     font-weight: bold !important;
     color: #111;
     border: 0px;
@@ -67,7 +67,7 @@ h2 {
 h3 {
     letter-spacing: 5px;
     text-transform: uppercase;
-    font: 40px "puhuiti", sans-serif;
+    font: 40px "Alibaba PuHuiTi", sans-serif;
     font-weight: bold !important;
     color: #111;
     border: 0px;
@@ -76,7 +76,7 @@ h3 {
 h4 {
     letter-spacing: 5px;
     text-transform: uppercase;
-    font: 30px "puhuiti", sans-serif;
+    font: 30px "Alibaba PuHuiTi", sans-serif;
     font-weight: medium;
     color: #111;
     border: 0px;
@@ -84,7 +84,7 @@ h4 {
 
 p {
     color: #111;
-    font: 18px "puhuiti", sans-serif;
+    font: 18px "Alibaba PuHuiTi", sans-serif;
     font-weight: normal;
 }
 
@@ -98,7 +98,7 @@ body,
 html {
     height: 100%;
     margin: 0;
-    font: 400 15px/1.8 "puhuiti", sans-serif;
+    font: 400 15px/1.8 "Alibaba PuHuiTi", sans-serif;
 }
 
 /* 侧边栏 */
