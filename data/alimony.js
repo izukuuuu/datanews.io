@@ -1,0 +1,536 @@
+var chart_alimony = echarts.init(
+    document.getElementById('alimony'), 'white', {renderer: 'canvas'});
+var option_alimony = {
+"animation": true,
+"animationThreshold": 2000,
+"animationDuration": 1000,
+"animationEasing": "cubicOut",
+"animationDelay": 0,
+"animationDurationUpdate": 300,
+"animationEasingUpdate": "cubicOut",
+"animationDelayUpdate": 0,
+"aria": {
+"enabled": false
+},
+"color": [
+"#5470c6",
+"#91cc75",
+"#fac858",
+"#ee6666",
+"#73c0de",
+"#3ba272",
+"#fc8452",
+"#9a60b4",
+"#ea7ccc"
+],
+"series": [
+{
+    "type": "sankey",
+    "data": [
+        {
+            "name": "29"
+        },
+        {
+            "name": "(0, 500]"
+        },
+        {
+            "name": "4"
+        },
+        {
+            "name": "22"
+        },
+        {
+            "name": "34"
+        },
+        {
+            "name": "19"
+        },
+        {
+            "name": "1"
+        },
+        {
+            "name": "(500, 1000]"
+        },
+        {
+            "name": "24"
+        },
+        {
+            "name": "20"
+        },
+        {
+            "name": "35"
+        },
+        {
+            "name": "16"
+        },
+        {
+            "name": "15"
+        },
+        {
+            "name": "31"
+        },
+        {
+            "name": "11"
+        },
+        {
+            "name": "10"
+        },
+        {
+            "name": "32"
+        },
+        {
+            "name": "33"
+        },
+        {
+            "name": "7"
+        },
+        {
+            "name": "3"
+        },
+        {
+            "name": "2"
+        },
+        {
+            "name": "12"
+        },
+        {
+            "name": "28"
+        },
+        {
+            "name": "13"
+        },
+        {
+            "name": "(1000, 1500]"
+        },
+        {
+            "name": "27"
+        },
+        {
+            "name": "17"
+        },
+        {
+            "name": "5"
+        },
+        {
+            "name": "23"
+        },
+        {
+            "name": "25"
+        },
+        {
+            "name": "30"
+        },
+        {
+            "name": "(1500, 2000]"
+        },
+        {
+            "name": "18"
+        },
+        {
+            "name": "21"
+        },
+        {
+            "name": "14"
+        },
+        {
+            "name": "6"
+        },
+        {
+            "name": "36"
+        },
+        {
+            "name": "9"
+        },
+        {
+            "name": "(2000, 2500]"
+        },
+        {
+            "name": "8"
+        },
+        {
+            "name": "26"
+        },
+        {
+            "name": "(3500, 4000]"
+        }
+    ],
+    "links": [
+        {
+            "source": "29",
+            "target": "(0, 500]",
+            "value": 1,
+            "tooltip": {
+                "formatter": "\u6848\u4ef629:<br>\u7537\u65b9: \u5415\u67d0<br>\u5973\u65b9: \u77f3\u67d0<br>\u79bb\u5a5a\u539f\u56e0: \u6027\u683c\u4e0d\u5408<br>\u8f96\u533a: \u65b0\u7586\u7ef4\u543e\u5c14\u81ea\u6cbb\u533a<br>\u629a\u517b\u8d39: 300\u5143/\u6708"
+            }
+        },
+        {
+            "source": "4",
+            "target": "(0, 500]",
+            "value": 1,
+            "tooltip": {
+                "formatter": "\u6848\u4ef64:<br>\u7537\u65b9: \u674e\u67d0<br>\u5973\u65b9: \u674e\u67d0\u6676<br>\u79bb\u5a5a\u539f\u56e0: \u534f\u8bae\u79bb\u5a5a<br>\u8f96\u533a: \u6cb3\u5357\u7701<br>\u629a\u517b\u8d39: 500\u5143/\u6708"
+            }
+        },
+        {
+            "source": "22",
+            "target": "(0, 500]",
+            "value": 1,
+            "tooltip": {
+                "formatter": "\u6848\u4ef622:<br>\u7537\u65b9: \u5b59\u67d0\u67d0<br>\u5973\u65b9: \u5b59\u67d0\u7532<br>\u79bb\u5a5a\u539f\u56e0: \u534f\u8bae\u79bb\u5a5a<br>\u8f96\u533a: \u56db\u5ddd\u7701<br>\u629a\u517b\u8d39: 500\u5143/\u6708"
+            }
+        },
+        {
+            "source": "34",
+            "target": "(0, 500]",
+            "value": 1,
+            "tooltip": {
+                "formatter": "\u6848\u4ef634:<br>\u7537\u65b9: \u8096\u67d0<br>\u5973\u65b9: \u5d14\u67d0<br>\u79bb\u5a5a\u539f\u56e0: \u611f\u60c5\u7834\u88c2<br>\u8f96\u533a: \u56db\u5ddd\u7701<br>\u629a\u517b\u8d39: 500\u5143/\u6708"
+            }
+        },
+        {
+            "source": "19",
+            "target": "(0, 500]",
+            "value": 1,
+            "tooltip": {
+                "formatter": "\u6848\u4ef619:<br>\u7537\u65b9: \u5218\u67d0<br>\u5973\u65b9: \u9c8d\u67d0<br>\u79bb\u5a5a\u539f\u56e0: \u611f\u60c5\u4e0d\u548c<br>\u8f96\u533a: \u8fbd\u5b81\u7701<br>\u629a\u517b\u8d39: 500\u5143/\u6708"
+            }
+        },
+        {
+            "source": "1",
+            "target": "(500, 1000]",
+            "value": 1,
+            "tooltip": {
+                "formatter": "\u6848\u4ef61:<br>\u7537\u65b9: \u5d14\u67d0\u6797<br>\u5973\u65b9: \u5173\u67d0\u5982<br>\u79bb\u5a5a\u539f\u56e0: \u611f\u60c5\u7834\u88c2\u3001\u5bb6\u5ead\u66b4\u529b<br>\u8f96\u533a: \u6cb3\u5357\u7701<br>\u629a\u517b\u8d39: 700\u5143/\u6708"
+            }
+        },
+        {
+            "source": "24",
+            "target": "(500, 1000]",
+            "value": 1,
+            "tooltip": {
+                "formatter": "\u6848\u4ef624:<br>\u7537\u65b9: \u5218\u67d0\u5c71<br>\u5973\u65b9: \u4e07\u67d0\u8363<br>\u79bb\u5a5a\u539f\u56e0: \u6027\u683c\u4e0d\u5408\uff0c\u957f\u671f\u5206\u5c45<br>\u8f96\u533a: \u5c71\u4e1c\u7701<br>\u629a\u517b\u8d39: 800\u5143/\u6708"
+            }
+        },
+        {
+            "source": "20",
+            "target": "(500, 1000]",
+            "value": 1,
+            "tooltip": {
+                "formatter": "\u6848\u4ef620:<br>\u7537\u65b9: \u4ed8\u67d0<br>\u5973\u65b9: \u77f3\u67d0<br>\u79bb\u5a5a\u539f\u56e0: \u611f\u60c5\u7834\u88c2<br>\u8f96\u533a: \u8fbd\u5b81\u7701<br>\u629a\u517b\u8d39: 900\u5143/\u6708"
+            }
+        },
+        {
+            "source": "35",
+            "target": "(500, 1000]",
+            "value": 1,
+            "tooltip": {
+                "formatter": "\u6848\u4ef635:<br>\u7537\u65b9: \u9ec4\u67d0<br>\u5973\u65b9: \u5f20\u67d0<br>\u79bb\u5a5a\u539f\u56e0: \u611f\u60c5\u7834\u88c2<br>\u8f96\u533a: \u56db\u5ddd\u7701<br>\u629a\u517b\u8d39: 800\u5143/\u6708"
+            }
+        },
+        {
+            "source": "16",
+            "target": "(500, 1000]",
+            "value": 1,
+            "tooltip": {
+                "formatter": "\u6848\u4ef616:<br>\u7537\u65b9: \u9a6c\u67d0\u4e59<br>\u5973\u65b9: \u9a6c\u67d0\u7532<br>\u79bb\u5a5a\u539f\u56e0: \u611f\u60c5\u7834\u88c2\u3001\u5bb6\u5ead\u66b4\u529b<br>\u8f96\u533a: \u7518\u8083\u7701<br>\u629a\u517b\u8d39: 1000\u5143/\u6708"
+            }
+        },
+        {
+            "source": "15",
+            "target": "(500, 1000]",
+            "value": 1,
+            "tooltip": {
+                "formatter": "\u6848\u4ef615:<br>\u7537\u65b9: \u519c\u82f1\u4ef2<br>\u5973\u65b9: \u9ec4\u5f69\u706f<br>\u79bb\u5a5a\u539f\u56e0: \u611f\u60c5\u7834\u88c2\u3001\u5bb6\u5ead\u66b4\u529b<br>\u8f96\u533a: \u5e7f\u897f\u58ee\u65cf\u81ea\u6cbb\u533a<br>\u629a\u517b\u8d39: 600\u5143/\u6708"
+            }
+        },
+        {
+            "source": "31",
+            "target": "(500, 1000]",
+            "value": 1,
+            "tooltip": {
+                "formatter": "\u6848\u4ef631:<br>\u7537\u65b9: \u66f9\u67d0\u9f99<br>\u5973\u65b9: \u8463\u67d0\u751f<br>\u79bb\u5a5a\u539f\u56e0: \u611f\u60c5\u4e0d\u548c<br>\u8f96\u533a: \u6cb3\u5357\u7701<br>\u629a\u517b\u8d39: 1000\u5143/\u6708"
+            }
+        },
+        {
+            "source": "11",
+            "target": "(500, 1000]",
+            "value": 1,
+            "tooltip": {
+                "formatter": "\u6848\u4ef611:<br>\u7537\u65b9: \u77f3\u67d0\u51ef<br>\u5973\u65b9: \u738b\u67d0\u743c<br>\u79bb\u5a5a\u539f\u56e0: \u611f\u60c5\u7834\u88c2<br>\u8f96\u533a: \u56db\u5ddd\u7701<br>\u629a\u517b\u8d39: 1000\u5143/\u6708"
+            }
+        },
+        {
+            "source": "10",
+            "target": "(500, 1000]",
+            "value": 1,
+            "tooltip": {
+                "formatter": "\u6848\u4ef610:<br>\u7537\u65b9: \u8d75\u67d0<br>\u5973\u65b9: \u738b\u67d0<br>\u79bb\u5a5a\u539f\u56e0: \u534f\u8bae\u79bb\u5a5a<br>\u8f96\u533a: \u8fbd\u5b81\u7701<br>\u629a\u517b\u8d39: 1000\u5143/\u6708"
+            }
+        },
+        {
+            "source": "32",
+            "target": "(500, 1000]",
+            "value": 1,
+            "tooltip": {
+                "formatter": "\u6848\u4ef632:<br>\u7537\u65b9: \u674e\u67d0\u5112<br>\u5973\u65b9: \u80e1\u67d0\u6653<br>\u79bb\u5a5a\u539f\u56e0: \u611f\u60c5\u7834\u88c2<br>\u8f96\u533a: \u6cb3\u5357\u7701<br>\u629a\u517b\u8d39: 800\u5143/\u6708"
+            }
+        },
+        {
+            "source": "33",
+            "target": "(500, 1000]",
+            "value": 1,
+            "tooltip": {
+                "formatter": "\u6848\u4ef633:<br>\u7537\u65b9: \u5434\u67d0\u658c<br>\u5973\u65b9: \u725b\u67d0\u679c<br>\u79bb\u5a5a\u539f\u56e0: \u611f\u60c5\u4e0d\u548c<br>\u8f96\u533a: \u6cb3\u5357\u7701<br>\u629a\u517b\u8d39: 800\u5143/\u6708"
+            }
+        },
+        {
+            "source": "7",
+            "target": "(500, 1000]",
+            "value": 1,
+            "tooltip": {
+                "formatter": "\u6848\u4ef67:<br>\u7537\u65b9: \u5434\u67d0\u822a<br>\u5973\u65b9: \u5f90\u67d0\u5a07<br>\u79bb\u5a5a\u539f\u56e0: \u534f\u8bae\u79bb\u5a5a<br>\u8f96\u533a: \u9ed1\u9f99\u6c5f\u7701<br>\u629a\u517b\u8d39: 600\u5143/\u6708"
+            }
+        },
+        {
+            "source": "3",
+            "target": "(500, 1000]",
+            "value": 1,
+            "tooltip": {
+                "formatter": "\u6848\u4ef63:<br>\u7537\u65b9: \u5218\u67d0\u5b58<br>\u5973\u65b9: \u666f\u67d0<br>\u79bb\u5a5a\u539f\u56e0: \u672a\u63d0\u53ca<br>\u8f96\u533a: \u6cb3\u5357\u7701<br>\u629a\u517b\u8d39: 600\u5143/\u6708"
+            }
+        },
+        {
+            "source": "2",
+            "target": "(500, 1000]",
+            "value": 1,
+            "tooltip": {
+                "formatter": "\u6848\u4ef62:<br>\u7537\u65b9: \u7afa\u67d0<br>\u5973\u65b9: \u674e\u67d0<br>\u79bb\u5a5a\u539f\u56e0: \u611f\u60c5\u4e0d\u548c\u3001\u7537\u65b9\u72af\u7f6a\u670d\u5211<br>\u8f96\u533a: \u6d59\u6c5f\u7701<br>\u629a\u517b\u8d39: 1000\u5143/\u6708"
+            }
+        },
+        {
+            "source": "12",
+            "target": "(500, 1000]",
+            "value": 1,
+            "tooltip": {
+                "formatter": "\u6848\u4ef612:<br>\u7537\u65b9: \u738b\u67d0<br>\u5973\u65b9: \u590f\u67d0<br>\u79bb\u5a5a\u539f\u56e0: \u611f\u60c5\u4e0d\u5408<br>\u8f96\u533a: \u91cd\u5e86\u5e02<br>\u629a\u517b\u8d39: 1000\u5143/\u6708"
+            }
+        },
+        {
+            "source": "28",
+            "target": "(500, 1000]",
+            "value": 1,
+            "tooltip": {
+                "formatter": "\u6848\u4ef628:<br>\u7537\u65b9: \u674e\u67d0<br>\u5973\u65b9: \u4efb\u67d0<br>\u79bb\u5a5a\u539f\u56e0: \u534f\u8bae\u79bb\u5a5a<br>\u8f96\u533a: \u5185\u8499\u53e4\u81ea\u6cbb\u533a<br>\u629a\u517b\u8d39: 800\u5143/\u6708"
+            }
+        },
+        {
+            "source": "13",
+            "target": "(1000, 1500]",
+            "value": 1,
+            "tooltip": {
+                "formatter": "\u6848\u4ef613:<br>\u7537\u65b9: \u6234\u67d0<br>\u5973\u65b9: \u5434\u67d0<br>\u79bb\u5a5a\u539f\u56e0: \u8c03\u89e3\u79bb\u5a5a<br>\u8f96\u533a: \u5b89\u5fbd\u7701<br>\u629a\u517b\u8d39: 1500\u5143/\u6708"
+            }
+        },
+        {
+            "source": "27",
+            "target": "(1000, 1500]",
+            "value": 1,
+            "tooltip": {
+                "formatter": "\u6848\u4ef627:<br>\u7537\u65b9: \u738b\u67d0\u534e<br>\u5973\u65b9: \u9676\u67d0\u79c0<br>\u79bb\u5a5a\u539f\u56e0: \u611f\u60c5\u7834\u88c2<br>\u8f96\u533a: \u4e91\u5357\u7701<br>\u629a\u517b\u8d39: 1300\u5143/\u6708"
+            }
+        },
+        {
+            "source": "17",
+            "target": "(1000, 1500]",
+            "value": 1,
+            "tooltip": {
+                "formatter": "\u6848\u4ef617:<br>\u7537\u65b9: \u738b\u535a<br>\u5973\u65b9: \u79e6\u5999\u8273<br>\u79bb\u5a5a\u539f\u56e0: \u611f\u60c5\u4e0d\u548c<br>\u8f96\u533a: \u9655\u897f\u7701<br>\u629a\u517b\u8d39: 1200\u5143/\u6708"
+            }
+        },
+        {
+            "source": "5",
+            "target": "(1000, 1500]",
+            "value": 1,
+            "tooltip": {
+                "formatter": "\u6848\u4ef65:<br>\u7537\u65b9: \u59dc\u67d0\u4e59<br>\u5973\u65b9: \u5218\u67d0<br>\u79bb\u5a5a\u539f\u56e0: \u534f\u8bae\u79bb\u5a5a<br>\u8f96\u533a: \u65b0\u7586\u7ef4\u543e\u5c14\u81ea\u6cbb\u533a<br>\u629a\u517b\u8d39: 1500\u5143/\u6708"
+            }
+        },
+        {
+            "source": "23",
+            "target": "(1000, 1500]",
+            "value": 1,
+            "tooltip": {
+                "formatter": "\u6848\u4ef623:<br>\u7537\u65b9: \u5c1a\u67d0<br>\u5973\u65b9: \u674e\u67d0\u7532<br>\u79bb\u5a5a\u539f\u56e0: \u5408\u540c\u7ea0\u7eb7<br>\u8f96\u533a: \u6cb3\u5357\u7701<br>\u629a\u517b\u8d39: 1500\u5143/\u6708"
+            }
+        },
+        {
+            "source": "25",
+            "target": "(1000, 1500]",
+            "value": 1,
+            "tooltip": {
+                "formatter": "\u6848\u4ef625:<br>\u7537\u65b9: \u5f20\u67d0<br>\u5973\u65b9: \u5f20\u67d0<br>\u79bb\u5a5a\u539f\u56e0: \u629a\u517b\u8d39\u7ea0\u7eb7<br>\u8f96\u533a: \u5e7f\u4e1c\u7701<br>\u629a\u517b\u8d39: 1500\u5143/\u6708"
+            }
+        },
+        {
+            "source": "30",
+            "target": "(1500, 2000]",
+            "value": 1,
+            "tooltip": {
+                "formatter": "\u6848\u4ef630:<br>\u7537\u65b9: \u738b\u67d0<br>\u5973\u65b9: \u8fde\u67d0<br>\u79bb\u5a5a\u539f\u56e0: \u592b\u59bb\u611f\u60c5\u7834\u88c2<br>\u8f96\u533a: \u65b0\u7586\u7ef4\u543e\u5c14\u81ea\u6cbb\u533a<br>\u629a\u517b\u8d39: 1800\u5143/\u6708"
+            }
+        },
+        {
+            "source": "18",
+            "target": "(1500, 2000]",
+            "value": 1,
+            "tooltip": {
+                "formatter": "\u6848\u4ef618:<br>\u7537\u65b9: \u5f20\u67d0\u9f99<br>\u5973\u65b9: \u5f20\u67d0<br>\u79bb\u5a5a\u539f\u56e0: \u534f\u8bae\u79bb\u5a5a<br>\u8f96\u533a: \u6cb3\u5357\u7701<br>\u629a\u517b\u8d39: 2000\u5143/\u6708"
+            }
+        },
+        {
+            "source": "21",
+            "target": "(1500, 2000]",
+            "value": 1,
+            "tooltip": {
+                "formatter": "\u6848\u4ef621:<br>\u7537\u65b9: \u738b\u67d0<br>\u5973\u65b9: \u5f20\u67d0<br>\u79bb\u5a5a\u539f\u56e0: \u5bb6\u5ead\u66b4\u529b\u3001\u51fa\u8f68<br>\u8f96\u533a: \u6cb3\u5357\u7701<br>\u629a\u517b\u8d39: 1600\u5143/\u6708"
+            }
+        },
+        {
+            "source": "14",
+            "target": "(1500, 2000]",
+            "value": 1,
+            "tooltip": {
+                "formatter": "\u6848\u4ef614:<br>\u7537\u65b9: \u623f\u67d0\u4e59<br>\u5973\u65b9: \u7530\u67d0<br>\u79bb\u5a5a\u539f\u56e0: \u611f\u60c5\u7834\u88c2<br>\u8f96\u533a: \u65b0\u7586\u7ef4\u543e\u5c14\u81ea\u6cbb\u533a<br>\u629a\u517b\u8d39: 1520\u5143/\u6708"
+            }
+        },
+        {
+            "source": "6",
+            "target": "(1500, 2000]",
+            "value": 1,
+            "tooltip": {
+                "formatter": "\u6848\u4ef66:<br>\u7537\u65b9: \u738b\u67d0\u8fbe<br>\u5973\u65b9: \u5415\u67d0\u4e39<br>\u79bb\u5a5a\u539f\u56e0: \u611f\u60c5\u7834\u88c2<br>\u8f96\u533a: \u6cb3\u5357\u7701<br>\u629a\u517b\u8d39: 2000\u5143/\u6708"
+            }
+        },
+        {
+            "source": "36",
+            "target": "(1500, 2000]",
+            "value": 1,
+            "tooltip": {
+                "formatter": "\u6848\u4ef636:<br>\u7537\u65b9: \u4faf\u67d0\u6e05<br>\u5973\u65b9: \u8521\u67d0\u73b2<br>\u79bb\u5a5a\u539f\u56e0: \u611f\u60c5\u7834\u88c2<br>\u8f96\u533a: \u5e7f\u897f<br>\u629a\u517b\u8d39: 2000\u5143/\u6708"
+            }
+        },
+        {
+            "source": "9",
+            "target": "(2000, 2500]",
+            "value": 1,
+            "tooltip": {
+                "formatter": "\u6848\u4ef69:<br>\u7537\u65b9: \u738b\u67d0<br>\u5973\u65b9: \u738b\u67d0<br>\u79bb\u5a5a\u539f\u56e0: \u8c03\u89e3\u79bb\u5a5a<br>\u8f96\u533a: \u4e0a\u6d77\u5e02<br>\u629a\u517b\u8d39: 2500\u5143/\u6708"
+            }
+        },
+        {
+            "source": "8",
+            "target": "(2000, 2500]",
+            "value": 1,
+            "tooltip": {
+                "formatter": "\u6848\u4ef68:<br>\u7537\u65b9: \u97e6\u67d0\u6797<br>\u5973\u65b9: \u5434\u67d0\u6770<br>\u79bb\u5a5a\u539f\u56e0: \u611f\u60c5\u4e0d\u548c<br>\u8f96\u533a: \u6cb3\u5357\u7701<br>\u629a\u517b\u8d39: 2500\u5143/\u6708"
+            }
+        },
+        {
+            "source": "26",
+            "target": "(3500, 4000]",
+            "value": 1,
+            "tooltip": {
+                "formatter": "\u6848\u4ef626:<br>\u7537\u65b9: \u674e\u67d0\u594e<br>\u5973\u65b9: \u949f\u5a34<br>\u79bb\u5a5a\u539f\u56e0: \u611f\u60c5\u7834\u88c2<br>\u8f96\u533a: \u6d77\u5357\u7701<br>\u629a\u517b\u8d39: 4000\u5143/\u6708"
+            }
+        }
+    ],
+    "left": "5%",
+    "top": "5%",
+    "right": "15%",
+    "bottom": "5%",
+    "nodeWidth": 20,
+    "nodeGap": 4,
+    "nodeAlign": "justify",
+    "orient": "horizontal",
+    "draggable": true,
+    "label": {
+        "show": true,
+        "position": "right",
+        "margin": 8
+    },
+    "lineStyle": {
+        "show": true,
+        "width": 1,
+        "opacity": 0.3,
+        "curveness": 0.5,
+        "type": "solid",
+        "color": "source"
+    }
+}
+],
+"legend": [
+{
+    "data": [
+        ""
+    ],
+    "selected": {},
+    "show": true,
+    "padding": 5,
+    "itemGap": 10,
+    "itemWidth": 25,
+    "itemHeight": 14,
+    "backgroundColor": "transparent",
+    "borderColor": "#ccc",
+    "borderRadius": 0,
+    "pageButtonItemGap": 5,
+    "pageButtonPosition": "end",
+    "pageFormatter": "{current}/{total}",
+    "pageIconColor": "#2f4554",
+    "pageIconInactiveColor": "#aaa",
+    "pageIconSize": 15,
+    "animationDurationUpdate": 800,
+    "selector": false,
+    "selectorPosition": "auto",
+    "selectorItemGap": 7,
+    "selectorButtonGap": 10
+}
+],
+"tooltip": {
+"show": true,
+"trigger": "item",
+"triggerOn": "mousemove|click",
+"axisPointer": {
+    "type": "line"
+},
+"showContent": true,
+"alwaysShowContent": false,
+"showDelay": 0,
+"hideDelay": 100,
+"enterable": false,
+"confine": false,
+"appendToBody": false,
+"transitionDuration": 0.4,
+"formatter": "{b}\uff1a{c}",
+"textStyle": {
+    "fontSize": 14
+},
+"borderWidth": 0,
+"padding": 5,
+"order": "seriesAsc"
+},
+"title": [
+{
+    "show": true,
+    "text": "\u629a\u517b\u8d39\u533a\u95f4\u5206\u5e03",
+    "target": "blank",
+    "subtarget": "blank",
+    "padding": 5,
+    "itemGap": 10,
+    "textAlign": "auto",
+    "textVerticalAlign": "auto",
+    "triggerEvent": false,
+    left: 'center'
+}
+]
+};
+chart_alimony.setOption(option_alimony);
